@@ -1,3 +1,8 @@
 {
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "Lua.runtime.version": "LuaJIT",
+    "Lua.runtime.special": [],
+    "Lua.workspace.library": [
+        "${3rd}/love2d/library"
+    ]
 }
