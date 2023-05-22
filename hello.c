@@ -1,8 +1,10 @@
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    printf("hello, world!\n");
+    string answer = ("Whats your name? ");
+    printf("answer"\n);
 
 
 }
