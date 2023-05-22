@@ -9,7 +9,7 @@ int main(void)
     {
         printf("Agreed.\n");
     }
-    else (c == 'n')
+    else if (c == 'n')
     {
         printf("Not agreed.\n");
     }
