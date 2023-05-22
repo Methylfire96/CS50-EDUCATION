@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    string answer = ("Whats your name? ");
-    printf("answer"\n);
+    string answer = get_string("Whats your name? ");
+    printf("hello, %s\n", answer);
 
 
 }
