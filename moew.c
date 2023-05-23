@@ -3,9 +3,12 @@
 
 int main(void)
 {
-    printf("moew\n");
-    printf("moew\n");
-    printf("moew\n");
+    int i = 5;
+    while(i>0)
+    {
+        printf("moew\n");
+        i--;
+    }
 
 
 }
