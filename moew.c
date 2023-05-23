@@ -1,10 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
+int get_size(void)
+void print_grid(int size)
+
 int main(void)
 {
-    get_size
-    print_grid
+    int n = get_size();
+    print_grid(n);
 
 }
 
