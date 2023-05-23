@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    int i = 5;
-    while(i>0)
+    int i = 1;
+    while(i<=3)
     {
         printf("moew\n");
-        i--;
+        i++;
     }
 
 
