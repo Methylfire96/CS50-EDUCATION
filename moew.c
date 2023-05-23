@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 
-int get_size(void)
-void print_grid(int size)
+int get_size(void);
+void print_grid(int size);
 
 int main(void)
 {
