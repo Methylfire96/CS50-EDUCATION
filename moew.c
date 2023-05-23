@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int size = 5;
+    const int size = 5;
     for (int row = 0; row<size; row++)
     {
         for (int col = 0; col<size; col++)
