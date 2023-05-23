@@ -3,9 +3,10 @@
 
 int main(void)
 {
-    for (int row = 0; row<4; row++)
+    int size = 5;
+    for (int row = 0; row<size; row++)
     {
-        for (int col = 0; col<4; col++)
+        for (int col = 0; col<size; col++)
         {
             printf("#");
 
