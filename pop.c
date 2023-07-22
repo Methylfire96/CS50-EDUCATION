@@ -5,26 +5,26 @@
 int main(void)
 {
 
-    int start;
+    float start;
     do
     {
-        start= get_int("Start Size: ");
+        start= get_float("Start Size: ");
     }
     while (start<9);
 
-    int end;
+    float end;
     do
     {
-        end= get_int("End Size: ");
+        end= get_float("End Size: ");
     }
     while (end<start);
 
-    int years = 0;
+    float years = 0;
     while (start < end)
     {
         start += start/12;
         years++;
     }
 
-    printf("Years: %i\n", years);
+    printf("Years: %f\n", years);
 }
