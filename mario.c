@@ -38,7 +38,7 @@ void print_stairs(int size)
 
 void print_stairs(int size)
 {
-    for (int row = size; row > 0; row--)
+    for (int row = size; row >= 0; row--)
     {
         for(int col = row - 1; col <= size; col++)
         {
