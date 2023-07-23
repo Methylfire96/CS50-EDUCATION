@@ -24,9 +24,9 @@ int get_size(void)
 
 void print_stairs(int size)
 {
-    for (int row = size; ;row--)
+    for (int row = 0; row >= size; row++)
     {
-        for(int col = row - 1; col <= size; col++)
+        for(int col = row + 1; col <= size; col++)
         {
             printf("#");
         }
