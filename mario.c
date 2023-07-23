@@ -2,7 +2,7 @@
 #include <cs50.h>
 
 int get_size(void);
-void print_stairs(float size);
+void print_stairs(int size);
 
 
 int main()
@@ -50,17 +50,22 @@ void print_stairs(int size)
 }
 */
 
-void print_stairs(float size)
+-----------------------------
+
+void print_stairs(int size)
 {
-    for (float row = 0; row <= size; row++)
+    for (int row = 1; row <= size; row++)
     {
-        for(float col = 1/size; col <= size; col++)
+        for (int space = size - row; space > 0; space--)
+        {
+            printf(" ");
+        }
+
+        for (int col = 1; col <= row; col++)
         {
             printf("#");
         }
+
         printf("\n");
     }
 }
-
------------------------------
-
