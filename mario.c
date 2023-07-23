@@ -22,7 +22,7 @@ int get_size(void)
     return brickSize;
 }
 
-/*
+/* ICECREAM COAN
 void print_stairs(int size)
 {
     for (int row = 0; row <= size; row++)
@@ -36,11 +36,25 @@ void print_stairs(int size)
 }
 */
 
+/* DOWNSTAIRS
 void print_stairs(int size)
 {
-    for (int row = size; row >= 0; row--)
+    for (int row = size; row > 0; row--)
     {
-        for(int col = row - 1; col <= size; col++)
+        for(int col = row; col <= size; col++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+*/
+
+void print_stairs(int size)
+{
+    for (int row = size; row > 0; row--)
+    {
+        for(int col = row; col <= size; col++)
         {
             printf("#");
         }
