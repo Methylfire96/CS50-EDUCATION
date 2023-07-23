@@ -1,20 +1,35 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int get_brickSize(void);
+void print_stairs(int brickSize);
+
+
 int main()
 {
-
+    int brickSize = get_brickSize();
+    print_stairs(brickSize);
 }
 
-int get_brick_size(void)
+int get_brickSize(void)
 {
-    int brick_size;
+    int brickSize;
     do
     {
-        brick_size = get_int("How many bricks you want to build?: ");
+        brickSize = get_int("How many bricks you want to build?: ");
     }
-    while (brick_size < 1);
-    return brick_size;
+    while (brickSize < 1);
+    return brickSize;
 }
 
-void print_stairs(int)
+void print_stairs(int brickSize)
+{
+    for (int row = 0; row < brickSize; row++)
+    {
+        for(int col = 0; col < brickSize, col++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
