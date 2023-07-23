@@ -3,7 +3,7 @@
 
 int main()
 {
-    int brick = get_int("How many bricks you want to build?: ");
+    string brick = get_string("How many bricks you want to build?: ");
 
-    printf("#" \n, brick);
+    printf("#");
 }
