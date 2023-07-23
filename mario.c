@@ -2,7 +2,7 @@
 #include <cs50.h>
 
 int get_size(void);
-void print_stairs(int size);
+void print_stairs(float size);
 
 
 int main()
