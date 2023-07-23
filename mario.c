@@ -51,7 +51,7 @@ void print_stairs(int size)
 */
 
 
-
+/* STAIRS!!
 void print_stairs(int size)
 {
     for (int row = 1; row <= size; row++)
