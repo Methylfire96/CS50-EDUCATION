@@ -51,12 +51,12 @@ void print_stairs(int size)
 */
 
 
-/* STAIRS!!
+// STAIRS!!
 void print_stairs(int size)
 {
     for (int row = 1; row <= size; row++)
     {
-        for (int space = size - row; space > 0; space--)
+        for (int gap = size - row; gap > 0; gap--)
         {
             printf(" ");
         }
