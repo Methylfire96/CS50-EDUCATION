@@ -61,3 +61,6 @@ void print_stairs(float size)
         printf("\n");
     }
 }
+
+-----------------------------
+
