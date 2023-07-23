@@ -52,9 +52,9 @@ void print_stairs(int size)
 
 void print_stairs(float size)
 {
-    for (float row = (1/size); row <= size; row++)
+    for (float row = 0; row <= size; row++)
     {
-        for(float col = row; col <= size; col++)
+        for(float col = size -row; col <= size; col++)
         {
             printf("#");
         }
