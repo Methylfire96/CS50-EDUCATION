@@ -52,7 +52,7 @@ void print_stairs(int size)
 
 void print_stairs(float size)
 {
-    for (float row = size /(1/size); row <= size; row++)
+    for (float row = (1/size); row <= size; row++)
     {
         for(float col = row; col <= size; col++)
         {
