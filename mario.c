@@ -54,7 +54,7 @@ void print_stairs(int size)
 {
     for (int row = size; row > 0; row--)
     {
-        for(int col = row; col <= size; col++)
+        for(int col = 0; col <= size; col++)
         {
             printf("#");
         }
