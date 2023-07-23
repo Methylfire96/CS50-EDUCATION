@@ -26,7 +26,7 @@ void print_stairs(int size)
 {
     for (int row = 0; row < size; row++)
     {
-        for(int col = 0; col < size, col++)
+        for(int col = row + 1; col < size; col++)
         {
             printf("#");
         }
