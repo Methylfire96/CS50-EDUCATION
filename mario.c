@@ -50,7 +50,7 @@ void print_stairs(int size)
 }
 */
 
------------------------------
+
 
 void print_stairs(int size)
 {
