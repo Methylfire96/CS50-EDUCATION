@@ -50,11 +50,11 @@ void print_stairs(int size)
 }
 */
 
-void print_stairs(int size)
+void print_stairs(float size)
 {
-    for (int row = size /(1/size); row <= size; row++)
+    for (float row = size /(1/size); row <= size; row++)
     {
-        for(int col = row; col <= size; col--)
+        for(float col = row; col <= size; col++)
         {
             printf("#");
         }
