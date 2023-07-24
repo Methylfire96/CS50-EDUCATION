@@ -19,7 +19,7 @@ int get_size(void)
     {
         brickSize = get_int("How many bricks you want to build?: ");
     }
-    while (brickSize < 1);
+    while (brickSize < 1 || brickSize > 10);
     return brickSize;
 }
 
