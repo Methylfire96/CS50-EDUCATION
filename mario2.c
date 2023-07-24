@@ -67,7 +67,8 @@ void print_stairs(int size)
             printf("#");
         }
 
-        printf("-");
+        printf("S");
+        printf("S");
 
         for(int col = 1; col <= row; col++)
         {
