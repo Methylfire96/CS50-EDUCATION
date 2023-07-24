@@ -1,8 +1,10 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <cs50.h>
 
 int get_size(void);
 void print_stairs(int size);
+
+
 
 int main()
 {
@@ -21,6 +23,36 @@ int get_size(void)
     return brickSize;
 }
 
+/* ICECREAM COAN
+void print_stairs(int size)
+{
+    for (int row = 0; row <= size; row++)
+    {
+        for(int col = row + 1; col <= size; col++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+*/
+
+//DOWNSTAIRS
+void print_stairs(int size)
+{
+    for (int row = size; row > 0; row--)
+    {
+        for(int col = row; col <= size; col++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+
+
+
+/* STAIRS!!
 void print_stairs(int size)
 {
     for (int row = 1; row <= size; row++)
@@ -35,6 +67,13 @@ void print_stairs(int size)
             printf("#");
         }
 
+        printf("  ");
+
+        for(int col = 1; col <= row; col++)
+        {
+            printf("#");
+        }
         printf("\n");
     }
 }
+*/
