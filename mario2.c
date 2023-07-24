@@ -37,8 +37,8 @@ void print_stairs(int size)
 }
 */
 
-/*DOWNSTAIRS
-void print_stairs2(int size)
+//DOWNSTAIRS
+void print_stairs(int size)
 {
     for (int row = size; row > 0; row--)
     {
@@ -49,10 +49,10 @@ void print_stairs2(int size)
         printf("\n");
     }
 }
-*/
 
 
-// STAIRS!!
+
+/* STAIRS!!
 void print_stairs(int size)
 {
     for (int row = 1; row <= size; row++)
@@ -76,3 +76,4 @@ void print_stairs(int size)
         printf("\n");
     }
 }
+*/
