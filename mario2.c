@@ -3,7 +3,7 @@
 
 int get_size(void);
 void print_stairs(int size);
-//void print_stairs2(int size);
+
 
 
 int main()
