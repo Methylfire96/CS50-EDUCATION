@@ -1,10 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-
 int main(void)
 {
-
     float start;
     do
     {
@@ -25,6 +23,5 @@ int main(void)
         start += start/12;
         years++;
     }
-
     printf("Years: %f\n", years);
 }
