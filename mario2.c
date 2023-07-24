@@ -3,7 +3,7 @@
 
 int get_size(void);
 void print_stairs(int size);
-void print_stairs2(int size);
+//void print_stairs2(int size);
 
 
 int main()
@@ -37,7 +37,7 @@ void print_stairs(int size)
 }
 */
 
-//DOWNSTAIRS
+/*DOWNSTAIRS
 void print_stairs2(int size)
 {
     for (int row = size; row > 0; row--)
@@ -49,7 +49,7 @@ void print_stairs2(int size)
         printf("\n");
     }
 }
-
+*/
 
 
 // STAIRS!!
@@ -67,6 +67,14 @@ void print_stairs(int size)
             printf("#");
         }
 
+        printf("\n");
+    }
+    for(int row = 1; row <= 2; row++)
+    {
+        for(int break = 0; break <= size; break++)
+        {
+            printf("*");
+        }
         printf("\n");
     }
 }
