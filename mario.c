@@ -34,7 +34,6 @@ void print_stairs(int size)
         {
             printf("#");
         }
-
         printf("\n");
     }
 }
