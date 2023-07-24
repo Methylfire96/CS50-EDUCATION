@@ -1,9 +1,7 @@
-#include <stdio.h>
 #include <cs50.h>
-
+#include <stdio.h>
 int get_size(void);
 void print_stairs(int size);
-
 
 int main()
 {
@@ -49,7 +47,6 @@ void print_stairs(int size)
     }
 }
 */
-
 
 // STAIRS!!
 void print_stairs(int size)
