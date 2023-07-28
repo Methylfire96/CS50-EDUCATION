@@ -1,6 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
 
+const int N = 3;
+
+float average(int )
+
+
 int main (void)
 {
     int scores [3];
