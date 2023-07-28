@@ -3,7 +3,7 @@
 
 const int N = 3;
 // collection is defined as an ARRAY
-float average(int collection[]);
+float average(int lengh, int collection[]);
 
 
 int main (void)
@@ -19,12 +19,12 @@ int main (void)
 
 }
 
-float average(int collection[])
+float average(int lengh, int collection[])
 {
     int summierung = 0;
-    for (int i = 0, i < N; i++)
+    for (int i = 0, i < lengh; i++)
     {
         summierung += collection[i];
     }
-    return summierung / (float) N;
+    return summierung / (float) lengh;
 }
