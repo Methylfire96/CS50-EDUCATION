@@ -22,7 +22,7 @@ int main (void)
 float average(int lengh, int collection[])
 {
     int summierung = 0;
-    for (int i = 0, i < lengh; i++)
+    for (int i = 0; i < lengh; i++)
     {
         summierung += collection[i];
     }
