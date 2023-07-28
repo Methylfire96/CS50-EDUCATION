@@ -3,16 +3,17 @@
 
 int main (void)
 {
-    int scores [3]
+    int scores [3];
     do
     {
-        scores = get_int("score: "); scores = 0; scores++
+        scores = get_int("score: ");
     }
-    while(scores < 0);
+    while(scores <= 3);
+    {
+        scores++
+    }
     return scores;
-    scores [0] = get_int("score 1: ");
-    scores [1] = get_int("score 2: ");
-    scores [2] = get_int("score 3: ");
+
 
 
     printf("Average: %f\n", (scores [0] + scores [1] + scores [2]) / (float) 3);
