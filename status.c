@@ -15,3 +15,5 @@ int main(int argc, char *argv[])
         //null bedeutet, das programm ist richtig durchgelaufen!
     }
 }
+
+// wenn ich im TERMINAL echo$? eingebe, bekomm ich den wert von return (0 oder 1)!
