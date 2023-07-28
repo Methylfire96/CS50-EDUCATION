@@ -3,12 +3,12 @@
 
 int main (void)
 {
-    scores [3];
-    scores [0] = 72;
-    scores [1] = 73;
-    scores [2] = 33;
+    int scores [3];
+    scores [0] = get_int("score 1: ");
+    scores [1] = get_int("score 2: ");
+    scores [2] = get_int("score 3: ");
 
 
-    printf("Average: %f\n", scores / 3);
+    printf("Average: %f\n", (scores [0] + scores [1] + scores [2]) / (float) 3);
 
 }
