@@ -6,12 +6,12 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("Missing command line\n");
-        return 1;
+        return 1; // egal welche ZAHL
     }
     else
     {
         printf("hello, %s\n", argv[1]);
-        return 0;
+        return 0; // egal welche ZAHL
         //null bedeutet, das programm ist richtig durchgelaufen!
     }
 }
