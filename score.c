@@ -2,19 +2,29 @@
 #include <stdio.h>
 
 const int N = 3;
-
-float average(int )
+// collection is defined as an ARRAY
+float average(int collection[]);
 
 
 int main (void)
 {
-    int scores [3];
+    int scores [N];
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < N; i++)
     {
         scores[i] = get_int("score: ");
     }
 
-    printf("Average: %f\n", (scores [0] + scores [1] + scores [2]) / (float) 3);
+    printf("Average: %f\n", average(scores));
 
+}
+
+float average(int collection[]);
+{
+    int summierung = 0;
+    for (int i = 0, i < N; i++)
+    {
+        summierung += collection[i];
+    }
+    return summierung / (float) N;
 }
