@@ -3,14 +3,14 @@
 
 int main (void)
 {
-    int scores [3];
+    int scores;
     do
     {
         scores = get_int("score: ");
     }
     while(scores <= 3);
     {
-        scores++
+        scores++;
     }
     return scores;
 
