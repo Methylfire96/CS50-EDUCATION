@@ -3,16 +3,12 @@
 
 int main (void)
 {
-    int scores;
-    do
+    int scores [3];
+
+    for (int i = 0; i < 3; i++)
     {
-        scores = get_int("score: ");
+        scores[i] = get_int("score: ");
     }
-    while(scores <= 3);
-    {
-        scores++;
-    }
-    return scores;
 
 
 
