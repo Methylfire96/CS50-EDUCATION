@@ -6,7 +6,7 @@ int main (void)
     int scores [3]
     do
     {
-        scores++
+        scores = get_int("score: "); scores = 0; scores++
     }
     while(scores < 0);
     return scores;
