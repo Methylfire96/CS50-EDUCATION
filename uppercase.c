@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
+//(void)== command line argument!
 int main(void)
 {
     string s = get_string("Before: ");
