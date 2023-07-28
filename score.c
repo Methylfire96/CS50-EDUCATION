@@ -19,7 +19,7 @@ int main (void)
 
 }
 
-float average(int collection[]);
+float average(int collection[])
 {
     int summierung = 0;
     for (int i = 0, i < N; i++)
