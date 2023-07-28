@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
-//(void)== command line argument!
+//(void)== command line argument! wir dann ersetzt durch (int argc, string argv[]) !bedeutet länge und text!
 int main(void)
 {
     string s = get_string("Before: ");
