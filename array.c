@@ -13,6 +13,6 @@ int main (void)
     int prog[lengh];
     for(int i = 1; i < lengh; i++)
     {
-        printf("%i\n", prog[i] *2);
+        printf("%i\n", prog[i] +2);
     }
 }
