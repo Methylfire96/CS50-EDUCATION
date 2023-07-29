@@ -12,7 +12,9 @@ int main (void)
 
     int prog[lengh];
     prog[0] = 1;
-    for(int i = 1; i <= lengh; i++)
+    printf("%i\n", prog[0]);
+
+    for(int i = 1; i < lengh; i++)
     {
         prog[i] = 2 *(prog[i-1]);
         printf("%i\n", prog[i]);
