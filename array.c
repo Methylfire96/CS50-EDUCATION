@@ -2,21 +2,28 @@
 #include<stdio.h>
 
 int main (void)
-{
-    int lengh;
+{   //get length
+    int length;
     do
     {
-        lengh = get_int("lengh: ");
+        length = get_int("length: ");
     }
-    while(lengh < 1);
+    while(length < 1);
 
-    int prog[lengh];
+    int prog[length];
+
+    //set first value
     prog[0] = 1;
+
+    //print first value
     printf("%i\n", prog[0]);
 
-    for(int i = 1; i < lengh; i++)
+    for(int i = 1; i < length; i++)
     {
+        //make the current element twice as previous
         prog[i] = 2 *(prog[i-1]);
+
+        //print current element
         printf("%i\n", prog[i]);
     }
 }
