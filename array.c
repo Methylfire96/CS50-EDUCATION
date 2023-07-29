@@ -10,9 +10,9 @@ int main (void)
     }
     while(lengh < 1);
 
-    int lengh[];
-    for(int i = 1; i < lengh, i++)
+    int prog[lengh];
+    for(int i = 1; i < lengh; i++)
     {
-        printf("%i\n", lengh[i] *2)
+        printf("%i\n", prog[i] *2);
     }
 }
