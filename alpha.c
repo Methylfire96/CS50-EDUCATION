@@ -5,3 +5,5 @@ int main (void)
 {
     word = get_string("word: ");
 }
+
+int prog[word];
