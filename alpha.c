@@ -16,9 +16,6 @@ int main (void)
             printf("no\n");
             return 0;
         }
-        else
-        {
-            printf("yes\n");
-        }
     }
+    printf("yes\n");
 }
