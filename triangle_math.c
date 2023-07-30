@@ -10,7 +10,20 @@ int main(void)
     float y = get_int("y: ");
     float z = get_int("z: ");
 
-    bool triangle(float x, float y, float z)
+    if(triangle(x,y,z))
+    {
+        printf("good\n");
+    }
+    else
+    {
+        printf("not good\n");
+    }
+
+
+}
+
+
+bool triangle(float x, float y, float z)
     {
         if((x+y<=z) || (x+z<=y) || (y+z<=x))
         {
@@ -23,4 +36,3 @@ int main(void)
         }
         return true;
     }
-}
