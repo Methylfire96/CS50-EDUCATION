@@ -6,9 +6,9 @@
 
 int main(void)
 {
-    int x = get_int("x: \n");
-    int y = get_int("y: \n");
-    int z = get_int("z: \n");
+    float x = get_int("x: \n");
+    float y = get_int("y: \n");
+    float z = get_int("z: \n");
 
     bool triangle(float x, float y, float z);
 }
