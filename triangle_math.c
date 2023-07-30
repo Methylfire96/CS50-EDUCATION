@@ -1,7 +1,7 @@
 #include<cs50.h>
 #include<stdio.h>
 
-bool triangle(float x, float y, float z);
+
 
 
 int main(void)
@@ -9,6 +9,8 @@ int main(void)
     int x = get_int("x: \n");
     int y = get_int("y: \n");
     int z = get_int("z: \n");
+
+    bool triangle(float x, float y, float z);
 }
 
 
