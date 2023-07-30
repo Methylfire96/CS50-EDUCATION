@@ -3,5 +3,5 @@
 
 int main (void)
 {
-    get_string
+    word = get_string("word: ");
 }
