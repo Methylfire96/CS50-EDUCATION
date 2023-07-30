@@ -8,8 +8,17 @@ int main (void)
 
     int word_length = strlen(word);
 
-    for(int i = 0; i < word; i++)
-
-    prog[i] = word[0] < word[1];
-    printf("%s\n", prog[i])
+    for(int i = 0; i < word_length - 1; i++)
+    {
+        //check if not alphabetical
+        if(word[i] > word[i + 1])
+        {
+            printf("no\n");
+            return 0;
+        }
+        else
+        {
+            printf("yes\n");
+        }
+    }
 }
