@@ -12,11 +12,11 @@ int main(void)
 
     if(triangle(x,y,z))
     {
-        printf("good\n");
+        printf("not good\n");
     }
     else
     {
-        printf("not good\n");
+        printf("good\n");
     }
 
 
