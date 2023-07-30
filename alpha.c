@@ -7,7 +7,7 @@ int main (void)
 }
 
 int prog[word];
-if
+for(int i = 0; i < word; i++)
 {
-    
+    prog[i] = 
 }
