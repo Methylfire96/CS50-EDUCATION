@@ -7,3 +7,7 @@ int main (void)
 }
 
 int prog[word];
+if
+{
+    
+}
