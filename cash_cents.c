@@ -35,7 +35,7 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void)
+int get_cents(quarters, dimes, nickels, pennies)
 {
    int cents;
    do
@@ -49,7 +49,7 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     int calculate_quarters = cents / (1/4)
-    
+
     return 0;
 }
 
