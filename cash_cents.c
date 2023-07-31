@@ -35,21 +35,20 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(quarters, dimes, nickels, pennies)
+int get_cents(void)
 {
    int cents;
    do
    {
         cents = get_int("how much is the change: ");
    }
-   while(cents < 1 || cents > 10000);
+   while(cents < 0 || cents > 1000);
    return cents;
 }
 
 int calculate_quarters(int cents)
 {
-    int calculate_quarters = cents / (1/4)
-
+    // TODO
     return 0;
 }
 
