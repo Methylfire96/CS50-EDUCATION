@@ -43,7 +43,7 @@ int get_cents(void)
         cents = get_int("how much is the change: ");
    }
    while(cents < 0 || cents > 1000);
-   return cents;
+   return 0;
 }
 
 int calculate_quarters(int cents)
