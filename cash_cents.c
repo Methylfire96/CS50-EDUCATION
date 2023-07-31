@@ -42,7 +42,7 @@ int get_cents(void)
    {
         cents = get_int("how much is the change: ");
    }
-   while(cents < 0 || cents > 1000);
+   while (cents < 0 || cents > 1000);
    return cents;
 }
 
@@ -67,5 +67,5 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     // TODO
-    return  cents / 1;
+    return cents / 1;
 }
