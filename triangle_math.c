@@ -10,6 +10,8 @@ int main(void)
     float y = get_int("y: ");
     float z = get_int("z: ");
 
+    bool isTriangle = triangle(x,y,z);
+
     if(triangle(x,y,z))
     {
         printf("not good\n");
@@ -18,6 +20,7 @@ int main(void)
     {
         printf("good\n");
     }
+    return 0;
 
 
 }
