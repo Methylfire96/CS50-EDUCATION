@@ -30,6 +30,6 @@ float calc_hours(int hours[], int weeks, char output)
     if(output == 'T')
     for (int i = 0; i < weeks; i++)
     {
-        printf(int hours[i] * weeks);
+        return (hours[i] * weeks);
     }
 }
