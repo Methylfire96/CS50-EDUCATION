@@ -29,7 +29,7 @@ float calc_hours(int hours[], int weeks, char output)
 {
     if(output == 'T')
 
-       
+        int hours[weeks];
         hours[0] = 1;
         for (int i = 0; i < weeks; i++)
         {
