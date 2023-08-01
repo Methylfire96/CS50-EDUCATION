@@ -28,10 +28,12 @@ int main(void)
 float calc_hours(int hours[], int weeks, char output)
 {
     if(output == 'T')
-    int hours[weeks];
-    hours[0] = 1;
-    for (int i = 0; i < weeks; i++)
-    {
-        return (hours[i] * weeks);
-    }
+
+       
+        hours[0] = 1;
+        for (int i = 0; i < weeks; i++)
+        {
+            hours[] = (hours[i] * weeks);
+            printf("%i\n", hours[]);
+        }
 }
