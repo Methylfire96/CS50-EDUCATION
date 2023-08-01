@@ -29,6 +29,6 @@ float calc_hours(int hours[], int weeks, char output)
 {
     if(output == 'T')
     {
-        printf(hours * w)
+        printf(hours [weeks[]])
     }
 }
