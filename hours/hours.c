@@ -27,8 +27,8 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
-    if(output == 'A')
+    for (int average = 1; average <= weeks; average++)
     {
-        printf()
+        for()
     }
 }
