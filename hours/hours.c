@@ -27,9 +27,9 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
-    if(char output = 'T')
+    if(output == 'T')
     for (int i = 0; i < weeks; i++)
     {
-        printf(hours[i] * weeks);
+        printf(int hours[i] * weeks);
     }
 }
