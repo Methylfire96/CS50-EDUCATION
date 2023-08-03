@@ -23,7 +23,14 @@ int main(void)
     {
         printf("player 1 wins!\n", %i, score);
     }
-    printf("player 2 wins!)\n", %i, score);
+    else if (score1 < score2)
+    {
+        printf("player 2 wins!)\n", %i, score);
+    }
+    else
+    {
+        printf("congrats, you tied ey!\n");
+    }
 }
 
 int compute_score(string word)
