@@ -8,6 +8,10 @@ int main(void)
 {
     string text = get_string("Please enter your text: ");
 
+    return text;
+
+
+
     //counting letters, words, sentences
 
     //max grade 16+ and min grade 1
