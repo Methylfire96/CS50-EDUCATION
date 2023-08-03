@@ -18,7 +18,7 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // TODO: Print the winner
+    //Print the winner
     if (score1 > score2)
     {
         printf("player 1 wins! %i to %i\n", score1, score2);
@@ -34,8 +34,9 @@ int main(void)
 }
 
 int compute_score(string word)
-{
+{   //score track
     int score = 0;
+    //umwandler
     int len = strlen(word);
 
     for(int i = 0; i < len; i++)
