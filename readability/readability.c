@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 
 int coleman_liau_formula(letters, words, sentences);
@@ -22,21 +23,32 @@ int main(void)
 
 //counting letters, words, sentences
 
-int count_letters(string text);
-
-
-
-int count_words(string text);
-
-
-
-int count_sentences(string text);
+int count_letters(string text)
+{
+    
+}
 
 
 
 
+int count_words(string text)
+{
+
+}
 
 
-int coleman_liau_formula(letters, words, sentences);
 
-//max grade 16+ and min grade 1
+int count_sentences(string text)
+{
+
+}
+
+
+
+
+int coleman_liau_formula(letters, words, sentences)
+{
+    //max grade 16+ and min grade 1
+}
+
+
