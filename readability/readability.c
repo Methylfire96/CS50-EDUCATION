@@ -10,7 +10,7 @@ int main(void)
 
     //counting letters, words, sentences
 
-    
+    //max grade 16+ and min grade 1
 }
 
 
