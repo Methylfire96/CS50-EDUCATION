@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -18,7 +18,7 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    //Print the winner
+    // Print the winner
     if (score1 > score2)
     {
         printf("player 1 wins! %i to %i\n", score1, score2);
@@ -34,18 +34,18 @@ int main(void)
 }
 
 int compute_score(string word)
-{   //score track
+{   // score track
     int score = 0;
-    //umwandler
+    // umwandler
     int len = strlen(word);
 
-    for(int i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
-        if(isupper(word[i]))
+        if (isupper(word[i]))
         {
             score += POINTS[word[i] - 'A'];
         }
-        if(islower(word[i]))
+        if (islower(word[i]))
         {
             score += POINTS[word[i] - 'a'];
         }
