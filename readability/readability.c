@@ -32,7 +32,7 @@ int count_letters(string text)
     {
         while(atoi(text[i]))
         {
-            letter_count = 
+            return 0;
         }
     }
 }
