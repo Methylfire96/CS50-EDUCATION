@@ -7,8 +7,9 @@ int coleman_liau_formula(letters, words, sentences);
 int main(void)
 {
     string text = get_string("Please enter your text: ");
-
     return text;
+
+    
 
 
 
