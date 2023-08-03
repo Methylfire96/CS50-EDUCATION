@@ -4,5 +4,8 @@
     "Lua.runtime.special": [],
     "Lua.workspace.library": [
         "${3rd}/love2d/library"
-    ]
+    ],
+    "files.associations": {
+        "string.h": "c"
+    }
 }

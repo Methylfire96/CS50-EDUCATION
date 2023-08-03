@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <ctype.h>
 
 
 int coleman_liau_formula(letters, words, sentences);
