@@ -27,6 +27,9 @@ int compute_score(string word)
 
     for(int i = 0; len = strlen(word); i < len; i++)
     {
-        if
+        if(isupper(word[i]))
+        {
+            score += points[]
+        }
     }
 }
