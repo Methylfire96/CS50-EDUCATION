@@ -30,7 +30,7 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        while(atoi(text[i]))
+        while(atoi(char text[i]))
         {
             return 0;
         }
