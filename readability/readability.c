@@ -34,9 +34,18 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        if(isupper(text[i]) && isblank(text[i]))
+        if(isupper(text[i]))
         {
             letter_count += ALPHABET[text[i] - 'A'];
+        }
+        if(isblank(text[i]))
+        {
+            letter_count += (ALPHABET[text[i] + 1]);
+
+        }
+        if(islower(text[i]))
+        {
+            letter_count += ALPHABET[text[i] - 'a'];
         }
     }
     return letter_count;
