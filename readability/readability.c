@@ -53,7 +53,16 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    
+    int word_count = 0;
+    int len = strlen(text);
+
+    for(int i = 0; i < len; i++)
+    {
+        if(isblank(text[i]))
+        {
+            word_count += ALPHABET[text[i]]
+        }
+    }
 }
 
 
