@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-
+int TEXT[];
 int coleman_liau_formula(string letters,int words,int sentences);
 
 
@@ -30,9 +30,9 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        while((text[i]))
+        if(isupper(text[i]))
         {
-            return 0;
+            letter_count = TEXT[word[i] - 'A'];
         }
     }
 }
