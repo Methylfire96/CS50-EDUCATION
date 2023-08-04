@@ -20,7 +20,7 @@ int main(void)
     //int words = count_words(text);
     //int sentences = count_sentences(text);
 
-    printf("%s  %i\n", text, count_letters);
+    printf("%s\n", text);
 }
 
 
