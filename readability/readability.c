@@ -18,10 +18,10 @@ int main(void)
 
 
     int letters = count_letters(text);
-    //int words = count_words(text);
+    int words = count_words(text);
     //int sentences = count_sentences(text);
 
-    printf("%s  %i letters\n", text, letters);
+    printf("%s  %i letters, %i words\n", text, letters, words);
 }
 
 
@@ -53,7 +53,7 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    
+
 }
 
 
