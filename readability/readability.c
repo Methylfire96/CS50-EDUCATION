@@ -28,8 +28,7 @@ int main(void)
 
 int count_letters(string text)
 {
-    int letter_count[text];
-    letter_count[0] = 1
+    int letter_count = 0;
     int len = strlen(text);
 
     for (int i = 0; i < len; i++)
