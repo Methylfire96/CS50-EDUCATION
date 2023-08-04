@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 int TEXT[];
+
 int coleman_liau_formula(string letters,int words,int sentences);
 
 
@@ -32,14 +33,15 @@ int count_letters(string text)
     {
         if(isupper(text[i]))
         {
-            letter_count = TEXT[word[i] - 'A'];
+            letter_count = TEXT[text[i] - 'A'];
         }
     }
+    return letter_count;
 }
 
 
 
-
+/*
 int count_words(string text)
 {
 
@@ -60,5 +62,5 @@ int coleman_liau_formula(string letters,int words,int sentences);
 {
     //max grade 16+ and min grade 1
 }
-
+*/
 
