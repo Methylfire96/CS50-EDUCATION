@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-
-int coleman_liau_formula(string letters,int words,int sentences);
+int count_letters(string text);
+//int coleman_liau_formula(string letters,int words,int sentences);
 
 
 int main(void)
