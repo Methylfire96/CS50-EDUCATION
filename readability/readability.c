@@ -14,7 +14,7 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Please enter your text: ");
-    return printf("%s\n", text);
+    printf("%s\n", text);
 
     int letters = count_letters(text);
     int words = count_words(text);
@@ -36,7 +36,7 @@ int count_letters(string text)
         letter_count += text[i];
     }
     return letter_count;
-    
+
 }
 
 
