@@ -33,7 +33,7 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        letter_count += text[i];
+        letter_count = text[i];
     }
     return letter_count;
 
