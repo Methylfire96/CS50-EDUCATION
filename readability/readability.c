@@ -9,7 +9,7 @@ int count_letters(string text);
 //int count_words(string text);
 //int count_sentences(string text);
 
-//int coleman_liau_formula(string letters,int words,int sentences);
+//int coleman_liau_formula(string letters,string words,int sentences);
 
 
 int main(void)
@@ -51,16 +51,13 @@ int count_letters(string text)
     return letter_count;
 }
 
-
-
-/*
 int count_words(string text)
 {
 
 }
 
 
-
+/*
 int count_sentences(string text)
 {
 
@@ -69,7 +66,7 @@ int count_sentences(string text)
 
 
 
-int coleman_liau_formula(string letters,int words,int sentences);
+int coleman_liau_formula(string letters,string words,int sentences);
 
 {
     //max grade 16+ and min grade 1
