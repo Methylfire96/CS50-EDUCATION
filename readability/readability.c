@@ -38,11 +38,11 @@ int count_letters(string text)
         {
             letter_count += ALPHABET[text[i] - 'A'];
         }
-        if(isblank(text[i]))
+        /*if(isblank(text[i]))
         {
             letter_count += (ALPHABET[text[i] + 1]);
 
-        }
+        }*/
         if(islower(text[i]))
         {
             letter_count += ALPHABET[text[i] - 'a'];
