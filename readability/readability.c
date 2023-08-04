@@ -54,7 +54,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     int word_count = 0;
-    if(text != isspace(text))
+    if(isspace(text))
     {
         return word_count + 1;
     }
