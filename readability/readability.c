@@ -58,7 +58,7 @@ int count_words(string text)
 
     for(int i = 0; i < blank; i++)
     {
-        word_count = + 1;
+        word_count = text[i] + 1;
 
     }
     return word_count;
