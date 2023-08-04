@@ -49,7 +49,6 @@ int compute_score(string word)
         {
             score += POINTS[word[i] - 'a'];
         }
-        while()
     }
     return score;
 }
