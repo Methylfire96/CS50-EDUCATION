@@ -60,9 +60,10 @@ int count_words(string text)
     {
         if(isblank(text[i]))
         {
-            word_count += ALPHABET[text[i]]
+            word_count += ALPHABET[text[i] + 1];
         }
     }
+    return word_count;
 }
 
 
