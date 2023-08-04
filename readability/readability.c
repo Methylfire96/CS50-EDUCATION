@@ -56,7 +56,7 @@ int count_words(string text)
     int word_count = 0;
     if(isspace(text))
     {
-        return word_count + 1;
+        word_count = word_count + 1;
     }
 
 
