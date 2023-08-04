@@ -32,7 +32,7 @@ int count_letters(string text)
     {
         if(isupper(text[i]))
         {
-            letter_count = text[text[i] - 'A'];
+            letter_count = (text[i] - 'A');
         }
     }
     return letter_count;
