@@ -6,7 +6,7 @@
 
 int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int count_letters(string text);
-//int count_words(string text);
+int count_words(string text);
 //int count_sentences(string text);
 
 //int coleman_liau_formula(string letters,string words,int sentences);
@@ -53,7 +53,7 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-
+    
 }
 
 
