@@ -60,7 +60,7 @@ int count_words(string text)
     {
         if(isblank(text[i]))
         {
-            word_count = text[i] + 1;
+            word_count = + 1;
         }
     }
     return word_count;
