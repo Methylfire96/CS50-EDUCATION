@@ -35,7 +35,7 @@ int count_letters(string text)
     {
         letter_count += text[i];
     }
-    while(text == isupper && islower && isblank)
+    while(string text == isupper && islower && isblank)
     {
         return letter_count;
     }
