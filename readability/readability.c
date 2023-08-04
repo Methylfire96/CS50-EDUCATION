@@ -5,6 +5,9 @@
 #include <stdlib.h>
 
 int count_letters(string text);
+int count_words(string text);
+int count_sentences(string text);
+
 //int coleman_liau_formula(string letters,int words,int sentences);
 
 
@@ -14,8 +17,8 @@ int main(void)
     return printf("%s\n", text);
 
     int letters = count_letters(text);
-    //int words = count_words(text);
-    //int sentencescount_sentences = (text);
+    int words = count_words(text);
+    int sentences = count_sentences(text);
 
 
 }
