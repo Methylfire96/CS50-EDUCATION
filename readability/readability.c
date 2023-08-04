@@ -33,12 +33,13 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        if(isupper(text[i]))
-        {
-            letter_count = (text[i] - 'A');
-        }
+        letter_count += text[i];
     }
-    return letter_count;
+    while(text == isupper && islower && isblank)
+    {
+        return letter_count;
+    }
+    return printf("somethings wrong\n");
 }
 
 
