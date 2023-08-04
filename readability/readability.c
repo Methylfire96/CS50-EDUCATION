@@ -49,7 +49,6 @@ int count_letters(string text)
         }
     }
     return letter_count;
-
 }
 
 
