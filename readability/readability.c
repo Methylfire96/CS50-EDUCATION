@@ -54,13 +54,14 @@ int count_letters(string text)
 int count_words(string text)
 {
     int word_count = 0;
-    int blank = isblank(text);
-
-    for(int i = 0; i < blank; i++)
+    if()
     {
-        word_count = text[i] + 1;
 
     }
+
+
+
+
     return word_count;
 }
 
