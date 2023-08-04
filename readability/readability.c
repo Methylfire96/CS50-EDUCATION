@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+int ALPHABET[26] = {1};
 int count_letters(string text);
 //int count_words(string text);
 //int count_sentences(string text);
@@ -33,7 +34,7 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        letter_count = text[i] - 'A';
+        letter_count = ALPHABET[text[i] - 'A'];
     }
     return letter_count;
 
