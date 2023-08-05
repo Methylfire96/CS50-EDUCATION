@@ -30,7 +30,7 @@ int main(void)
     }
     else if(grade > 16)
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
     else
     {
@@ -118,13 +118,7 @@ int coleman_liau_formula(int letters,int words,int sentences)
     float S = (sentences * 100) / words;
 
     int grade = lround(0.0588 * L - 0.296 * S - 15.8);
-    if(grade < 1)
-    {
-        return 1;
-    }
-    else if(grade > 16)
-    {
-        return 16;
-    }
+    while(grade > 1 && grade < 16);
+
     return grade;
 }
