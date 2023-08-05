@@ -120,15 +120,11 @@ int coleman_liau_formula(int letters,int words,int sentences)
     int grade_count = lround(0.0588 * L - 0.296 * S - 15.8);
     if(grade_count < 1)
     {
-        printf("Before Grade 1\n");
+        return 1;
     }
     else if(grade_count > 16)
     {
-        printf("Grade 16+");
+        return 16;
     }
-    else
-    {
-        printf("Grade %i\n", grade_count);
-    }
-
+    return grade_count;
 }
