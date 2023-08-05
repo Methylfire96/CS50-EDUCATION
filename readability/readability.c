@@ -47,6 +47,11 @@ int count_letters(string text)
 
 int count_words(string text)
 {
+    if(text[0] != ' ')
+        {
+            return 1;
+        }
+
     int word_count = 1;
     int len = strlen(text);
 
@@ -56,10 +61,7 @@ int count_words(string text)
         {
             word_count++;
         }
-        if(text[0] != ' ')
-        {
-            return repeat the question
-        }
+
 
     }
     return word_count;
