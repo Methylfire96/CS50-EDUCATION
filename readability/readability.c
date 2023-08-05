@@ -56,7 +56,10 @@ int count_words(string text)
         {
             word_count++;
         }
-        while(text[0] != ' ');
+        if(text[0] == ' ')
+        {
+            printf("no space before the text, thank you");
+        }
     }
     return word_count;
 }
