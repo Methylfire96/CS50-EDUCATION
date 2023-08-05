@@ -16,6 +16,16 @@ int main(void)
 {
     string text = get_string("Please enter your text: ");
 
+    if(text[0] != ' ')
+    {
+        do
+        {
+            printf("The first character cannot be a space. Please enter your text again: ");
+            text = get_string("");
+
+        }
+        while (text[0] == ' ');
+    }
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
@@ -28,16 +38,7 @@ int main(void)
 
 int count_letters(string text)
 {
-    if(text[0] != ' ')
-    {
-        do
-        {
-            printf("The first character cannot be a space. Please enter your text again: ");
-            text = get_string("");
 
-        }
-        while (text[0] == ' ');
-    }
     int letter_count = 0;
     int len = strlen(text);
 
