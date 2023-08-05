@@ -56,8 +56,9 @@ int count_words(string text)
         {
             printf("The first character cannot be a space. Please enter your text again: ");
             text = get_string("");
-            while (text[0] == ' ');
+
         }
+        while (text[0] == ' ');
     }
 
     for (int i = 0; i < len; i++)
