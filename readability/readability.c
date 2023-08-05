@@ -18,10 +18,9 @@ int main(void)
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
-    int grade = int coleman_liau_formula(int letters,int words,int sentences);
+    int grade = coleman_liau_formula(letters,words,sentences);
 
-
-    printf("%s  %i letters, %i words, % i sentences\n", text, letters, words, sentences);
+    printf("%s - Grade %i \n", text, grade);
 }
 
 
@@ -95,20 +94,14 @@ int count_sentences(string text)
 
 
 
-int coleman_liau_formula(int letters,int words,int sentences);
+int coleman_liau_formula(int letters,int words,int sentences)
 {
     float L = letters / (words * 100);
     float S = sentences / (words * 100);
 
-    for(int coleman_liau_formula)
-    {
-        do
-        {
-            int grade = ((0.0588 * L) - (0.296 * S) - 15.8);
-            return grade;
-        }
-        printf("%s Grade %i ", text, grade);
-    }
+    int grade = ((0.0588 * L) - (0.296 * S) - 15.8);
+
+    return grade;
 
 }
 
