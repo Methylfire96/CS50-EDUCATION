@@ -49,7 +49,10 @@ int count_words(string text)
 {
     if(text[0] != ' ')
         {
-            return 1;
+            do
+            {
+                
+            }
         }
 
     int word_count = 1;
