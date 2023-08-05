@@ -56,7 +56,7 @@ int count_words(string text)
         {
             word_count++;
         }
-        while(text[0] != ' ' || text != '  ');
+        while(text[0] != ' ');
     }
     return word_count;
 }
