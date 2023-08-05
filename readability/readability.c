@@ -117,14 +117,14 @@ int coleman_liau_formula(int letters,int words,int sentences)
     float L = (letters * 100) / words;
     float S = (sentences * 100) / words;
 
-    int grade_count = lround(0.0588 * L - 0.296 * S - 15.8);
-    if(grade_count < 1)
+    int grade = lround(0.0588 * L - 0.296 * S - 15.8);
+    if(grade < 1)
     {
         return 1;
     }
-    else if(grade_count > 16)
+    else if(grade > 16)
     {
         return 16;
     }
-    return grade_count;
+    return grade;
 }
