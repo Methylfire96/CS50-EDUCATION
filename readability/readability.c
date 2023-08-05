@@ -56,6 +56,7 @@ int count_words(string text)
         {
             word_count++;
         }
+        while(text[0] != ' ' || text != '  ');
     }
     return word_count;
 }
@@ -66,7 +67,7 @@ int count_sentences(string text)
 {
     int sentence_count = 0;
     int len = strlen(text);
-    
+
     for (int i = 0; i < len; i++)
     {
         if(text[i] == '!' || text[i] == '?' || text[i] == '.')
