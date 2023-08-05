@@ -98,16 +98,19 @@ int coleman_liau_formula(int letters,int words,int sentences);
     float L = letters / (words * 100);
     float S = sentences / (words * 100);
 
-    int coleman_liau_formula = ((0.0588 * L) - (0.296 * S) - 15.8);
-
     for(int coleman_liau_formula)
     {
-        printf(")
+        do
+        {
+            int grade = ((0.0588 * L) - (0.296 * S) - 15.8);
+            return grade;
+        }
+        printf("%s Grade %i ", text, grade);
     }
 
-
-
-    //max grade 16+ and min grade 1
 }
 
 
+
+
+//max grade 16+ and min grade 1
