@@ -8,8 +8,7 @@ int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-
-//int coleman_liau_formula(string letters,string words,int sentences);
+int coleman_liau_formula(int letters,int words,int sentences);
 
 
 int main(void)
@@ -94,7 +93,7 @@ int count_sentences(string text)
 
 
 
-int coleman_liau_formula(string letters,string words,int sentences);
+int coleman_liau_formula(int letters,int words,int sentences);
 {
     float L = letters / (words * 100);
     float S = sentences / (words * 100);
