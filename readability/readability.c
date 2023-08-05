@@ -6,8 +6,8 @@
 
 int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int count_letters(string text);
-//int count_words(string text);
-//int count_sentences(string text);
+int count_words(string text);
+int count_sentences(string text);
 
 //int coleman_liau_formula(string letters,string words,int sentences);
 
@@ -16,12 +16,11 @@ int main(void)
 {
     string text = get_string("Please enter your text: ");
 
-
     int letters = count_letters(text);
-    //int words = count_words(text);
-    //int sentences = count_sentences(text);
+    int words = count_words(text);
+    int sentences = count_sentences(text);
 
-    printf("%s  %i letters\n", text, letters);
+    printf("%s  %i letters, %i words, % i sentences\n", text, letters, words, sentences);
 }
 
 
@@ -38,11 +37,6 @@ int count_letters(string text)
         {
             letter_count += ALPHABET[text[i] - 'A'];
         }
-        /*if(isblank(text[i]))
-        {
-            letter_count += (ALPHABET[text[i] + 1]);
-
-        }*/
         if (islower(text[i]))
         {
             letter_count += ALPHABET[text[i] - 'a'];
@@ -51,17 +45,18 @@ int count_letters(string text)
     return letter_count;
 }
 
-/* int count_words(string text)
+int count_words(string text)
 {
-    int word_count = 0;
-    if(isspace(text))
+    int word_count = 1;
+    int len = strlen(text);
+
+    for (int i = 0; i < len; i++)
     {
-        word_count = word_count + 1;
+        if(text[i] == ' ')
+        {
+            word_count++;
+        }
     }
-
-
-
-
     return word_count;
 }
 
@@ -69,13 +64,23 @@ int count_letters(string text)
 
 int count_sentences(string text)
 {
-
+    int sentence_count = 0;
+    int len = strlen(text);
+    
+    for (int i = 0; i < len; i++)
+    {
+        if(text[i] == '!' || text[i] == '?' || text[i] == '.')
+        {
+            sentence_count++;
+        }
+    }
+    return sentence_count;
 }
 
 
 
 
-int coleman_liau_formula(string letters,string words,int sentences);
+/*int coleman_liau_formula(string letters,string words,int sentences);
 
 {
     //max grade 16+ and min grade 1
