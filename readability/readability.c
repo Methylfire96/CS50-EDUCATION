@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+
 
 int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int count_letters(string text);
@@ -99,7 +101,7 @@ int coleman_liau_formula(int letters,int words,int sentences)
     float L = (letters * 100) / words;
     float S = (sentences * 100) / words;
 
-    int grade = (0.0588 * L - 0.296 * S - 15.8);
+    int grade = lround(0.0588 * L - 0.296 * S - 15.8);
     while(grade >=1 && grade <=16);
 
     return grade;
