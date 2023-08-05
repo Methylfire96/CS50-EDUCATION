@@ -18,6 +18,8 @@ int main(void)
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
+    int grade = int coleman_liau_formula(int letters,int words,int sentences);
+
 
     printf("%s  %i letters, %i words, % i sentences\n", text, letters, words, sentences);
 }
