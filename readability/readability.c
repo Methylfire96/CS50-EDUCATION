@@ -61,8 +61,6 @@ int count_words(string text)
         {
             word_count++;
         }
-
-
     }
     return word_count;
 }
