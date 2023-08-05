@@ -96,10 +96,10 @@ int count_sentences(string text)
 
 int coleman_liau_formula(int letters,int words,int sentences)
 {
-    float L = letters / (words * 100);
-    float S = sentences / (words * 100);
+    float L = (letters * 100) / words;
+    float S = (sentences * 100) / words;
 
-    int grade = ((0.0588 * L) - (0.296 * S) - 15.8);
+    int grade = (0.0588 * L - 0.296 * S - 15.8);
 
     return grade;
 
