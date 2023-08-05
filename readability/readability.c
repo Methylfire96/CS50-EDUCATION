@@ -101,6 +101,11 @@ int coleman_liau_formula(string letters,string words,int sentences);
 
     int coleman_liau_formula = ((0.0588 * L) - (0.296 * S) - 15.8);
 
+    for(int coleman_liau_formula)
+    {
+        printf(")
+    }
+
 
 
     //max grade 16+ and min grade 1
