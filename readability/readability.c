@@ -100,6 +100,7 @@ int coleman_liau_formula(int letters,int words,int sentences)
     float S = (sentences * 100) / words;
 
     int grade = (0.0588 * L - 0.296 * S - 15.8);
+    while(grade >=1 && grade <=16);
 
     return grade;
 
