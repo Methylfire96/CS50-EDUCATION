@@ -50,16 +50,13 @@ int count_words(string text)
     int word_count = 1;
     int len = strlen(text);
 
-    if(text[0] == ' ')
+    while(text[0] == ' ')
     {
-        do
-        {
-            printf("The first character cannot be a space. Please enter your text again: ");
-            text = get_string("");
+        printf("The first character cannot be a space. Please enter your text again: ");
+        text = get_string("");
 
-        }
-        while (text[0] == ' ');
     }
+
 
     for (int i = 0; i < len; i++)
     {
@@ -77,6 +74,12 @@ int count_sentences(string text)
 {
     int sentence_count = 0;
     int len = strlen(text);
+
+    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.')
+    {
+        printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
+        text = get_string("");
+    }
 
     for (int i = 0; i < len; i++)
     {
