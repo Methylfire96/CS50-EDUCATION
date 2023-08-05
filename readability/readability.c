@@ -58,7 +58,7 @@ int count_words(string text)
         }
         if(text[0] != ' ')
         {
-            return string text;
+            return repeat the question
         }
 
     }
