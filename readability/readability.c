@@ -112,6 +112,9 @@ int coleman_liau_formula(int letters,int words,int sentences)
     {
         printf("Grade 16+");
     }
-    return grade_count;
+    else
+    {
+        printf("Grade %i\n", grade_count);
+    }
 
 }
