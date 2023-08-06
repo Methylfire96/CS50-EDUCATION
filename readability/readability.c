@@ -51,7 +51,7 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int word_count = 1;
+    int word_count = 0;
     int len = strlen(text);
 
     if(text[0] == ' ')
@@ -69,7 +69,7 @@ int count_words(string text)
             word_count++;
         }
     }
-    return word_count;
+    return word_count + 1;
 }
 
 
