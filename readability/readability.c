@@ -1,11 +1,9 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
@@ -43,13 +41,9 @@ int count_letters(string text)
 
     for (int i = 0; i < len; i++)
     {
-        if (isupper(text[i]))
+        if (isalpha(text[i]))
         {
-            letter_count += ALPHABET[text[i] - 'A'];
-        }
-        if (islower(text[i]))
-        {
-            letter_count += ALPHABET[text[i] - 'a'];
+            letter_count++;
         }
     }
     return letter_count;
