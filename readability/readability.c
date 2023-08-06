@@ -13,7 +13,6 @@ int coleman_liau_formula(int letters,int words,int sentences);
 int main(void)
 {
     string text;
-    int len = strlen(text);
     do
     {
         text = get_string("Please enter your text: ");
