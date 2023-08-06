@@ -58,6 +58,7 @@ int count_words(string text)
     {
         printf("The first character cannot be a space. Please enter your text again: ");
         text = get_string("");
+        len = strlen(text);//update the new asked text length!
 
     }
 
@@ -83,7 +84,6 @@ int count_sentences(string text)
     {
         printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
         text = get_string("");
-        //update the new asked text length!
         len = strlen(text);
     }
 
