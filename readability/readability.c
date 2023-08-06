@@ -11,7 +11,12 @@ int coleman_liau_formula(int letters,int words,int sentences);
 
 int main(void)
 {
-    string text = get_string("Please enter your text: ");
+    string text;
+    do
+    {
+        text = get_string("Please enter your text: ");
+    }
+    while(text[0] == ' ');
 
     int letters = count_letters(text);
     int words = count_words(text);
@@ -54,14 +59,6 @@ int count_words(string text)
     int word_count = 1;
     int len = strlen(text);
 
-    if(text[0] == ' ')
-    {
-        printf("The first character cannot be a space. Enter your text again: ");
-        text = get_string("");
-        len = strlen(text);//update the new length of the text!
-
-    }
-
     for (int i = 0; i < len; i++)
     {
         if(text[i] == ' ')
@@ -83,7 +80,7 @@ int count_sentences(string text)
     {
         printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
         text = get_string("");
-        len = strlen(text);
+        len = strlen(text);//update new length!
     }
 
     for (int i = 0; i < len; i++)
