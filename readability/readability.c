@@ -23,7 +23,7 @@ int main(void)
     int sentences = count_sentences(text);
     int grade = coleman_liau_formula(letters, words, sentences);
 
-    printf("%s - ", text);
+    printf("%s \n", text);
 
     if (grade < 1)
     {
