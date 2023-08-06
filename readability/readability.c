@@ -18,7 +18,7 @@ int main(void)
         text = get_string("Please enter your text: ");
     }
 
-    while(text[0] == ' ' && text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"');
+    while(text[0] == ' ' && text[strlen(text) - 1] != '!' && text[strlen(text) - 1] != '?' && text[strlen(text) - 1] != '.' && text[strlen(text) - 1] != '.' && text[strlen(text) - 1] != '"');
 
     int letters = count_letters(text);
     int words = count_words(text);
