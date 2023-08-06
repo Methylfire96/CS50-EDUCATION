@@ -91,7 +91,7 @@ int count_sentences(string text)
     int sentence_count = 0;
     int len = strlen(text);
 
-    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '"')
+    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"')
     {
         printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
         text = get_string("");
