@@ -118,7 +118,5 @@ int coleman_liau_formula(int letters,int words,int sentences)
     float S = (sentences * 100) / words;
 
     int grade = lround(0.0588 * L - 0.296 * S - 15.8);
-   
-
     return grade;
 }
