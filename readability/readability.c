@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 
-const int len = strlen(text);
+
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
@@ -13,10 +13,12 @@ int coleman_liau_formula(int letters,int words,int sentences);
 int main(void)
 {
     string text;
+    int len = strlen(text);
     do
     {
         text = get_string("Please enter your text: ");
     }
+
     while(text[0] == ' ' && text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"');
 
     int letters = count_letters(text);
@@ -43,6 +45,7 @@ int main(void)
 int count_letters(string text)
 {
     int letter_count = 0;
+    int len = strlen(text);
 
 
     for (int i = 0; i < len; i++)
