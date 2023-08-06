@@ -4,7 +4,6 @@
 #include <string.h>
 #include <math.h>
 
-
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
@@ -17,8 +16,7 @@ int main(void)
     {
         text = get_string("Please enter your text: ");
     }
-
-    while(text[0] == ' ' || text[strlen(text) - 1] != '!' || text[strlen(text) - 1] != '?' || text[strlen(text) - 1] != '.' || text[strlen(text) - 1] != '.' || text[strlen(text) - 1] != '"');
+    while(text[0] == ' ');
 
     int letters = count_letters(text);
     int words = count_words(text);
@@ -45,7 +43,6 @@ int count_letters(string text)
 {
     int letter_count = 0;
     int len = strlen(text);
-
 
     for (int i = 0; i < len; i++)
     {
@@ -78,6 +75,13 @@ int count_sentences(string text)
 {
     int sentence_count = 0;
     int len = strlen(text);
+
+    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"')
+    {
+        printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
+        text = get_string("");
+        len = strlen(text);//update new length!
+    }
 
     for (int i = 0; i < len; i++)
     {
