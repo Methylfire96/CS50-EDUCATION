@@ -16,7 +16,7 @@ int main(void)
     {
         text = get_string("Please enter your text: ");
     }
-    while(text[0] == ' ');
+    while(text[0] == ' ' && text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"');
 
     int letters = count_letters(text);
     int words = count_words(text);
@@ -75,13 +75,6 @@ int count_sentences(string text)
 {
     int sentence_count = 0;
     int len = strlen(text);
-
-    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"')
-    {
-        printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
-        text = get_string("");
-        len = strlen(text);//update new length!
-    }
 
     for (int i = 0; i < len; i++)
     {
