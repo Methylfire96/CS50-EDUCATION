@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <ctype.h>
 #include <stdio.h>
+#include <ctype.h>
 #include <string.h>
 #include <math.h>
 
