@@ -1,13 +1,13 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
+#include <stdio.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-int coleman_liau_formula(int letters,int words,int sentences);
+int coleman_liau_formula(int letters, int words, int sentences);
 
 int main(void)
 {
@@ -16,20 +16,20 @@ int main(void)
     {
         text = get_string("Please enter your text: ");
     }
-    while(text[0] == ' ');
+    while (text[0] == ' ');
 
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
-    int grade = coleman_liau_formula(letters,words,sentences);
+    int grade = coleman_liau_formula(letters, words, sentences);
 
     printf("%s - ", text);
 
-    if(grade < 1)
+    if (grade < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if(grade > 16)
+    else if (grade > 16)
     {
         printf("Grade 16+\n");
     }
@@ -61,7 +61,7 @@ int count_words(string text)
 
     for (int i = 0; i < len; i++)
     {
-        if(text[i] == ' ')
+        if (text[i] == ' ')
         {
             word_count++;
         }
@@ -69,23 +69,21 @@ int count_words(string text)
     return word_count;
 }
 
-
-
 int count_sentences(string text)
 {
     int sentence_count = 0;
     int len = strlen(text);
 
-    while(text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"')
+    while (text[len - 1] != '!' && text[len - 1] != '?' && text[len - 1] != '.' && text[len - 1] != '.' && text[len - 1] != '"')
     {
         printf("Please make sure your text ends with a period, exclamation mark, or question mark. Enter your text again: ");
         text = get_string("");
-        len = strlen(text);//update new length!
+        len = strlen(text); // update new length!
     }
 
     for (int i = 0; i < len; i++)
     {
-        if(text[i] == '!' || text[i] == '?' || text[i] == '.')
+        if (text[i] == '!' || text[i] == '?' || text[i] == '.')
         {
             sentence_count++;
         }
@@ -93,10 +91,7 @@ int count_sentences(string text)
     return sentence_count;
 }
 
-
-
-
-int coleman_liau_formula(int letters,int words,int sentences)
+int coleman_liau_formula(int letters, int words, int sentences)
 {
     float L = (letters * 100) / (float) words;
     float S = (sentences * 100) / (float) words;
