@@ -5,13 +5,11 @@
 #include <string.h>
 #include <math.h>
 
-
 int ALPHABET[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
 int coleman_liau_formula(int letters,int words,int sentences);
-
 
 int main(void)
 {
@@ -36,11 +34,7 @@ int main(void)
     {
         printf("Grade %i\n", grade);
     }
-
 }
-
-
-//counting letters, words, sentences
 
 int count_letters(string text)
 {
