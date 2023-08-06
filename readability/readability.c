@@ -58,7 +58,7 @@ int count_words(string text)
     {
         printf("The first character cannot be a space. Please enter your text again: ");
         text = get_string("");
-        len = strlen(text);//update the new asked text length!
+        len = strlen(text);//update the new length of the text!
 
     }
 
