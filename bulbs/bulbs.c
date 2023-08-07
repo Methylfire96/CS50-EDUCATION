@@ -8,7 +8,24 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+    string text = get_string("what text should we krypt?: ");
+    int len = strlen(text);
+
+    for(int i = 0; i < len; i++)
+    {
+        char c = text[i];
+        int value = (int) c;
+
+        for(int j = BITS_IN_BYTE - 1; j >= 0; j--)
+        {
+            int bit = (value >> j) & 1;
+            print_bulb(bit);
+        }
+        printf(" ");
+    }
+    printf("\n");
+
+    return 0;
 }
 
 void print_bulb(int bit)
