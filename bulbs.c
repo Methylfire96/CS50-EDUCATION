@@ -10,12 +10,8 @@
 int main (void)
 {
     string text = get_string("What text, should we krypt?: \n");
-    int len = strlen(text);
-    for(int i = 0; i < len, i++)
-    {
-        printf("%i", text[i]);
-    }
-
+    text = char text1;
+    printf("%i", text1);
 
 
 
