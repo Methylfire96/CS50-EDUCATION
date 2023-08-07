@@ -9,7 +9,7 @@
 int main (void)
 {
     string text = get_string("What text, should we krypt?: \n");
-    char len = strlen(text);
+    int len = strlen(text);
     printf("%i", len);
 
 }
