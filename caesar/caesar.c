@@ -54,5 +54,5 @@ int count_c(string plaintext);
 int cipher(int number, int key)
 {
     int ci = number + key;
-    char letter_ci
+    char letter_ci = int ci
 }
