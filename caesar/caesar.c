@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(int argc, char *plaintext[])
+int main(int argc, char *argv[])
 {
     if (argc > 0 && argc < 26)
     {
@@ -16,6 +16,8 @@ int main(int argc, char *plaintext[])
             plaintext = get_string("Plaintext: ");
         }
     }
+    printf("Ciphertext: \n", argv[]);
+    return 0;
 
 
 
