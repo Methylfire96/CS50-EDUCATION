@@ -50,3 +50,8 @@ int count_c(string plaintext);
     }
     return number;
 }
+
+int cipher(int number)
+{
+    char ci = 
+}
