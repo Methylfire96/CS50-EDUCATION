@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         string plaintext = get_string("Plaintext: ");
         int count_c(string plaintext);
 
-        printf("%i %s\n", plain_number, argv[1]);
+        printf("%i %s\n", c, argv[1]);
         return 0;
     }
 }
