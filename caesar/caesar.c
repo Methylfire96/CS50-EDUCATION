@@ -6,11 +6,18 @@ int main(int argc, string argv[])
     int key;
     do
     {
-        key = int_string("Usage: ./caesar key");
+        key = get_int("Usage: ./caesar key");
     }
     while(key == int);
 
-    
+    string plaintext;
+    do{
+        plaintext = get_string("")
+    }
+
+
+
+    string ciphertext;
 
 
 }
