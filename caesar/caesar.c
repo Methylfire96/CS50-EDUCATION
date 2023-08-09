@@ -13,10 +13,12 @@ int main(int argc, char *argv[])
         printf("Usage: ./caesar key\n", argv[0]);
         return 1;
     }
-    else
-    {
-        string plaintext = get_string("Plaintext: ");
-        int count_c(string plaintext);
+
+    int key = atoi(argv[1]);
+
+    string plaintext = get_string("Plaintext: ");
+    
+    int count_c(string plaintext);
         char c = count_c;
         printf("%s %s\n", c, argv[1]);
         return 0;
