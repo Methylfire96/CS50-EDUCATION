@@ -16,7 +16,11 @@ int main(int argc, string argv[])
         plaintext = get_string("Plaintext: ");
     }
 
-    string ciphertext
+    string ciphertext;
+    do
+    {
+        printf(plaintext + )
+    }
 
 
 
