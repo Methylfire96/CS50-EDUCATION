@@ -4,7 +4,14 @@
 int main(int argc, string argv[])
 {
     if (argc > 0 && argc < 26)
-    
+    {
+        printf("Usage: ./caesar key");
+        return 1;
+    }
+    else
+    {
+        printf
+    }
 
 
 
