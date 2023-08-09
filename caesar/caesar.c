@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     {
         string plaintext = get_string("Plaintext: ");
         char c1 = plaintext;
-        printf(" %i %s, c1, argv[1]);
+        printf("%i %s\n", c1, argv[1]);
         return 0;
     }
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     printf("Ciphertext: %s", ciphertext);
 
-*/
+
 
 }
 
@@ -56,3 +56,4 @@ int cipher(int number, int key)
     int ci = number + key;
     char letter_ci = int ci
 }
+*/
