@@ -20,7 +20,8 @@ int main(int argc, string argv[])
     do
     {
         char plaintext = int value;
-        int value = int value + int key;
+        int placeholder = int value + int key;
+        char ciphertext = i
     }
 
 
