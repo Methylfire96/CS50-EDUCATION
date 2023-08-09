@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int count_c
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -11,6 +13,7 @@ int main(int argc, char *argv[])
     else
     {
         string plaintext = get_string("Plaintext: ");
+        int c = count_c(plaintext);
         printf("Ciphertext: %s, %s \n", plaintext, argv[]);
         return 0;
     }
