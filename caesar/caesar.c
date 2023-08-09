@@ -18,17 +18,6 @@ int main(int argc, char *argv[])
 
     string plaintext = get_string("Plaintext: ");
     
-    int count_c(string plaintext);
-        char c = count_c;
-        printf("%s %s\n", c, argv[1]);
-        return 0;
-    }
-}
-
-
-int count_c(string plaintext);
-{
-    int c = 0;
     int len = strlen(plaintext);
 
     for (int i = 0; i < len; i++)
