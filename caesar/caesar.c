@@ -3,12 +3,12 @@
 
 int main(int argc, string argv[])
 {
-    string text;
+    int key;
     do
     {
-        text = get_string("Usage: ./caesar key");
+        key = int_string("Usage: ./caesar key");
     }
-    while(text == int);
+    while(key == int);
 
     
 
