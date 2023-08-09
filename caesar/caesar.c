@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     {
         string plaintext = get_string("Plaintext: ");
         int c = count_c(plaintext);
-        printf("Ciphertext: %s, %s, %i \n", plaintext, argv[], c);
+        printf("Ciphertext: %s, %s, %i \n", plaintext, argv[1], c);
         return 0;
     }
 
