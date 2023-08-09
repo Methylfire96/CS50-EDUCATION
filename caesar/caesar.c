@@ -19,15 +19,8 @@ int main(int argc, string plaintext[])
 
 
 
-    int key;
-    do
-    {
-        key = get_int("Usage: ./caesar key");
-    }
-    while(key == int);
-
-
-
+/*
+    string plaintext;
     string ciphertext;
 
 
@@ -37,7 +30,7 @@ int main(int argc, string plaintext[])
 
     printf("Ciphertext: %s", ciphertext);
 
-
+*/
 
 
 }
