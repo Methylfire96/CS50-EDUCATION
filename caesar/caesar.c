@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(int argc, string *argv[])
+int main(int argc, char *plaintext[])
 {
     if (argc > 0 && argc < 26)
     {
