@@ -21,7 +21,7 @@ int main(void)
             int bit = (value >> j) & 1;
             print_bulb(bit);
         }
-        printf(" ");
+        printf("\n");
     }
     printf("\n");
 
