@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     if (argc > 0 && argc < 26)
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
     else
