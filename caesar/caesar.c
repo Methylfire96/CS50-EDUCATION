@@ -1,5 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <math.h>
+#include <string.h>
 
 int count_c(string plaintext);
 
