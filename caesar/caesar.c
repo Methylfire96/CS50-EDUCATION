@@ -19,7 +19,8 @@ int main(int argc, string argv[])
     string ciphertext;
     do
     {
-        printf(plaintext + )
+        char plaintext = int value;
+        int value = int value + int key;
     }
 
 
