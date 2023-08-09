@@ -11,9 +11,10 @@ int main(int argc, char *argv[])
     else
     {
         string plaintext = get_string("Plaintext: ");
+        printf("Ciphertext: %s \n", plaintext, argv[]);
+        return 0;
     }
-    printf("Ciphertext: %s \n", argv[1]);
-    return 0;
+
 
 
 
