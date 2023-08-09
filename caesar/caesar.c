@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int count_c
+int count_c(string plaintext);
 
 int main(int argc, char *argv[])
 {
@@ -18,9 +18,6 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-
-
-
 /*
     string plaintext;
     string ciphertext;
@@ -34,5 +31,19 @@ int main(int argc, char *argv[])
 
 */
 
+}
 
+int count_c(string plaintext);
+{
+    int  = 0;
+    int len = strlen(text);
+
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(text[i]))
+        {
+            letter_count++;
+        }
+    }
+    return letter_count;
 }
