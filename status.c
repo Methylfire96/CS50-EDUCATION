@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        printf("hello, %s\n", argv[]);
+        printf("hello, %s\n", argv[1]);
         return 0; // egal welche ZAHL
         //null bedeutet, das programm ist richtig durchgelaufen!
     }
