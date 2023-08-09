@@ -26,17 +26,17 @@ int main(int argc, char *argv[])
 
 int count_c(string plaintext);
 {
-    int plain_number = 0;
+    int c = 0;
     int len = strlen(plaintext);
 
     for (int i = 0; i < len; i++)
     {
         if (isalpha(plaintext[i]))
         {
-            plain_number++;
+            c++;
         }
     }
-    return plain_number;
+    return c;
 }
 /*
     string plaintext;
