@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <math.h>
+#include <stdlib.h>
 #include <string.h>
 
 int count_c(string plaintext);
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key\n", argv[0]);
         return 1;
     }
     else
