@@ -35,15 +35,15 @@ int main(int argc, char *argv[])
 
 int count_c(string plaintext);
 {
-    int  = 0;
-    int len = strlen(text);
+    int number = 0;
+    int len = strlen(plaintext);
 
     for (int i = 0; i < len; i++)
     {
-        if (isalpha(text[i]))
+        if (isalpha(plaintext[i]))
         {
-            letter_count++;
+            number++;
         }
     }
-    return letter_count;
+    return number;
 }
