@@ -11,13 +11,13 @@ int main(int argc, string argv[])
     while(key == int);
 
     string plaintext;
-    do{
-        plaintext = get_string("")
+    do
+    {
+        plaintext = get_string("Plaintext: ");
     }
 
+    string ciphertext
 
-
-    string ciphertext;
 
 
 }
