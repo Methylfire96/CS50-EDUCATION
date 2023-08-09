@@ -51,7 +51,8 @@ int count_c(string plaintext);
     return number;
 }
 
-int cipher(int number)
+int cipher(int number, int key)
 {
-    char ci = 
+    int ci = number + key;
+    char letter_ci
 }
