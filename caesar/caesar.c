@@ -16,11 +16,28 @@ int main(int argc, char *argv[])
     else
     {
         string plaintext = get_string("Plaintext: ");
-        char c1 = plaintext;
+        int count_c(string plaintext);
+        char c1 = plain_number;
         printf("%i %s\n", c1, argv[1]);
         return 0;
     }
+}
 
+
+int count_c(string plaintext);
+{
+    int plain_number = 0;
+    int len = strlen(plaintext);
+
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(plaintext[i]))
+        {
+            plain_number++;
+        }
+    }
+    return plain_number;
+}
 /*
     string plaintext;
     string ciphertext;
@@ -34,22 +51,9 @@ int main(int argc, char *argv[])
 
 
 
-}
 
-int count_c(string plaintext);
-{
-    int number = 0;
-    int len = strlen(plaintext);
 
-    for (int i = 0; i < len; i++)
-    {
-        if (isalpha(plaintext[i]))
-        {
-            number++;
-        }
-    }
-    return number;
-}
+
 
 int cipher(int number, int key)
 {
