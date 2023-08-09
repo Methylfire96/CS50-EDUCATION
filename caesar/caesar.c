@@ -17,12 +17,14 @@ int main(int argc, string argv[])
     }
 
     string ciphertext;
-    do
-    {
-        char plaintext = int value;
-        int placeholder = int value + int key;
-        char ciphertext = i
-    }
+
+
+    char plaintext = int value;
+    int placeholder = int value + int key;
+    char ciphertext = int placeholder
+
+    printf("Ciphertext: %s", ciphertext);
+
 
 
 
