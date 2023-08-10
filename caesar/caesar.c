@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
         if (isalpha(plaintext[i]))
         {
             char characters;
-            if (isupper(plaintext[i])
+            if (isupper(plaintext[i]))
             {
                 characters = 'A';
             }
@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
             }
         printf(" %c", (plaintext[i] - characters + key) % 26 + characters);
         }
+    }
     printf("\n");
     return 0;
 }
