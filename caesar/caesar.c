@@ -42,26 +42,3 @@ int main(int argc, char *argv[])
     printf("\n");
     return 0;
 }
-/*
-    string plaintext;
-    string ciphertext;
-
-
-    char plaintext = int value;
-    int placeholder = int value + int key;
-    char ciphertext = int placeholder
-
-    printf("Ciphertext: %s", ciphertext);
-
-
-
-
-
-
-
-int cipher(int number, int key)
-{
-    int ci = number + key;
-    char letter_ci = int ci
-}
-*/
