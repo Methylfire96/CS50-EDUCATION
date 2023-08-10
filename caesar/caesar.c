@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < len; i++)
     {
-        if (isalpha(plaintext[i]))
+        if (isupper(plaintext[i]))
         {
-            char base = isupper(plaintext[i]) ? 'A' : 'a';
-            printf(" %c", (plaintext[i] + key) % 26);
+
+            printf(" %c", (plaintext[i] - 65 + key) % 26 + 65);
         }
         else
         {
