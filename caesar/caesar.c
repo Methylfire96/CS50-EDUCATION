@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 
     int key = atoi(argv[1]);
 
-    string plaintext = get_string("Plaintext: ");
+
+    printf("Plaintext: ");
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
 
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
     {
         if (isalpha(plaintext[i]))
         {
-            printf(" %c", (plaintext[i] + key) % 26));
+            printf(" %c", (plaintext[i] + key) % 26);
         }
         else
         {
