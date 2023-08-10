@@ -32,11 +32,12 @@ int main(int argc, char *argv[])
             {
                 characters = 'A';
             }
-        else
-        {
-            printf("%c", plaintext[i]);
+            else
+            {
+                characters = 'a';
+            }
+        printf(" %c", (plaintext[i] - characters + key) % 26 + characters);
         }
-    }printf(" %c", (plaintext[i] - base + key) % 26 + base);
     printf("\n");
     return 0;
 }
