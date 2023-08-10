@@ -17,14 +17,17 @@ int main(int argc, char *argv[])
     int key = atoi(argv[1]);
 
     string plaintext = get_string("Plaintext: ");
-    
+    char plaintext[150];
+    fgets(plaintext, sizeof(plaintext), stdin);
+
+
     int len = strlen(plaintext);
 
     for (int i = 0; i < len; i++)
     {
         if (isalpha(plaintext[i]))
         {
-            c++;
+            char 
         }
     }
     return c;
