@@ -27,7 +27,11 @@ int main(int argc, char *argv[])
     {
         if (isalpha(plaintext[i]))
         {
-            char 
+            printf(" %c", (plaintext[i] + key) % 26));
+        }
+        else
+        {
+            printf("c)
         }
     }
     return c;
