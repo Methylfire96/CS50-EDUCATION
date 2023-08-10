@@ -31,10 +31,11 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("c)
+            printf("%c", plaintext[i]);
         }
     }
-    return c;
+    printf("\n");
+    return 0;
 }
 /*
     string plaintext;
