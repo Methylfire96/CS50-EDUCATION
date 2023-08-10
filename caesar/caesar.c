@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     {
         if (isalpha(plaintext[i]))
         {
+            char base = isupper(plaintext[i]) ? 'A' : 'a';
             printf(" %c", (plaintext[i] + key) % 26);
         }
         else
