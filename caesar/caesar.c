@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
         return 1;
     }
     //has to be a number
-    char num = argv[1];
-    for (int i = 0; num != '\0'; i++)
+    char *num = argv[1];
+    for (int i = 0; num[] != '\0'; i++)
     {
         if (!isdigit(num[i]))
         {
