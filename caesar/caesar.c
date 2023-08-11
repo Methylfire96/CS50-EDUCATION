@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     {
         int key = atoi(argv[1]);
     }
-    while (isdigit();
+    while (isdigit(key));
 
 
 
