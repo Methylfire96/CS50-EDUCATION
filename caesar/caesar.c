@@ -12,8 +12,12 @@ int main(int argc, char *argv[])
         printf("Usage: %s key\n", argv[0]);
         return 1;
     }
+    do
+    {
+        int key = atoi(argv[1]);
+    }
+    while (isdigit();
 
-    int key = atoi(argv[1]);
 
 
     printf("Plaintext: ");
