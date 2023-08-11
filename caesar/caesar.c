@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int key = atoi(argv[1]);
 
     //request plaintext
-    printf("Plaintext: \n");
+    printf("Plaintext: ");
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
 
@@ -46,11 +46,11 @@ int main(int argc, char *argv[])
             {
                 characters = 'a';
             }
-        printf("%c", (plaintext[j] - characters + key) % 26 + characters);
+        printf("%c\n", (plaintext[j] - characters + key) % 26 + characters);
         }
         else
         {
-            printf("%c", plaintext[j]);
+            printf("%c\n", plaintext[j]);
         }
     }
     printf("\n");
