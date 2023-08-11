@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int key = atoi(argv[1]);
 
     //request plaintext
-    printf("Plaintext: ");
+    printf("Plaintext: \n");
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
 
