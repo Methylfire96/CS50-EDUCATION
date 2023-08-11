@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     }
     //has to be a number
     char *num = argv[1];
-    for (int i = 0; num[] != '\0'; i++)
+    for (int i = 0; num[i] != '\0'; i++)
     {
         if (!isdigit(num[i]))
         {
@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 
     int len = strlen(plaintext);
 
-    for (int i = 0; i < len; i++)
+    for (int j = 0; j < len; j++)
     {
-        if (isalpha(plaintext[i]))
+        if (isalpha(plaintext[j]))
         {   //capital letters or not for the subtraction
             char characters;
-            if (isupper(plaintext[i]))
+            if (isupper(plaintext[j]))
             {
                 characters = 'A';
             }
@@ -46,11 +46,11 @@ int main(int argc, char *argv[])
             {
                 characters = 'a';
             }
-        printf(" %c", (plaintext[i] - characters + key) % 26 + characters);
+        printf(" %c", (plaintext[j] - characters + key) % 26 + characters);
         }
         else
         {
-            printf("%c", plaintext[i]);
+            printf("%c", plaintext[j]);
         }
     }
     printf("\n");
