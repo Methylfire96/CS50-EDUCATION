@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < len; i++)
     {
         if (isalpha(plaintext[i]))
-        {   //
+        {   //capital letters or not for the subtraction
             char characters;
             if (isupper(plaintext[i]))
             {
