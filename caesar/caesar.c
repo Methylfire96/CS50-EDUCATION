@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         {
             printf("%c", plaintext[j]);
         }
-        if (j < len - 1)
+        if (j == len - 1)
         {
             printf("");
         }
