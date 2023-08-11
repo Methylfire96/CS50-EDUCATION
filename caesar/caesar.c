@@ -6,16 +6,26 @@
 
 
 int main(int argc, char *argv[])
-{
+{   //request user
     if (argc != 2)
     {
         printf("Usage: %s key\n", argv[0]);
         return 1;
     }
-    
+    //has to be a number
+    char num = argv[1];
+    for (int i = 0; num != '\0'; i++)
+    {
+        if (!isdigit(num[i]))
+        {
+            printf("Usage: %s key\n", argv[0]);
+            return 1;
+        }
+    }
+    //switch string to int
     int key = atoi(argv[1]);
 
-
+    //request plaintext
     printf("Plaintext: ");
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
@@ -26,7 +36,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < len; i++)
     {
         if (isalpha(plaintext[i]))
-        {
+        {   //
             char characters;
             if (isupper(plaintext[i]))
             {
