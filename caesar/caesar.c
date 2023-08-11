@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             {
                 characters = 'a';
             }
-        printf(" %c", (plaintext[j] - characters + key) % 26 + characters);
+        printf("%c", (plaintext[j] - characters + key) % 26 + characters);
         }
         else
         {
