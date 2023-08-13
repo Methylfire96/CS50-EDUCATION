@@ -52,8 +52,8 @@ int main(int argc, char *argv[])
         {
             printf("%c", plaintext[j]);
         }
-    printf("\n");
-    }
 
+    }
+    printf("\n");
     return 0;
 }
