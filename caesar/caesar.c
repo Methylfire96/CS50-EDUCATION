@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
         }
         if (j == len - 1)
         {
-            printf("");
+            printf("#");
         }
     }
 
