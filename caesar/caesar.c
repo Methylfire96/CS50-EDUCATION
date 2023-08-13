@@ -1,9 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 
 int main(int argc, char *argv[])
 {   //request user
@@ -30,7 +29,6 @@ int main(int argc, char *argv[])
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
 
-
     int len = strlen(plaintext);
 
     for (int j = 0; j < len; j++)
@@ -52,7 +50,6 @@ int main(int argc, char *argv[])
         {
             printf("%c", plaintext[j]);
         }
-
     }
 
     return 0;
