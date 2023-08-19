@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
     char plaintext[150];
     fgets(plaintext, sizeof(plaintext), stdin);
 
+    printf("Ciphertext: ");
+
     int len = strlen(plaintext);
 
     for (int j = 0; j < len; j++)
@@ -51,6 +53,5 @@ int main(int argc, char *argv[])
             printf("%c", plaintext[j]);
         }
     }
-
     return 0;
 }
