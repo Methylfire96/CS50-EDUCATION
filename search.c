@@ -7,10 +7,10 @@ int main (void)
     string strings[] = {"A", "B", "c", "d", "e", "f", "g"};
 
     string s = get_string("String: ");
-    string compare =
+
     for (int i = 0; i < 7; i++)
     {
-        if (strings[i] == strcmp(s, strings);compare)
+        if (strcmp (strings[i], s) == 0)
         {
             printf("Found\n");
             return 0;
