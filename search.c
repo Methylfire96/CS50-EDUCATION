@@ -13,9 +13,9 @@ int main (void)
         if (strcmp (strings[i], s) == 0)
         {
             printf("Found\n");
-            return 0;
+            return 0; //wenn 0 returned wird, dann ist die funktion richtig!!
         }
     }
     printf("Not Found\n");
-    return 1;
+    return 1; //muss kein return sein, sagt aber dass die funktion falsch ist!!
 }
