@@ -26,9 +26,9 @@ int main (void)
 
     for (int i = 0; i < 2; i++)
     {
-        if (strcmp (names[i], name) == 0)
+        if (strcmp (people[i].name, name) == 0)
         {
-            printf("Found\n");
+            printf("Found\n", people[i].number);
             return 0; //wenn 0 returned wird, dann ist die funktion richtig!!
         }
     }
