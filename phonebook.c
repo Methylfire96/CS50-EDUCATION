@@ -13,7 +13,9 @@ person;
 
 int main (void)
 {
+    person people[2];
 
+    people[0].name = "Carter";
 
     string name = get_string("Name: ");
 
