@@ -16,10 +16,15 @@ int main (void)
     person people[2];
 
     people[0].name = "Carter";
+    people[0].number = "123454321";
+
+    people[1].name = "David";
+    people[1].number = "543212345";
+
 
     string name = get_string("Name: ");
 
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 2; i++)
     {
         if (strcmp (names[i], name) == 0)
         {
