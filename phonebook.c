@@ -28,7 +28,7 @@ int main (void)
     {
         if (strcmp (people[i].name, name) == 0)
         {
-            printf("Found\n", people[i].number);
+            printf("Found %s\n", people[i].number);
             return 0; //wenn 0 returned wird, dann ist die funktion richtig!!
         }
     }
