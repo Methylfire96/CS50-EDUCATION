@@ -14,11 +14,12 @@ int main (void)
 
 void draw(int n)
 {
-    if (n<= 0)
+    if (n<= 0) //eingebauter stop -- berechnet von hinten
     {
         return;
     }
     draw(n-1); // recursion2 macht erneut einen endlos loop!!
+
     for (int i = 0; i < n; i++)
     {
         printf("#");
