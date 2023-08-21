@@ -4,9 +4,12 @@
 
 void draw(int n);
 
-int main(void)
+int main (void)
 {
-    draw(3);
+    int height = get_int("Height: ");
+    draw(height);
+
+
 }
 
 void draw(int n)
