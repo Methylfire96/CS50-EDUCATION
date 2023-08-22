@@ -8,7 +8,7 @@ How do you know?: most quick walk through, when having random sorted numbers.
 
 sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: slightly slower in sorted numbers then bubble sort
 
 
 sort1 rev5000:  138s        random5000: 073s        sorted5000: 025s
