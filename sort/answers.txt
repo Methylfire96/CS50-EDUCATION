@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
 
-How do you know?: needs the most time
+How do you know?: needs the most time in random sorted numbers, but is the fastest in sorted numbers.
 
 sort2 uses: merge sort
 
