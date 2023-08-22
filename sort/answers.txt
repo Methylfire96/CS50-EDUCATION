@@ -12,3 +12,14 @@ How do you know?: TODO
 
 
 
+sort2 rev5000:  059s        random5000: 044s
+      rev10000: 113s        random10000: 100s
+      rev50000: 442s        random50000: 181s
+
+sort1 rev5000:  138s        random5000: 
+      rev10000: 233s        random10000:
+      rev50000: 5,638s      random50000:
+
+sort3 rev5000:  046s        random5000: 054s
+      rev10000: 191s        random10000: 158s
+      rev50000: 2,984s      random50000: 3,171s
