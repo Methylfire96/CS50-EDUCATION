@@ -150,7 +150,7 @@ void tabulate(void)
             return true;
         }
     }
-    for (int i = 0, i < votercount; i++)
+    for (int i = 0, i < voter_count; i++)
     {
         if (voter[i] < voter_count)
         {
