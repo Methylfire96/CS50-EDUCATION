@@ -2,8 +2,8 @@
 
 int main (void)
 {
-    char *s = "#####";
-    printf("%s\n", s);
+    char *s = "########";
+    printf("%s %s\n", s,s);
     printf("%s\n", s+1);
     printf("%s\n", s+2);
     printf("%s\n", s+3);
