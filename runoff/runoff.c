@@ -177,7 +177,10 @@ int find_min(void)
     {
         for(j = 0; j< candidate_count; j++)
         {
-            if()
+            if(candidates[preference[i][j]].eliminated == false)
+            {
+                find_min 
+            }
         }
     }
     return 0;
