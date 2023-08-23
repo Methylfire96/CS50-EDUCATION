@@ -5,6 +5,12 @@ int main (void)
     char *s = "########";
     printf("%s %s\n", s,s);
     printf("%s   %s\n", s+1, s+1);
+    printf("%s    %s\n", s+1, s+2);
+    printf("%s     %s\n", s+1, s+3);
+    printf("%s      %s\n", s+1, s+4);
+    printf("%s     %s\n", s+1, s+3);
+    printf("%s    %s\n", s+1, s+2);
+    printf("%s   %s\n", s+1, s+1);
     printf("%s\n", s+2);
     printf("%s\n", s+3);
     printf("%s\n", s+4);
