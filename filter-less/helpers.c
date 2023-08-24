@@ -26,13 +26,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            int sepiaRed = (int)((image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189)) + 0.5;
-            int sepiaGreen = (int)((image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168)) + 0.5;
-            int sepiaBlue = (int)((image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131)) + 0.5;
+            int sepiaRed = (int)((image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189));
+            int sepiaGreen = (int)((image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168));
+            int sepiaBlue = (int)((image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131));
 
             if(sepiaRed >= 255 || sepiaGreen >= 255 || sepiaBlue >= 255)
             {
-                sepiaRed =255, sepiaGreen = 255, sepiaBlue = 255;
+                sepiaRed = 255, sepiaGreen = 255, sepiaBlue = 255;
             }
 
             image[i][j].rgbtRed = sepiaRed;
