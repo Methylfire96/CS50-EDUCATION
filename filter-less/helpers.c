@@ -91,7 +91,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 }
             }
-
+            //math.h has the llround function, to get to the nearest number
             temporary[i][j].rgbtRed = round(totalRed / counter);
             temporary[i][j].rgbtGreen = round(totalGreen / counter);
             temporary[i][j].rgbtBlue = round(totalBlue / counter);
