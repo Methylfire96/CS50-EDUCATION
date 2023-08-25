@@ -65,6 +65,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             temporary[i][j] = image[i][j];
         }
     }
+    // build the 3x3 pixels around with the average tone of the RGB
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
