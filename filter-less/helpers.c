@@ -56,12 +56,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
-{
+{   //build a temporary variable
     RGBTRIPLE temporary[height][width];
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
-        {
+        {   //the temporary variable = the original image
             temporary[i][j] = image[i][j];
         }
     }
