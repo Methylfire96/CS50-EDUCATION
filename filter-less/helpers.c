@@ -44,9 +44,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for(int i = 0; i < height; i++)
-    {
-        for(int j = 0; j < width; j++)
-        {
+    {   //swap in the middle of the picture = width/2
+        for(int j = 0; j < width/2; j++)
+        {   //debug wants RGBTRIPLE x = the image -> swapping image to pixel change -> pixel change = x!!
             RGBTRIPLE reflection = image[i][j];
             image[i][j] = image[i][width - 1 - j];
             image[i][width - 1 - j] = reflection;
@@ -60,34 +60,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
-
-
-/*{
-            if(image[i][j].rgbtRed < 0xFF /2 && image[i][j].rgbtGreen < 0xFF /2 && image[i][j].rgbtBlue < 0xFF /2)
-            {
-                image[i][j].rgbtRed = 0x00, image[i][j].rgbtGreen = 0x00, image[i][j].rgbtBlue = 0x00;
-            }
-            else
-            {
-                image[i][j].rgbtRed = 0xFF, image[i][j].rgbtGreen = 0xFF, image[i][j].rgbtBlue = 0xFF;
-            }
-        ////
-         if(image[i][j].rgbtRed == 0x00 && image[i][j].rgbtGreen == 0x00 && image[i][j].rgbtBlue == 0x00)
-            {
-                image[i][j].rgbtRed = 0xFF, image[i][j].rgbtGreen = 0xFF, image[i][j].rgbtBlue = 0xFF;
-            }
-            if(image[i][j].rgbtRed < 0xFF /2 && image[i][j].rgbtGreen < 0xFF /2 && image[i][j].rgbtBlue < 0xFF /2)
-            {
-                image[i][j].rgbtRed = 0x00, image[i][j].rgbtGreen = 0x00, image[i][j].rgbtBlue = 0x00;
-            }
-            if(image[i][j].rgbtRed > 0xFF /2 && image[i][j].rgbtGreen > 0xFF /2 && image[i][j].rgbtBlue > 0xFF /2)
-            {
-                image[i][j].rgbtRed = 0x00, image[i][j].rgbtGreen = 0x00, image[i][j].rgbtBlue = 0x00;
-            }
-            if(image[i][j].rgbtRed == 0xFF && image[i][j].rgbtGreen == 0xFF && image[i][j].rgbtBlue == 0xFF)
-            {
-                image[i][j].rgbtRed = 0x00, image[i][j].rgbtGreen = 0x00, image[i][j].rgbtBlue = 0x00;
-            }
-
-        }
-        */
