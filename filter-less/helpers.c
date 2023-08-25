@@ -24,10 +24,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
-        {   // 255 is the max rgb number, but math.h needs fmin!!
-            int sepiaRed = fmin(255, ((image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189))+ 0.5);
-            int sepiaGreen = fmin(255, ((image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168))+ 0.5);
-            int sepiaBlue = fmin(255, ((image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131))+ 0.5);
+        { // 255 is the max rgb number, but math.h needs fmin!!
+            int sepiaRed =
+                fmin(255, ((image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189)) + 0.5);
+            int sepiaGreen =
+                fmin(255, ((image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168)) + 0.5);
+            int sepiaBlue =
+                fmin(255, ((image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131)) + 0.5);
 
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtGreen = sepiaGreen;
@@ -41,12 +44,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
-    {   // swap in the middle of the picture = width/2
+    { // swap in the middle of the picture = width/2
         for (int j = 0; j < width / 2; j++)
-        {   // debug wants "RGBTRIPLE" x = the image -> swapping image to pixel change -> pixel change = x!!
-            RGBTRIPLE reflection = image[i][j];         // temporary = original
-            image[i][j] = image[i][width - 1 - j];      // original = creation
-            image[i][width - 1 - j] = reflection;       // creation = temporary
+        { // debug wants "RGBTRIPLE" x = the image -> swapping image to pixel change -> pixel change = x!!
+            RGBTRIPLE reflection = image[i][j];    // temporary = original
+            image[i][j] = image[i][width - 1 - j]; // original = creation
+            image[i][width - 1 - j] = reflection;  // creation = temporary
         }
     }
     return;
@@ -54,12 +57,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
-{   // build a temporary variable
+{ // build a temporary variable
     RGBTRIPLE temporary[height][width];
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
-        {   // temporary = original image
+        { // temporary = original image
             temporary[i][j] = image[i][j];
         }
     }
@@ -67,7 +70,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
-        {   // creation
+        { // creation
             int totalRed = 0, totalGreen = 0, totalBlue = 0;
             float counter = 0.0;
 
@@ -77,7 +80,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int madeVertical = i + vertical;
                     int madeHorizontal = j + horizontal;
-                    
+
                     if (madeVertical < 0 || madeVertical > (height - 1) || madeHorizontal < 0 || madeHorizontal > (width - 1))
                     {
                         continue;
