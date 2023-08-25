@@ -46,9 +46,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {   //swap in the middle of the picture = width/2
         for(int j = 0; j < width/2; j++)
         {   //debug wants "RGBTRIPLE" x = the image -> swapping image to pixel change -> pixel change = x!!
-            RGBTRIPLE reflection = image[i][j];
-            image[i][j] = image[i][width - 1 - j];
-            image[i][width - 1 - j] = reflection;
+            RGBTRIPLE reflection = image[i][j];         //temporary = original
+            image[i][j] = image[i][width - 1 - j];      //original = creation
+            image[i][width - 1 - j] = reflection;       //creation = temporary
         }
     }
     return;
@@ -61,7 +61,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
-        {   //the temporary variable = the original image
+        {   //temporary = original image
             temporary[i][j] = image[i][j];
         }
     }
