@@ -98,6 +98,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             temporary[i][j].rgbtBlue = llround(totalBlue / counter);
         }
     }
+    //put created blur effect into order in new .bmp
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
