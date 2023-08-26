@@ -28,5 +28,10 @@ int main(int argc, char *argv[])
             printf("There is no further JPG file!\n");
         }
     }
-    
+    int counter = 0;
+    for (int i = 0; i < buffer_jpg, i++)
+    {
+        counter++;
+        printf("%i\n", counter);
+    }
 }
