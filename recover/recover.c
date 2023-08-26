@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {
-        if (buffer_jpg[i] != buffer[i])
+        if (buffer[i] != buffer_jpg[i])
         {
             printf("There is no further JPG file!\n");
         }
     }
-    printf("found file");
+    printf("found file\n");
     /*int image_count = counter;
     int counter = 0;
     for (int i = 0; i < image_count; i++)
