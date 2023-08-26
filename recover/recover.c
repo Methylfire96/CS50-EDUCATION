@@ -23,9 +23,10 @@ int main(int argc, char *argv[])
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4, i++)
     {
-        if (buffer_jpg != buffer)
+        if (buffer_jpg[i] != buffer[i])
         {
-            printf("This is not a JPG file!\n");
+            printf("There is no further JPG file!\n");
         }
     }
+    
 }
