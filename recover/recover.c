@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[])
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[4];
     uint8_t buffer_jpg[] = {255, 216, 255, 224};
     fread(buffer, 1, 4, file);
-    for (int i = 0; i < 4, i++)
+    for (int i = 0; i < 4; i++)
     {
         if (buffer_jpg[i] != buffer[i])
         {
