@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    uint8_t buffer[4];
-    uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff, 0xe};
+    uint8_t buffer[3];
+    uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff};
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {
