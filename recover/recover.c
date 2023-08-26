@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[4];
-    uint8_t buffer_jpg[] = {255, 216, 255, 224};
+    uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff, 0xe};
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {
