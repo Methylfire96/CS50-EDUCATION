@@ -10,11 +10,12 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("wrong input! #err1\n");
-        return 1;
+        return 1; //
     }
 
     string filename = argv[1];
     FILE *file = fopen(filename, "r");
+    //check if file = NULL, error2
     if (file == NULL)
     {
         printf("No such file found. #err2\n");
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
             char jpg_file[8];
             sprintf(jpg_file, "%03i.jpg", counter);
             jpg = fopen(jpg_file, "w");
-            //check jpg
+            //check if jpg = NULL, then error3
             if (jpg == NULL)
             {
                 fclose(file);
