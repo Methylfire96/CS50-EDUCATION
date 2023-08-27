@@ -24,14 +24,15 @@ int main(int argc, char *argv[])
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {   //if finding jpg file, the next file is 512byts far away
-        if (buffer[0] == 0xff & buffer[1] == 0xd8 & 0xff)
+        if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff)
         {
             fclose(file);
             fread(buffer, 1, 4, file);
-            printf("found jpg file\n");
+            printf("found jpg!! file\n");
         }
     }
-    printf("found file\n");
+    printf("found -- file\n");
+
     /*int image_count = counter;
     int counter = 0;
     for (int i = 0; i < image_count; i++)
