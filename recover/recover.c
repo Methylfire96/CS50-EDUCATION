@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff};
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
-    {
+    {   //if finding jpg file, the next file is 512bits far away
         if (buffer[i] != buffer_jpg[i])
         {
             printf("There is no further JPG file!\n");
