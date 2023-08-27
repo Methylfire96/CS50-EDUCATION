@@ -27,10 +27,18 @@ int main(int argc, char *argv[])
     int counter = 0;
     while (fread(buffer, BLOCKSIZE, 1, file) == 1);
     {   //if finding jpg file, the next file is 512byts far away
-        if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff &(buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&(buffer[3] & 0xf0) == 0xe0)
         {
-            sprintf(filename, "%03i.jpg", 2);
-            FILE *img = fopen(filename, "w");
+            //clode jpg file
+            if(jpg != NULL)
+            {
+                fclose(jpg);
+            }
+
+            //create new jpg file + counter (jpg1, jpg2,...)
+            char filename[8];
+            sprintf(filename, "%03i.jpg", counter);
+            jpg = fopen(filename, "w");
             fwrite(jpgbuffer, 1, 512, jpg);
         }
         else
