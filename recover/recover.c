@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
     //if finding jpg file, the next file is 512byts far away
     uint8_t buffer[BLOCK_SIZE];
-    // jpg first 4 inputs = {0xff, 0xd8, 0xff, 0xe n, n = 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f};
+    // jpg first 4 inputs==signature = {0xff, 0xd8, 0xff, 0xe n, n = 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f};
     FILE *jpg = NULL;
     int counter = 0;
     while (fread(buffer, BLOCK_SIZE, 1, raw_file) == 1)
