@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-const int BLOCKSIZE = 512;
+const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
         return 2;
     }
     //if finding jpg file, the next file is 512byts far away
-    uint8_t buffer[BLOCKSIZE];
+    uint8_t buffer[BLOCK_SIZE];
     // jpg first 4 inputs = {0xff, 0xd8, 0xff, 0xe n, n = 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f};
     FILE *jpg = NULL;
     int counter = 0;
-    while (fread(buffer, BLOCKSIZE, 1, raw_file) == 1)
+    while (fread(buffer, BLOCK_SIZE, 1, raw_file) == 1)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&(buffer[3] & 0xf0) == 0xe0)
         {
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
         if (jpg != NULL)
         {
-            fwrite(buffer, BLOCKSIZE, 1, jpg);
+            fwrite(buffer, BLOCK_SIZE, 1, jpg);
         }
     }
     fclose(raw_file);
