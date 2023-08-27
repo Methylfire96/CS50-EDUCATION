@@ -52,15 +52,11 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, BLOCKSIZE, 1, jpg);
         }
-
     }
-    printf("found -- file\n");
-
-    /*int image_count = counter;
-    int counter = 0;
-    for (int i = 0; i < image_count; i++)
+    fclose(file);
+    if (jpg != NULL)
     {
-        counter++;
-        printf("%i\n", counter);
-    }*/
+        fclose(jpg);
+    }
+    return 0;
 }
