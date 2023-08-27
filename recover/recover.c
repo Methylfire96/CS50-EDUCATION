@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
             char filename[8];
             sprintf(filename, "%03i.jpg", counter);
             jpg = fopen(filename, "w");
-
-        }
-        {
-            fclose(filename);
-        }
+            if (jpg != NULL)
+            {
+                fclose(file);
+                fprintf("No such file found.\n")
+            }
 
     }
     printf("found -- file\n");
