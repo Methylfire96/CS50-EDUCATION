@@ -35,14 +35,15 @@ int main(int argc, char *argv[])
                 fclose(jpg);
             }
 
-            //create new jpg file + counter (jpg1, jpg2,...)
-            
-            sprintf(filename, "%03i.jpg", counter);
-            jpg = fopen(filename, "w");
-            if (jpg != NULL)
+            //create new jpg file + counter
+            char jpg_file[8];
+            sprintf(jpg_file, "%03i.jpg", counter);
+            jpg = fopen(jpg_file, "w");
+            //check jpg
+            if (jpg == NULL)
             {
                 fclose(file);
-                printf("No such file found. #err3\n");
+                printf("Could not create %s. #err3\n", jpg_file);
                 return 3;
             }
             counter++;
