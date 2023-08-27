@@ -29,17 +29,17 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // cloe jpg file
+            // close jpg file
             if (jpg != NULL)
             {
                 fclose(jpg);
             }
 
-            //create new jpg file + counter
+            // create new jpg file + counter
             char jpg_file[8];
             sprintf(jpg_file, "%03i.jpg", counter);
             jpg = fopen(jpg_file, "w");
-            //check if jpg = NULL, then error3
+            // check if jpg = NULL, then error3
             if (jpg == NULL)
             {
                 fclose(raw_file);
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             }
             counter++;
         }
-        //write the jpg_file
+        // write the jpg_file
         if (jpg != NULL)
         {
             fwrite(buffer, BLOCK_SIZE, 1, jpg);
