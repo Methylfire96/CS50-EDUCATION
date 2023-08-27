@@ -41,6 +41,5 @@ int main (int argc, char *argv[])
         free(ptr);
         ptr = next;
     }
-
     return 0;
 }
