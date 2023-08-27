@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+const int BLOCKSIZE = 512;
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -16,11 +18,13 @@ int main(int argc, char *argv[])
     if (file == NULL)
     {
         printf("No such file found.\n");
-        return 1;
+        return 2;
     }
 
-    uint8_t buffer[3];
-    uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff};
+    uint8_t buffer[BLOCKSIZE];
+    // jpg first 4 inputs = {0xff, 0xd8, 0xff, 0xe n, n = 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f};
+    FILE *jpg
+    int counter = 0;
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {   //if finding jpg file, the next file is 512byts far away
@@ -34,7 +38,7 @@ int main(int argc, char *argv[])
         {
             fclose(filename);
         }
-        
+
     }
     printf("found -- file\n");
 
