@@ -45,7 +45,13 @@ int main(int argc, char *argv[])
                 fprintf("No such file found. #err3\n");
                 return 3;
             }
-            j
+            counter++;
+        }
+
+        if (jpg != NULL)
+        {
+            fwrite(buffer, BLOCKSIZE, 1, jpg);
+        }
 
     }
     printf("found -- file\n");
