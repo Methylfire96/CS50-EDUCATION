@@ -23,11 +23,10 @@ int main(int argc, char *argv[])
     uint8_t buffer_jpg[] = {0xff, 0xd8, 0xff};
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
-    {   //if finding jpg file, the next file is 512bits far away
+    {   //if finding jpg file, the next file is 512byts far away
         if (buffer[i] == buffer_jpg[i])
         {
-            fopen(file, "r");
-            fread(buffer,512, 4, file);
+            printf("There is no further JPG file!\n");
         }
     }
     printf("found file\n");
