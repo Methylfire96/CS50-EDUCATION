@@ -30,6 +30,11 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w");
             fwrite(jpgbuffer, 1, 512, jpg);
         }
+        else
+        {
+            fclose(filename);
+        }
+        
     }
     printf("found -- file\n");
 
