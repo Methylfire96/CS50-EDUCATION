@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
     }
 
     string filename = argv[1];
-    FILE *file = fopen(filename, "r");
-    //check if file = NULL, error2
-    if (file == NULL)
+    FILE *raw_file = fopen(filename, "r");
+    //check if raw file = NULL, error2
+    if (raw_file == NULL)
     {
         printf("No such file found. #err2\n");
         return 2;
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     // jpg first 4 inputs = {0xff, 0xd8, 0xff, 0xe n, n = 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f};
     FILE *jpg = NULL;
     int counter = 0;
-    while (fread(buffer, BLOCKSIZE, 1, file) == 1)
+    while (fread(buffer, BLOCKSIZE, 1, raw_file) == 1)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&(buffer[3] & 0xf0) == 0xe0)
         {
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
             //check if jpg = NULL, then error3
             if (jpg == NULL)
             {
-                fclose(file);
+                fclose(raw_file);
                 printf("Could not create %s. #err3\n", jpg_file);
                 return 3;
             }
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             fwrite(buffer, BLOCKSIZE, 1, jpg);
         }
     }
-    fclose(file);
+    fclose(raw_file);
     if (jpg != NULL)
     {
         fclose(jpg);
