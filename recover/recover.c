@@ -39,9 +39,8 @@ int main(int argc, char *argv[])
             char filename[8];
             sprintf(filename, "%03i.jpg", counter);
             jpg = fopen(filename, "w");
-            fwrite(jpgbuffer, 1, 512, jpg);
+
         }
-        else
         {
             fclose(filename);
         }
