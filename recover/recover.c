@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("wrong input! #err1\n");
-        return 1; //
+        return 1; //error1
     }
 
     string filename = argv[1];
