@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
         return 1; //error1
     }
 
-    string filename = argv[1];
-    FILE *raw_file = fopen(filename, "r");
+    string file = argv[1];
+    FILE *raw_file = fopen(file, "r");
     //check if raw file = NULL, error2
     if (raw_file == NULL)
     {
