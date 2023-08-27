@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -13,7 +12,7 @@ int main(int argc, char *argv[])
         return 1; //error1
     }
 
-    string file = argv[1];
+    char *file = argv[1];
     FILE *raw_file = fopen(file, "r");
     //check if raw file = NULL, error2
     if (raw_file == NULL)
@@ -49,12 +48,13 @@ int main(int argc, char *argv[])
             }
             counter++;
         }
-
+        //write the jpg_file
         if (jpg != NULL)
         {
             fwrite(buffer, BLOCK_SIZE, 1, jpg);
         }
     }
+    // close the used buffer of the opened file and created file
     fclose(raw_file);
     if (jpg != NULL)
     {
