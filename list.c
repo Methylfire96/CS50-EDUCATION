@@ -33,7 +33,7 @@ int main(void)
     list = tmp; //now pointer list points onto tmp
 
     //old usage of 3bytes
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++) //------------ 3 to 4, then works correctly
     {
         printf("%i\n", list[i]);
     }
