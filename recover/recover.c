@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("wrong input!\n");
+        printf("wrong input! #err1\n");
         return 1;
     }
 
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(filename, "r");
     if (file == NULL)
     {
-        printf("No such file found.\n");
+        printf("No such file found. #err2\n");
         return 2;
     }
 
@@ -42,8 +42,10 @@ int main(int argc, char *argv[])
             if (jpg != NULL)
             {
                 fclose(file);
-                fprintf("No such file found.\n")
+                fprintf("No such file found. #err3\n");
+                return 3;
             }
+            j
 
     }
     printf("found -- file\n");
