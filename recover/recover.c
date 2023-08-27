@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
             }
 
             //create new jpg file + counter (jpg1, jpg2,...)
-            char filename[8];
+            string filename[8];
             sprintf(filename, "%03i.jpg", counter);
             jpg = fopen(filename, "w");
             if (jpg != NULL)
