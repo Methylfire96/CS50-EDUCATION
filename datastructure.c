@@ -34,7 +34,13 @@ int main (int argc, char *argv[])
         ptr = ptr->next;
     }
 
-
+    ptr = list;
+    while (ptr != NULL)
+    {
+        node *next = ptr-> number;
+        free(ptr);
+        ptr = next;
+    }
 
     return 0;
 }
