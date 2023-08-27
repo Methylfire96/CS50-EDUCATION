@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
         {
             sprintf(filename, "%03i.jpg", 2);
             FILE *img = fopen(filename, "w");
+            fwrite(jpgbuffer, 1, 512, jpg);
         }
     }
     printf("found -- file\n");
