@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    if (word == true)
+    if (word = true)
     {
         printf("Found!\n");
     }
@@ -118,7 +118,7 @@ bool check(char* word)
     {
         printf("Not Found.\n");
     }
-    return false;
+    return 0;
 }
 
 // Unload trie from memory
