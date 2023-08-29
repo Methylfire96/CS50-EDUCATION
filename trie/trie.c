@@ -110,18 +110,7 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char *word)
 {
-    int num = atoi(word);
 
-    if ( num!= 0)
-    {
-        printf("Found!\n");
-        return true;
-    }
-    else
-    {
-        printf("Not Found.\n");
-        return false;
-    }
 }
 
 // Unload trie from memory
