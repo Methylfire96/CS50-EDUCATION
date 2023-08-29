@@ -1,7 +1,5 @@
-import cs50
-import string
+from cs50 import get_string
 
-import math
 
 print("hello, world")
 answer = get_string("What is your name? ")
