@@ -113,12 +113,13 @@ bool check(char *word)
     if (atoi(word) == true)
     {
         printf("Found!\n");
+        return 0;
     }
     else
     {
         printf("Not Found.\n");
+        return false;
     }
-    return 0;
 }
 
 // Unload trie from memory
