@@ -1,19 +1,20 @@
 #s= input("Do u agree?")
 
-#if s == "Y" or s == "y": # also same if s in ["Y","y"]:
-    print("Agreed")
-#elif s == "N" or s == "n": # also same if s in ["N","n"]:
-    print("not agreed")
+#if s == "Y" or s == "y": ## also same if s in ["Y","y"]:
+    #print("Agreed")
+#elif s == "N" or s == "n": ## also same if s in ["N","n"]:
+    #print("not agreed")
 
 
 
 
 s= input("Do u agree?")
+s = s.lower()
 
 
-if s.lower() in ["y","yes"]
+if s in ["y","yes"]:
     print("Agreed")
-elif s.lower() in ["N","n"]:
+elif s in ["N","n"]:
     print("not agreed")
 
 
