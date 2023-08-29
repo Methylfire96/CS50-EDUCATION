@@ -110,8 +110,30 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char *word)
 {
+    // Start at the root of the trie
+    node *cursor = root;
 
+    // Traverse the trie based on each character in the word
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        // Calculate the index corresponding to the current character
+        int index = tolower(word[i]) - 'a';
+
+        // Check if the current character's node is NULL in the trie
+        if (cursor->children[index] == NULL)
+        {
+            return false; // The word is not in the trie
+        }
+
+        // Move the cursor to the next node
+        cursor = cursor->children[index];
+    }
+
+    // After traversing the entire word, check if the cursor points to a word node
+    return cursor->is_word;
 }
+
+
 
 // Unload trie from memory
 bool unload(void)
