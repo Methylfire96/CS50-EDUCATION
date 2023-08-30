@@ -18,6 +18,6 @@ def get_height():
     while True:
         n = get_int("height: ")
         if n > 0:
-            break
+            return n
 
-    return n
+main()
