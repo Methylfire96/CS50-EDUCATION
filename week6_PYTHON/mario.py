@@ -16,8 +16,8 @@ def main():
 
 def get_height():
     while True:
-        n = get_int("height: ")
-        if n > 0:
-            return n
+        n = get_int("height: ") ### also possible return get_int("Height: ")
+        if n > 0: ### ---------
+            return n ### --------
 
 main()
