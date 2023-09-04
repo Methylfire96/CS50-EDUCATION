@@ -58,7 +58,7 @@ bool load(const char *dictionary)
         return false;
     }
     char word[LENGTH +1];
-    while (fscanf(text, %s, word) != )
+    while (fscanf(text, "%s", word) != )
 
 }
 
