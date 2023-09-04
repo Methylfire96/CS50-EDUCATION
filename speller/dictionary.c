@@ -74,8 +74,8 @@ bool load(const char *dictionary)
 
         int index = hash(word);
 
-        new_node->next = hash_table[index];
-        hash_table[index] = new_node;
+        new_node->next = table[index];
+        table[index] = new_node;
 
         word_count++;
     }
