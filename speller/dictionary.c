@@ -26,7 +26,9 @@ bool check(const char *word)
     node *word != NULL;
     for (int i = 0; i < strlen(word)- "\0"; i++)
     {
-        
+        node *w = malloc(sizeof(word));
+        w->word = word;
+        word->
     }
     return false;
 }
