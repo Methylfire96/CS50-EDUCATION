@@ -3,7 +3,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <strings.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -54,8 +55,11 @@ bool load(const char *dictionary)
     if (text = NULL)
     {
         printf("cant open dict %s:\n", dictionary);
+        return false;
     }
-    return false;
+    char word[LENGTH +1];
+    while (fscanf(text, %s, word) != )
+
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
