@@ -25,22 +25,23 @@ bool check(const char *word)
 {
     // TODO
     node *w = malloc(sizeof(word));
-    if (n == NULL)
+    while (w != 0)
     {
-        printf("no allocation\n");
-        return 1;
+        if (strcasecmp(word, w->word) == 0)
+        {
+            return true;
+            w = w->next;
+        }
     }
-    return 0;
+    return false;
 }
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    for (int i = 0; i < strcasecmp(word); i++)
-    {
-        
-    }
+    for ( int i = 0; i < strlen(word); i++)
+
     return toupper(word[0]) - 'A';
 }
 
