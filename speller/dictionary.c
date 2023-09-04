@@ -26,8 +26,8 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    int index = hash(word);
-    for (node *cursor = hash_table[index]; cursor != NULL; cursor->next)
+    unsigned int index = hash(word);
+    for (node *cursor = table[index]; cursor != NULL; cursor->next)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
