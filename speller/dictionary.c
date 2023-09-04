@@ -3,8 +3,10 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <strings.h>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -27,7 +29,7 @@ bool check(const char *word)
 {
     // TODO
     unsigned int index = hash(word);
-    for (node *cursor = table[index]; cursor != NULL; cursor->next)
+    for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
@@ -46,7 +48,7 @@ unsigned int hash(const char *word)
     {
         hash += toupper(word[i]) - 'A';
     }
-    return hast % N;
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -72,7 +74,7 @@ bool load(const char *dictionary)
 
         int index = hash(word);
 
-        new_node->next = hast_table[index];
+        new_node->next = hash_table[index];
         hash_table[index] = new_node;
 
         word_count++;
@@ -96,7 +98,7 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        while (hast_table[i] != NULL)
+        while (hash_table[i] != NULL)
         {
             node *temp = hash_table[i]->next;
             free(hash_table[i]);
