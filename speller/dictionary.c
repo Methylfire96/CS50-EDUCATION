@@ -23,15 +23,13 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node *word = NULL;
-    for (int i = 0; i < word[i] != '\0'; i++)
+    node *w = malloc(sizeof(word));
+    if (n == NULL)
     {
-        node *w = malloc(sizeof(word));
-        w->word = word;
-        w->next = list;
-        list = w;
+        printf("no allocation\n");
+        return 1;
     }
-    return false;
+    return 0;
 }
 
 // Hashes word to a number
