@@ -41,14 +41,16 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     for ( int i = 0; i < strlen(word); i++)
-
-    return toupper(word[0]) - 'A';
+    {
+        return toupper(word[0]) - 'A';
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
+    
     return false;
 }
 
