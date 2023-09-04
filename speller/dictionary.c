@@ -64,7 +64,7 @@ bool load(const char *dictionary)
     }
     char word[LENGTH + 1];
     while (fscanf(file, "%s", word) != EOF)
-    {   //size of new, null = close file, otherwise copy, new to table - table new + word_count
+    {   //size of new, null = close file, otherwise copy, new to table list- table list to new + word_count
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
         {
@@ -96,6 +96,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    // create temporary, put away, free, put in temp
     for (int i = 0; i < N; i++)
     {
         while (table[i] != NULL)
