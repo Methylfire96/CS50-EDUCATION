@@ -30,7 +30,7 @@ bool check(const char *word)
     // TODO
     // hash word to get index
     unsigned int index = hash(word);
-    //
+    //go through the list, until word is found
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
     {       //compare word with current node word
         if (strcasecmp(cursor->word, word) == 0)
