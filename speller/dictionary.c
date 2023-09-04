@@ -28,7 +28,8 @@ bool check(const char *word)
     {
         node *w = malloc(sizeof(word));
         w->word = word;
-        w->next = word;
+        w->next = list;
+        list = w;
     }
     return false;
 }
