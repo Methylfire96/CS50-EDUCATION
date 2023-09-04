@@ -25,13 +25,12 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node *w = malloc(sizeof(word));
-    while (w != 0)
+    int index = hash(word);
+    for (node *cursor = hash_table[index]; cursor != NULL; cursor->next)
     {
-        if (strcasecmp(word, w->word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
-            w = w->next;
         }
     }
     return false;
