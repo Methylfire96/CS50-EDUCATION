@@ -53,19 +53,19 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    TEXT * text = fopen(dictionary, "r");
-    if (text == NULL)
+    FILE * file = fopen(dictionary, "r");
+    if (file == NULL)
     {
         printf("cant open dict: %s\n", dictionary);
         return false;
     }
     char word[LENGTH +1];
-    while (fscanf(text, "%s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
         {
-            fclose(text);
+            fclose(file);
             return false;
         }
         strcpy(new_node->word, word);
@@ -77,7 +77,7 @@ bool load(const char *dictionary)
 
         word_count++;
     }
-    fclose(text);
+    fclose(file);
 
     return true;
 
