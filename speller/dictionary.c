@@ -50,7 +50,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    
+    TEXT * text = fopen(dictionary, "r");
+    if (text = NULL)
+    {
+        printf("cant open dict %s:\n", dictionary);
+    }
     return false;
 }
 
