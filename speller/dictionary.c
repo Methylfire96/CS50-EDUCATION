@@ -98,11 +98,11 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        while (hash_table[i] != NULL)
+        while (table[i] != NULL)
         {
-            node *temp = hash_table[i]->next;
-            free(hash_table[i]);
-            hash_table[i] = temp;
+            node *temp = table[i]->next;
+            free(table[i]);
+            table[i] = temp;
         }
     }
     return true;
