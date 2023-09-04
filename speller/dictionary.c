@@ -30,7 +30,7 @@ bool check(const char *word)
     // TODO
     // hash word to get index
     unsigned int index = hash(word);
-    //go through the list, until word is found
+    //go through the list, until word is found(table[])
     for (node *cursor = table[index]; cursor != NULL; cursor = cursor->next)
     {       //compare word with current node word
         if (strcasecmp(cursor->word, word) == 0)
@@ -46,6 +46,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned int hash = 0;
+    // till end of word(\0)
     for ( int i = 0; i < word[i] != '\0'; i++)
     {
         hash += toupper(word[i]) - 'A';
