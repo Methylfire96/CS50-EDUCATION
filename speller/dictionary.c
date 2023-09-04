@@ -23,7 +23,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node *word != NULL;
+    node *word = NULL;
     for (int i = 0; i < strlen(word)- "\0"; i++)
     {
         node *w = malloc(sizeof(word));
