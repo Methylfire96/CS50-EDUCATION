@@ -1,10 +1,10 @@
 from pyfiglet import Figlet
+from cs50 import get_string
 
 figlet = Figlet()
 
-print(figlet.getFonts())
 
-ask = figlet.setFont(font=f)
-print("which font u wanna use?: ")
-
-print(figlet.renderText(s))
+ask = get_string("which font u wanna use?: ")
+figlet.setFont(font=ask)
+text = get_string("which text u wanna put in diff font?: ")
+print(figlet.renderText(text))
