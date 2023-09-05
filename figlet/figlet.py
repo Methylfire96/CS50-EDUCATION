@@ -9,7 +9,7 @@ try:
     figlet.setFont(font=ask)
     text = get_string("Which text do you want to put in a different font?: ")
     print(figlet.renderText(text))
-    Figlet.exit(0)
+    sys.exit(0)
 except Exception as e:
-    print("Error:", e)
-    Figlet.exit(1)
+    print("Invalid usage", e)
+sys.exit(1)
