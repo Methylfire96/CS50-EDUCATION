@@ -1,4 +1,3 @@
-from sys import argv
 from cs50 import get_string
 
 greetings = get_string("Greetings: ")
