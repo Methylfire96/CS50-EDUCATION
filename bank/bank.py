@@ -7,5 +7,5 @@ if "H" in greetings[0]:
     print("20$")
 if "hello" in greetings:
     print("0$")
-else
-    print()
+else:
+    print("100$")
