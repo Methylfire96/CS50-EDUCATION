@@ -1,2 +1,6 @@
-from pyfiglet
+from pyfiglet import Figlet
+
+figlet = Figlet()
+
+
 
