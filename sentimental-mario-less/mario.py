@@ -1,3 +1,9 @@
 # TODO
-ask = get_int("Height: ")
-for (int i = 0; i < ask; i++)
+def main():
+    height = get_height()
+    for i in range(height):
+        print("#")
+def get_height():
+    while True:
+        try:
+            
