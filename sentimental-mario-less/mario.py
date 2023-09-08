@@ -1,9 +1,12 @@
 # TODO
 def main():
     height = get_height()
-    for i in range(height):
-        for j in range(height):
-            print("#")
+    for row in range(height, 0, -1):
+        for col in range(row, height + 1):
+            print("#", end ="")
+        print()
+
+
 def get_height():
     while True:
         try:
