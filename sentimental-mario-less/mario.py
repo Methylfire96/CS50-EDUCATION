@@ -2,9 +2,7 @@
 def main():
     height = get_height()
     for row in range(height, 0, -1):
-            print(" " * (height - row) + "#" )
-        print()
-
+            print(" " * (height - row) + "#" * row)
 
 def get_height():
     while True:
