@@ -1,8 +1,8 @@
 # TODO
 def main():
     height = get_height()
-    for row in range(height):
-            print(" " * (height - row - 1) + "#" * (row + 1))
+    for row in range(1, height + 1):
+            print(" " * (height - row) + "#" * row)
 
 def get_height():
     while True:
