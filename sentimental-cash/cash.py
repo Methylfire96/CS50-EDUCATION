@@ -1,8 +1,5 @@
 # TODO
 cents = input("How many cents do you get back?: ")
-while cents < 0 or cents > 1000:
-    return cents
-
-else:
+if cents < 0 or cents > 1000:
     print("invalid input")
 
