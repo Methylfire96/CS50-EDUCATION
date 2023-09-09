@@ -1,5 +1,33 @@
 # TODO
-cents = input("How many cents do you get back?: ")
-if cents < 0 or cents > 1000:
-    print("invalid input")
+from cs50 import get_float
+def main():
+    while True:
+        cents = get_float("How many cents do you get back?: ")
+        cents = round(cents + 100)
+        if cents >= 0:
+            break
+
+    coins = calc_coins(cents)
+    print(coins)
+
+def get_float(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            if value >= 0:
+                return value
+        except ValueError:
+            pass
+
+def calc_coins(cents):
+    coins = 0
+    coin_values = [25, 10, 5, 1]
+
+    for value in coin_value:
+        coins+= cents // value
+        cents %= value
+    return coins
+
+if __name__ == "__main__":
+    main()
 
