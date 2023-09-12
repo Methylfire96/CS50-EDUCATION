@@ -2,9 +2,9 @@
 from cs50 import get_float
 def main():
     while True:
-        cents = get_float("How many cents do you get back?: ")
-        
-        if cents >= 0:
+        dollars = get_float("How many cents do you get back?: ")
+        cents = round(dollars * 100)
+        if cents > 0:
             break
 
     coins = calc_coins(cents)
