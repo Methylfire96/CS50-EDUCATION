@@ -8,19 +8,15 @@ def main():
             break
         else:
             print("Invalid structure")
+    index = calc_index(text)
+    grade = get_grade(index)
+    print(f"Grade {grade}")
 
 
+def calc_index(text):
+    letters = sum(c.isalpha() for c in text)
+    words = len(text.split())
+    sentences = text.count('.') + text.count('!') + text.count('?'))
 
 
-def count_letters(text)
-    count = 0
-    len = strlen(text)
-    
-
-def count_words(text)
-
-
-def count_sentences(text)
-
-
-def grade(count_letters, count_words, count_sentences)
+def get_grade(index):
