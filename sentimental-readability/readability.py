@@ -29,3 +29,6 @@ def get_grade(index):
         return "Grade 16"
     else:
         return f"Grade {index}"
+
+if __name__ == "__main__":
+    main()
