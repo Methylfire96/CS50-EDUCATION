@@ -26,7 +26,7 @@ def get_grade(index):
     if index < 1:
         return "Before Grade 1"
     elif index >= 16:
-        return "Grade 16"
+        return "Grade 16+"
     else:
         return f"Grade {index}"
 
