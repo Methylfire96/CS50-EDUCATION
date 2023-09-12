@@ -23,4 +23,9 @@ def calc_index(text):
     return round(index)
 
 def get_grade(index):
-    if index 
+    if index < 1:
+        return "Before Grade 1"
+    elif index >= 16:
+        return "Grade 16"
+    else:
+        return f"Grade {index}"
