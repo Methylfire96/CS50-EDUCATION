@@ -23,7 +23,7 @@ def calc_coins(cents):
     coins = 0
     coin_values = [25, 10, 5, 1]
 
-    for value in coin_value:
+    for value in coin_values:
         coins+= cents // value
         cents %= value
     return coins
