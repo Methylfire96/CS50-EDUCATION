@@ -2,7 +2,7 @@
 from cs50 import get_float
 def main():
     while True:
-        dollars = get_float("How much is the change?: ")
+        dollars = get_float("How much is the change?: $ ")
         cents = round(dollars * 100)
         if cents > 0:
             break
