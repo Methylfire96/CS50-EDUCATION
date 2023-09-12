@@ -21,4 +21,4 @@ def count_words(text)
 def count_sentences(text)
 
 
-def grade()
+def grade(count_letters, )
