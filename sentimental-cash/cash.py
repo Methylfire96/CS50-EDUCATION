@@ -3,7 +3,7 @@ from cs50 import get_float
 def main():
     while True:
         cents = get_float("How many cents do you get back?: ")
-        cents = round(cents * 100)
+        
         if cents >= 0:
             break
 
