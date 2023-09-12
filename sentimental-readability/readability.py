@@ -13,7 +13,7 @@ def main():
 
 
 def count_letters(text)
-
+    
 
 def count_words(text)
 
@@ -21,4 +21,4 @@ def count_words(text)
 def count_sentences(text)
 
 
-def grade(count_letters, )
+def grade(count_letters, count_words, count_sentences)
