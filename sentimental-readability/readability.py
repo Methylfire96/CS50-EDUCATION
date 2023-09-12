@@ -13,6 +13,8 @@ def main():
 
 
 def count_letters(text)
+    count = 0
+    len = strlen(text)
     
 
 def count_words(text)
