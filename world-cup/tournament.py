@@ -20,7 +20,7 @@ def main():
     with open(filename) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            teams.append({
+            teams.append ({
                 "name": row["team"],
                 "rating": int(row["rating"])
             })
@@ -35,7 +35,7 @@ def main():
             counts[winning_team] += 1
         else:
             counts[winning_team] = 1
-            return ["team"]
+            return [winning_team]
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -70,7 +70,7 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
 
-    return teams[0]
+    return teams[0]["name"]
 
 
 if __name__ == "__main__":
