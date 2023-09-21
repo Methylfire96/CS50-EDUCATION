@@ -27,7 +27,7 @@ def main():
             teams.append(team)
 
 
-    counts = {team["name"]: 0 for team in teams}
+        counts = {team["name"]: 0 for team in teams}
     # TODO: Simulate N tournaments and keep track of win counts
         if i in range(N):
             winning_team = simulate_tournament(teams)
