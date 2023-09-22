@@ -9,7 +9,6 @@ N = 1000
 
 
 def main():
-
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
@@ -22,9 +21,8 @@ def main():
         for row in reader:
             team_name = row["team"]
             team_rating = int(row["rating"])
-
+            
             teams.append({"team": team_name, "rating": team_rating})
-
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
