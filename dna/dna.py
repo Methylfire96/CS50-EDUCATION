@@ -10,12 +10,16 @@ def main():
 
 
     # TODO: Read database file into a variable
-    databases = open("./" + sys.argv[1], "r")
-    sequences = open("./" + sys.argv[2], "r")
+    databases = open("./" + sys.argv[1])
+    sequences = open("./" + sys.argv[2])
+    with open(databases, "r") as csv:
+        reader = csv.DictReader(csv)
+        human = list(reader)
 
-    reader = csv.DictReader(databases)
-    strs = reader.fieldnames[1:]
+    with open(sequences, "r") as txt:
+        sequence = sequences.read()
 
+    STRs = list(human[0].keys())[1:]
     # TODO: Read DNA sequence file into a variable
 
 
