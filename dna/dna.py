@@ -31,6 +31,11 @@ def main():
         else:
             print("no match")
 
+def match(str, dna, row):
+    for str in strs:
+        if dna[str] != int(row[str]):
+            return False
+    return True
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
