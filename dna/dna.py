@@ -24,22 +24,7 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    dna = {}
-    for str in strs:
-        dna[str] = longest_match(str, dna)
-    # TODO: Check database for matching profiles
-    for row in reader:
-        if match(str, dna, row):
-            print(f"{row["name"]}")
-            return
-        else:
-            print("no match")
-
-def match(str, dna, row):
-    for str in strs:
-        if dna[str] != int(row[str]):
-            return False
-    return True
+    
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
