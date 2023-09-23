@@ -12,7 +12,7 @@ def main():
 
     # TODO: Read database file into a variable
 
-    sequences = "/." +
+
     with open(sys.argv[1] "r") as csv:
         reader = csv.DictReader(csv)
         human = list(reader)
@@ -20,7 +20,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2] "r") as txt:
-            sequence = sequences.read()
+            sequence = txt.read()
 
     STRs = list(human[0].keys())[1:]
 
