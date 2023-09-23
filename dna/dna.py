@@ -10,8 +10,8 @@ def main():
 
 
     # TODO: Read database file into a variable
-    databases = sys.argv[1]
-    sequences = sys.argv[2]
+    databases = "/." + sys.argv[1]
+    sequences = "/." + sys.argv[2]
     with open(databases, "r") as csv:
         reader = csv.DictReader(csv)
         human = list(reader)
