@@ -7,6 +7,12 @@ def main():
     # TODO: Check for command-line usage
     if len(sys.argv) != 2:
         print("wrong command line input")
+    DNA = []
+    filename = sys.argv[1]
+    with open(filename) = file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            
 
     # TODO: Read database file into a variable
 
