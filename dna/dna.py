@@ -18,7 +18,7 @@ def main():
 
             for row in reader:          #name,AGATC,AATG,TATC
                 #person = row["name"]
-                base1 = int(row["AGATC"])
+                #base1 = int(row["AGATC"])
                 #base2 = int(row["DNA[2]"])
                 #base3 = int(row["DNA[3]"])
                 if base1 in counts:
