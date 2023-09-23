@@ -8,14 +8,13 @@ def main():
     if len(sys.argv) != 2:
         print("wrong command line input")
     DNA = []
-    filename = sys.argv[1]
-    with open(filename) = file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            
 
     # TODO: Read database file into a variable
-
+    filename = sys.argv[1]
+        with open(filename) = file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
