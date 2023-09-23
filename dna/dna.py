@@ -10,28 +10,19 @@ def main():
 
 
     # TODO: Read database file into a variable
-    filename = sys.argv[1]
-    with open(filename, "r") as file:
-        reader = csv.DictReader(file)
-            #counts = {}
+    databases = open("./" + sys.argv[1], "r")
+    sequences = open("./" + sys.argv[2], "r")
+
+    reader = csv.DictReader(databases)
+    strs = reader.fieldnames[1:]
+
     # TODO: Read DNA sequence file into a variable
 
-        for row in reader:          #name,AGATC,AATG,TATC
-            print(row[1])
-                #person = row["name"]
-                #base1 = int(row["AGATC"])
-                #base2 = int(row["DNA[2]"])
-                #base3 = int(row["DNA[3]"])
-                #if base1 in counts:
-                    #counts[base1] += 1
-                #else:
-                    #counts[base1] = 1
-
-        #for base1 in counts:
-        #print(f"{base1}: {counts[base1]}")
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    dna = {}
+    for str in strs:
+        dna[str] = consec_repeats(str, dna)
     # TODO: Check database for matching profiles
 
     #return
