@@ -13,10 +13,15 @@ def main():
     filename = sys.argv[1]
         with open(filename) = file:
             reader = csv.DictReader(file)
-            for row in reader:
-                
     # TODO: Read DNA sequence file into a variable
 
+            for row in reader:          #name,AGATC,AATG,TATC
+                person = row["name"]
+                base1 = int(row["DNA[1]"])
+                base2 = int(row["DNA[2]"])
+                base3 = int(row["DNA[3]"])
+
+                DNA.append = {}
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
