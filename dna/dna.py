@@ -24,8 +24,12 @@ def main():
     for str in strs:
         dna[str] = longest_match(str, dna)
     # TODO: Check database for matching profiles
-    
-    #return
+    for row in reader:
+        if match(str, dna, row):
+            print(f"{row["name"]}")
+            return
+        else:
+            print("no match")
 
 
 def longest_match(sequence, subsequence):
