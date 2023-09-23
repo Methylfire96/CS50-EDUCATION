@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("wrong command line input")
+        print("python dna.py data.csv sequence.txt")
 
 
     # TODO: Read database file into a variable
