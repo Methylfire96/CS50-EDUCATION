@@ -28,6 +28,14 @@ def main():
     for STR in STRs:
         counts[STR] = longest_match(sequence, STR)
 
+    match = find_match(humans, counts)
+
+    if match is not None:
+        print(match["name"])
+    else:
+        print("No match")
+
+
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
 
@@ -64,6 +72,18 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
+def find_match(humans, counts):
+    for human in humans:
+        match = True
+        for STR, count in counts.items():
+            if int(human[STR]) != count:
+                match = False
+                break
+        if match:
+            return human
+
+    return None
 
 
 main()
