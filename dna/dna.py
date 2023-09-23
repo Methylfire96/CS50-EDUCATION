@@ -16,15 +16,17 @@ def main():
         reader = csv.DictReader(csv)
         human = list(reader)
 
+
+    # TODO: Read DNA sequence file into a variable
     with open(sequences, "r") as txt:
-        sequence = sequences.read()
+            sequence = sequences.read()
 
     STRs = list(human[0].keys())[1:]
-    # TODO: Read DNA sequence file into a variable
-
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+    counts = {}
+    for STR in STRs:
+        counts[STR] = longest_match(sequence, STR)
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
