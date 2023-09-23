@@ -22,7 +22,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     dna = {}
     for str in strs:
-        dna[str] = consec_repeats(str, dna)
+        dna[str] = longest_match(str, dna)
     # TODO: Check database for matching profiles
 
     #return
