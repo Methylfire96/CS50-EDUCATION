@@ -5,13 +5,13 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("wrong command line input")
     DNA = []
 
     # TODO: Read database file into a variable
     filename = sys.argv[1]
-        with open(filename) as file:
+        with open(filename, "r") as file:
             reader = csv.DictReader(file)
     # TODO: Read DNA sequence file into a variable
 
