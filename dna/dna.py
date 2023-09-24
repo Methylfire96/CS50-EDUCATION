@@ -25,7 +25,7 @@ def main():
         if key == "name":
             continue
 
-    counts[key] = longest_match(sequence, key)
+        counts[key] = longest_match(sequence, key)
 
     # TODO: Check database for matching profiles
     for row in human_db:
