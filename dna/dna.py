@@ -22,8 +22,10 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     counts = {}
     for STR in human_db[0].keys():
-        if STR 
-        counts[STR] = longest_match(sequence, STR)
+        if STR == "name":
+            continue
+
+    counts[STR] = longest_match(sequence, STR)
 
     # TODO: Check database for matching profiles
     for row in human_db:
