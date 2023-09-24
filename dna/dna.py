@@ -31,6 +31,23 @@ def main():
     for STR in STRs:
         counts[STR] = longest_match(sequence, STR)
 
+    # TODO: Check database for matching profiles
+    for row in human:
+        match = True
+        for STR in row.keys():
+            if STR == "name":
+                continue
+            if int(row[STR]) != counts[STR]:
+                match = False
+                break
+            if match:
+                print(row["name"])
+                return
+            
+    print("no match")
+
+
+###
     match = find_match(human, counts)
 
     if match is not None:
