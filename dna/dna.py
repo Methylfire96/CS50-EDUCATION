@@ -20,10 +20,9 @@ def main():
             sequence = txt.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    STRs = list(human_db[0].keys())[1:]
-
     counts = {}
-    for STR in STRs:
+    for STR in human_db[0].keys():
+        if STR 
         counts[STR] = longest_match(sequence, STR)
 
     # TODO: Check database for matching profiles
