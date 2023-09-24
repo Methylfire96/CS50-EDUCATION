@@ -13,13 +13,13 @@ def main():
     # TODO: Read database file into a variable
 
 
-    with open(sys.argv[1] "r") as csv:
+    with open(sys.argv[1], "r") as csv:
         reader = csv.DictReader(csv)
         human = list(reader)
 
 
     # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2] "r") as txt:
+    with open(sys.argv[2], "r") as txt:
             sequence = txt.read()
 
 
@@ -43,17 +43,9 @@ def main():
             if match:
                 print(row["name"])
                 return
-            
+
     print("no match")
 
-
-###
-    match = find_match(human, counts)
-
-    if match is not None:
-        print(match["name"])
-    else:
-        print("No match")
 
 
 def longest_match(sequence, subsequence):
@@ -92,18 +84,6 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
-
-def find_match(humans, counts):
-    for human in humans:
-        match = True
-        for STR, count in counts.items():
-            if int(human[STR]) != count:
-                match = False
-                break
-        if match:
-            return human
-
-    return None
 
 
 main()
