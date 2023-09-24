@@ -29,7 +29,7 @@ def main():
     for STR in STRs:
         counts[STR] = longest_match(sequence, STR)
 
-    match = find_match(humans, counts)
+    match = find_match(human, counts)
 
     if match is not None:
         print(match["name"])
