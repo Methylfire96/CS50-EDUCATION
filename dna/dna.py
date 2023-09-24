@@ -22,9 +22,11 @@ def main():
     with open(sys.argv[2] "r") as txt:
             sequence = txt.read()
 
-    STRs = list(human[0].keys())[1:]
+
 
     # TODO: Find longest match of each STR in DNA sequence
+    STRs = list(human[0].keys())[1:]
+
     counts = {}
     for STR in STRs:
         counts[STR] = longest_match(sequence, STR)
