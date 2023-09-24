@@ -36,9 +36,9 @@ def main():
             if int(row[key]) != counts[key]:
                 match = False
                 break
-            if match:
-                print(row["name"])
-                return
+        if match:
+            print(row["name"])
+            return
 
     print("no match")
 
