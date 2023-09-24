@@ -13,8 +13,8 @@ def main():
     # TODO: Read database file into a variable
 
 
-    with open(sys.argv[1], "r") as csv:
-        reader = csv.DictReader(csv)
+    with open(sys.argv[1], "r") as database:
+        reader = csv.DictReader(database)
         human = list(reader)
 
 
