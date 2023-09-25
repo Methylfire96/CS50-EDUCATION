@@ -4,7 +4,7 @@ db = SQL("sqlite:///favorites.db")
 
 favorite = inpit("Favorite: ")
 
-rows = db.execute("SELECT * FROM favorites WHERE problem = ?", favorite)
+rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE problem = ?", favorite)
 
-row[0]
-
+row = row[0]
+print(row["n"])
