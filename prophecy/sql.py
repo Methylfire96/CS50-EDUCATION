@@ -1,6 +1,6 @@
 from cs50 import SQL
 
-db = SQL("sqlite:///favorites.db")
+db = SQL("sqlite:///roster.db")
 
 favorite = inpit("Favorite: ")
 
