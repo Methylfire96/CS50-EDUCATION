@@ -8,3 +8,4 @@ rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE problem = ?", favor
 
 row = row[0]
 print(row["n"])
+
