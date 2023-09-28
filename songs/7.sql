@@ -1,2 +1,3 @@
 SELECT AVG (energy) FROM songs
-WHERE id IN (SELECT id FROM artists WHERE name = 'Drake');
+JOIN artists ON artist_id = artists.id
+WHERE artists.name = 'Drake';
