@@ -1,0 +1,2 @@
+Energy: min = 0.296, max = 0.909 avg = 0.659
+Valence: min =  , max = 0.9 , avg = 0.484
