@@ -1,5 +1,6 @@
 SELECT DISTINCT people.name FROM people
-JOIN directors ON people.id = 
+JOIN directors ON people.id = directors.person_id
+WHERE ratings.rating = "9.0";
 
 
 
