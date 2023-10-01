@@ -1,7 +1,7 @@
 SELECT title FROM movies
 WHERE id IN (
     SELECT movie_id FROM stars
-    JOIN poeple ON stars.person_id = people.id
+    JOIN poeple ON stars.person_id = person.id
     WHERE people.name = "Bradley Cooper"
 )
 AND id IN (
