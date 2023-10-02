@@ -53,7 +53,7 @@
     SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions
     WHERE people.phone_number = phone_calls.caller
     AND people.license_plate = bakery_security_logs.license_plate
-    AND
+    AND 
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
     AND bakery_security_logs.hour = 10
     AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw"
