@@ -22,6 +22,20 @@
     In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow.
     The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
+--search phone_calls in the time range when the thief left the bakery:
+    SELECT * FROM phone_calls
+    WHERE year = 2021 AND month = 7 AND day = 28 AND duration <= 60;
+--> (130) 555-0289
+    (499) 555-9472
+    (367) 555-5533
+    (609) 555-5876
+    (499) 555-9472
+    (286) 555-6063
+    (770) 555-1861
+    (031) 555-6622
+    (826) 555-1652
+    (338) 555-6650
+
 --search the bakery sec logs:
     SELECT license_plate FROM bakery_security_logs
     WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10;
@@ -39,49 +53,14 @@
 --search ATM withdwawal in the morning of the theft:
     SELECT * FROM atm_transactions
     WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
-    28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199
+--> 28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199
 
-    --------------
-    SELECT * FROM people
-    JOIN phone_calls ON people.phone_number = phone_calls.caller
-    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    JOIN atm_transactions ON people.id = atm_transactions.id
-    WHERE phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
-    AND bakery_security_logs.year = 2021 AND bakery_security_logs.month = 7 AND bakery_security_logs.day = 28 AND bakery_security_logs.hour = 10
-    AND atm_transactions.year = 2021 AND atm_transactions.month = 7 AND atm_transactions.day = 28 AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw"
-
+--combine the informations on phone_calls, bakery_security_logs and atm_transactions:
     SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions
     WHERE people.phone_number = phone_calls.caller
     AND people.license_plate = bakery_security_logs.license_plate
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
-    AND bakery_security_logs.hour = 10
-
-AND people.id = atm_transactions.id
-    AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
-
-
-
-
-
-
-
-
-
-
-
---search phone_calls in the time range when the thief left the bakery:
-    SELECT * FROM phone_calls
-    WHERE year = 2021 AND month = 7 AND day = 28 AND duration <= 60;
-    (130) 555-0289
-    (499) 555-9472
-    (367) 555-5533
-    (609) 555-5876
-    (499) 555-9472
-    (286) 555-6063
-    (770) 555-1861
-    (031) 555-6622
-    (826) 555-1652
-    (338) 555-6650
+    AND bakery_security_logs.hour = 10;
 
 --search for flights from fiftyville on the following day in the morning
     SELECT * FROM airports;
@@ -96,4 +75,21 @@ city fiftyville: airport_name = Fiftyville Regional Airport
     SELECT * FROM passengers
     JOIN flights ON passengers.flight_id = flights.id
     WHERE flights.origin_airport_id = 8 AND flights.destination_airport_id = 4 AND flights.hour = 8 AND flights.minute = 20;
+
+
+--from the COMBINE from aboth, find those persons passport_number and compare it with the passenger list:
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
