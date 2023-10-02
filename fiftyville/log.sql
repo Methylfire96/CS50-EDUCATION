@@ -34,3 +34,6 @@
     322W7JE
     0NTHK55
     1106N58
+
+--search ATM withdwawal in the morning of the theft:
+    
