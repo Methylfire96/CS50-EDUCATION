@@ -78,25 +78,14 @@ city fiftyville: airport_name = Fiftyville Regional Airport
 
 
 --from the COMBINE from aboth, find those persons passport_number and compare it with the passenger list:
-    SELECT DISTINCT passport_number FROM people
-    JOIN phone_calls ON people.phone_number = phone_calls.caller
-    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    JOIN atm_transactions ON atm_transactions.id = people.id
-    JOIN bank_accounts ON bank_accounts.person_id = people.id
-    WHERE phone_calls.year = 2021
-  AND phone_calls.month = 7
-  AND phone_calls.day = 28
-  AND phone_calls.duration <= 60
-  AND bakery_security_logs.hour = 10
-  AND EXISTS (
-    SELECT * FROM passengers
-    JOIN flights ON passengers.flight_id = flights.id
-    WHERE flights.origin_airport_id = 8
-      AND flights.destination_airport_id = 4
-      AND flights.hour = 8
-      AND flights.minute = 20
-      AND passengers.passport_number = people.passport_number
-  );
+    SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions, bank_accounts
+    WHERE people.phone_number = phone_calls.caller
+    AND atm_transactions.account_number = bank_accounts.account_number
+    AND bank_accounts.person_id = people.id
+    AND people.license_plate = bakery_security_logs.license_plate
+    AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
+    AND bakery_security_logs.hour = 10
+    AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
 
 
@@ -105,14 +94,7 @@ city fiftyville: airport_name = Fiftyville Regional Airport
 
 
 
-SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions, bank_accounts
-WHERE people.phone_number = phone_calls.caller
-AND atm_transactions.account_number = bank_accounts.account_number
-AND bank_accounts.person_id = people.id
-AND people.license_plate = bakery_security_logs.license_plate
-AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
-AND bakery_security_logs.hour = 10
-AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
+
 
 
 
