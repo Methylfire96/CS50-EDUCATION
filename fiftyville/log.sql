@@ -38,7 +38,7 @@
 
 --search the bakery sec logs:
     SELECT license_plate FROM bakery_security_logs
-    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10;
+    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >=15 AND minute <= 25;
 --> there is 9 license plates who left the parking lot:
     5P2BI95
     94KL13X
@@ -84,7 +84,7 @@
     AND bank_accounts.person_id = people.id
     AND people.license_plate = bakery_security_logs.license_plate
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
-    AND bakery_security_logs.hour = 10 AND activity = "exit"
+    AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute >=15 AND bakery_security_logs.minute <= 25 AND bakery_security_logs.activity = "exit"
     AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
 
