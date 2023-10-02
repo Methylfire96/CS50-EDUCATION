@@ -55,8 +55,8 @@
     WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 --> 28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199
 
---combine the informations on phone_calls, bakery_security_logs and atm_transactions:
-    SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions
+--combine the informations on phone_calls, bakery_security_logs:
+    SELECT name FROM people, phone_calls, bakery_security_logs
     WHERE people.phone_number = phone_calls.caller
     AND people.license_plate = bakery_security_logs.license_plate
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
@@ -81,7 +81,7 @@ city fiftyville: airport_name = Fiftyville Regional Airport
     SELECT DISTINCT passport_number FROM people
     JOIN phone_calls ON people.phone_number = phone_calls.caller
     JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-    JOIN atm_transactions ON atm_transactions.person_id = people.id
+    JOIN atm_transactions ON atm_transactions.id = people.id
     JOIN bank_accounts ON bank_accounts.person_id = people.id
     WHERE phone_calls.year = 2021
   AND phone_calls.month = 7
@@ -89,7 +89,7 @@ city fiftyville: airport_name = Fiftyville Regional Airport
   AND phone_calls.duration <= 60
   AND bakery_security_logs.hour = 10
   AND EXISTS (
-    SELECT 1
+    SELECT *
     FROM passengers
     JOIN flights ON passengers.flight_id = flights.id
     WHERE flights.origin_airport_id = 8
