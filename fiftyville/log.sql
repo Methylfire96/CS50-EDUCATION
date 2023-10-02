@@ -86,17 +86,21 @@
     AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute >=15 AND bakery_security_logs.minute <= 25 AND bakery_security_logs.activity = "exit"
     AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
---find persons passport_number and compare it with the passenger list:
+-- find persons passport_number and compare it with the passenger list:
 
     SELECT name FROM people
     JOIN passengers ON people.passport_number = passengers.passport_number
     WHERE passengers.flight_id = 36 AND people.name IN ("Bruce" , "Diana");
 --> on the plane is Bruce!
 
---whom did Bruce call, is his accomplice:
+-- whom did Bruce call, is his accomplice:
     SELECT * FROM phone_calls
     JOIN people ON people.phone_number = phone_calls.caller
     WHERE people.name = "Bruce" AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <= 60;
+--> (367) 555-5533
+    SELECT name FROM people
+    JOIN phone_calls ON people.phone_number = phone_calls.receiver
+    WHERE phone_calls.receiver = "(367) 555-5533";
 
 
 
