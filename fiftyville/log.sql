@@ -7,6 +7,10 @@
     WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
 --> theft took place at 10:15am in the Humphrey Street bakery ( 3 witnesse), littering at 16:36 (no witnesses)
 
+--search for the interviews:
+    SELECT transcript FROM interviews
+    WHERE year = 2021 AND month = 7 AND day = 28;
+
 --search the bakery sec logs:
     SELECT license_plate FROM bakery_security_logs
     WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10;
