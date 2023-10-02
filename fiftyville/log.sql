@@ -88,7 +88,10 @@
 
 --find persons passport_number and compare it with the passenger list:
 
-
+    SELECT *, Bruce, Diana FROM bakery_security_logs
+    JOIN people ON people.license_plate = bakery_security_logs.license_plate
+    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >=15 AND minute <= 25
+    ORDER BY minute;
 
 
 
