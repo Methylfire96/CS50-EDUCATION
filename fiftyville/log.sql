@@ -11,13 +11,14 @@
     SELECT transcript FROM interviews
     WHERE year = 2021 AND month = 7 AND day = 28;
 -->the 3 interviews:
-    #Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
+    #
+    Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
     If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
-
-    #I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
+    #
+    I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
     I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
-
-    #As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
+    #
+    As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
     In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow.
     The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
@@ -46,3 +47,15 @@
 --search phone_calls in the time range when the thief left the bakery:
     SELECT * FROM phone_calls
     WHERE year = 2021 AND month = 7 AND day = 28 AND duration <= 60;
+    (130) 555-0289
+    (499) 555-9472
+    (367) 555-5533
+    (609) 555-5876
+    (499) 555-9472
+    (286) 555-6063
+    (770) 555-1861
+    (031) 555-6622
+    (826) 555-1652
+    (338) 555-6650
+
+--
