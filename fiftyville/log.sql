@@ -37,8 +37,10 @@
     (338) 555-6650
 
 --search the bakery sec logs:
-    SELECT license_plate FROM bakery_security_logs
-    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >=15 AND minute <= 25;
+    SELECT *, people.name FROM bakery_security_logs
+    JOIN people ON people.license_plate = bakery_security_logs.license_plate
+    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >=15 AND minute <= 25
+    ORDER BY minute;
 --> there is 9 license plates who left the parking lot:
     5P2BI95
     94KL13X
