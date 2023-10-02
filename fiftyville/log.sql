@@ -77,9 +77,7 @@
     JOIN flights ON passengers.flight_id = flights.id
     WHERE flights.origin_airport_id = 8 AND flights.destination_airport_id = 4 AND flights.hour = 8 AND flights.minute = 20;
 
-
---from the COMBINE from aboth, find those persons passport_number and compare it with the passenger list:
-    SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions, bank_accounts
+SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions, bank_accounts
     WHERE people.phone_number = phone_calls.caller
     AND atm_transactions.account_number = bank_accounts.account_number
     AND bank_accounts.person_id = people.id
@@ -87,6 +85,9 @@
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
     AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute >=15 AND bakery_security_logs.minute <= 25 AND bakery_security_logs.activity = "exit"
     AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
+
+--find persons passport_number and compare it with the passenger list:
+
 
 
 
