@@ -94,10 +94,6 @@
 --> on the plane is Bruce!
 
 -- whom did Bruce call, is his accomplice:
-    SELECT * FROM phone_calls
-    JOIN people ON people.phone_number = phone_calls.caller
-    WHERE people.name = "Bruce" AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <= 60;
---> (367) 555-5533
     SELECT p2.name AS receiver
     FROM phone_calls pc
     JOIN people p1 ON pc.caller = p1.phone_number
