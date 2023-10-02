@@ -5,7 +5,7 @@
 --finding the description of that data above:
     SELECT description FROM crime_scene_reports
     WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
---> theft took place at 10:15am in the Humphrey Street bakery ( 3 witnesse), littering at 16:36 (no witnesses)
+--> theft took place at 10:15am in the Humphrey Street bakery ( 3 witnesse)
 
 --search for the interviews:
     SELECT transcript FROM interviews
