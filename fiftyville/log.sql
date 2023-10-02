@@ -89,8 +89,7 @@ city fiftyville: airport_name = Fiftyville Regional Airport
   AND phone_calls.duration <= 60
   AND bakery_security_logs.hour = 10
   AND EXISTS (
-    SELECT *
-    FROM passengers
+    SELECT * FROM passengers
     JOIN flights ON passengers.flight_id = flights.id
     WHERE flights.origin_airport_id = 8
       AND flights.destination_airport_id = 4
