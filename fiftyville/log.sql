@@ -88,12 +88,15 @@
 
 --find persons passport_number and compare it with the passenger list:
 
-    SELECT *, Bruce, Diana FROM bakery_security_logs
-    JOIN people ON people.license_plate = bakery_security_logs.license_plate
-    WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute >=15 AND minute <= 25
-    ORDER BY minute;
+    SELECT name FROM people
+    JOIN passengers ON people.passport_number = passengers.passport_number
+    WHERE passengers.flight_id = 36 AND people.name IN ("Bruce" , "Diana");
+--> on the plane is Bruce!
 
-
+--whom did Bruce call, is his accomplice:
+    SELECT * FROM phone_calls
+    JOIN people ON people.phone_number = phone_calls.caller
+    WHERE people.name = "Bruce";
 
 
 
