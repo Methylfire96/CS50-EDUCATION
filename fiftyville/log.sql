@@ -84,7 +84,7 @@
     AND bank_accounts.person_id = people.id
     AND people.license_plate = bakery_security_logs.license_plate
     AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
-    AND bakery_security_logs.hour = 10
+    AND bakery_security_logs.hour = 10 AND activity = "exit"
     AND atm_transactions.atm_location = "Leggett Street" AND atm_transactions.transaction_type = "withdraw";
 
 
