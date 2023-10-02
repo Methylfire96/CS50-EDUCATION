@@ -10,4 +10,4 @@
 --search the bakery sec logs:
     SELECT license_plate FROM bakery_security_logs
     WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10;
---> there is one licenxe plate exit 1minute after the theft (5P2BI95)
+--> there is one licenxe plate exit 1minute after the theft (5P2BI95) and entry at
