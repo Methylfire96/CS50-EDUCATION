@@ -91,3 +91,9 @@ city fiftyville: airport_name = Fiftyville Regional Airport
     ORDER BY hour;
 -->the first flight out of Fiftyville goes to New York City at 8:20am
    therefore, the thief has to be on that plane.
+
+--search the right plane:
+    SELECT * FROM passengers
+    JOIN flights ON passengers.flight_id = flights.id
+    WHERE flights.origin_airport_id = 8 AND flights.destination_airport_id = 4 AND flights.hour = 8 AND flights.minute = 20;
+    
