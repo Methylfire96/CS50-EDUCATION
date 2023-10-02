@@ -106,10 +106,9 @@ city fiftyville: airport_name = Fiftyville Regional Airport
 
 
 SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions
-
-JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
-JOIN bank_account ON bank_accounts.person_id = people.id
 WHERE people.phone_number = phone_calls.caller
+AND atm_transactions.account_number = bank_accounts.account_number
+AND bank_accounts.person_id = people.id
 AND people.license_plate = bakery_security_logs.license_plate
 AND atm_transactions ON people.id = atm_transactions.id
 AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <=60
