@@ -64,12 +64,12 @@
 
 --search for flights from fiftyville on the following day in the morning
     SELECT * FROM airports;
-city fiftyville: airport_name = Fiftyville Regional Airport
+--> city fiftyville: airport_name = Fiftyville Regional Airport
     SELECT * FROM flights
     WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = 8
     ORDER BY hour;
--->the first flight out of Fiftyville goes to New York City at 8:20am
-   therefore, the thief has to be on that plane.
+--> the first flight out of Fiftyville goes to New York City at 8:20am
+    therefore, the thief has to be on that plane.
 
 --search the right plane:
     SELECT * FROM passengers
