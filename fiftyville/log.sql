@@ -39,7 +39,7 @@
 --search the bakery sec logs:
     SELECT license_plate FROM bakery_security_logs
     WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10;
---> there is 9 licenxe plates who left the parking lot:
+--> there is 9 license plates who left the parking lot:
     5P2BI95
     94KL13X
     6P58WS2
