@@ -78,7 +78,7 @@
     WHERE flights.origin_airport_id = 8 AND flights.destination_airport_id = 4 AND flights.hour = 8 AND flights.minute = 20;
 
 SELECT name FROM people, phone_calls, bakery_security_logs, atm_transactions, bank_accounts
-    WHERE people.phone_number = phone_calls.caller
+    JOIN people.phone_number = phone_calls.caller
     AND atm_transactions.account_number = bank_accounts.account_number
     AND bank_accounts.person_id = people.id
     AND people.license_plate = bakery_security_logs.license_plate
