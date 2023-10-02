@@ -98,9 +98,13 @@
     JOIN people ON people.phone_number = phone_calls.caller
     WHERE people.name = "Bruce" AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28 AND phone_calls.duration <= 60;
 --> (367) 555-5533
-    SELECT name FROM people
-    JOIN phone_calls ON people.phone_number = phone_calls.receiver
-    WHERE phone_calls.receiver = "(367) 555-5533";
+    SELECT p2.name AS receiver
+    FROM phone_calls pc
+    JOIN people p1 ON pc.caller = p1.phone_number
+    JOIN people p2 ON pc.receiver = p2.phone_number
+    WHERE p1.name = "Bruce" AND pc.year = 2021 AND pc.month = 7 AND pc.day = 28 AND pc.duration < 60;
+--> the accomplice is Robin
+
 
 
 
