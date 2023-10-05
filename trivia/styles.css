@@ -48,7 +48,7 @@ button, input[type="submit"] {
     text-align: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     vertical-align: middle;
-    
+
 
 }
 
@@ -61,4 +61,14 @@ input[type="text"] {
 input[type="text"]:hover {
     background-color: #f5f5f5;
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    flex: 1;
+    margin: 10px;
 }
