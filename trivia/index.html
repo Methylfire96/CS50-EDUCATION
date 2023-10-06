@@ -13,6 +13,14 @@
                     });
                 });
             });
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll(".buttonCorrect").forEach(button => {
+                    button.addEventListener("click", function() {
+                        this.style.backgroundColor = "green";
+                    });
+                });
+            });
+
         </script>
 
     </head>
@@ -32,7 +40,7 @@
                 <table>
                     <tr class="container">
                         <td>
-                            <button id="red" class="button">Bruce Springsteen</button>
+                            <button class="button">Bruce Springsteen</button>
                         </td>
                         <td>
                             <button id="button" class="button">Madonna</button>
@@ -41,7 +49,7 @@
                             <button id="button" class="button">Justin Timberlake</button>
                         </td>
                         <td>
-                            <button id="button" class="button">Beyonce</button>
+                            <button id="button" class="buttonCorrect">Beyonce</button>
                         </td>
 
                     </tr>
