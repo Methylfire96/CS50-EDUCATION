@@ -6,12 +6,15 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
-            let body = document.querySelector("body");
-            document.querySelector("red").addEventListener("click", function(){
-                body.style.backgroundColor = "red";
-            })
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll(".button").forEach(button => {
+                    button.addEventListener("click", function() {
+                        this.style.backgroundColor = "red";
+                    });
+                });
+            });
         </script>
+
     </head>
     <body>
         <div class="header">
