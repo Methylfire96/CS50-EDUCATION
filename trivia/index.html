@@ -13,13 +13,17 @@
                         if (isCorrect) {
                             this.style.backgroundColor = "green";
                             this.disable = true;
-                            document.getElementById("result")
+                            document.getElementById("result").innerText = "Correct";
                         }
-                        this.style.backgroundColor = "red";
+                        else {
+                            this.style.backgroundColor = "red";
+                            document.getElementById("result").innerText = "Incorrect
+                        }
+
                     });
 
 
-                        this.style.backgroundColor = "green";
+
                     });
                 });
             });
