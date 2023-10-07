@@ -9,7 +9,10 @@
             document.addEventListener("DOMContentLoaded", function() {
                 document.querySelectorAll(".button").forEach(button => {
                     button.addEventListener("click", function() {
-                        
+                        let isCorrect = this.dataset.correct === "true";
+                        if (isCorrect) {
+                            this.s
+                        }
                         this.style.backgroundColor = "red";
                     });
 
