@@ -21,6 +21,19 @@
                         }
                     });
                 });
+                
+                document.getElementById("submit").addEventListener("click", function() {
+                    let userResponse = document.getElementById("response").value;
+                    let correctAnswer = "OpenAI";
+                    let responseField = document.getElementById("response");
+
+                    if (userResponse.toLowerCase() === correctAnswer.toLowerCase()) {
+                        responseField.style.backgroundColor = "green";
+                        document.getElementById("responseResult").innerText = "Correct!";
+                    } else {
+                        responseField.style.backgroundColor = "red";
+                        document.getElementById("responseResult").innerText = "Incorrect";
+                    }
             });
 
         </script>
