@@ -11,7 +11,9 @@
                     button.addEventListener("click", function() {
                         let isCorrect = this.dataset.correct === "true";
                         if (isCorrect) {
-                            this.s
+                            this.style.backgroundColor = "green";
+                            this.disable = true;
+                            document.getElementById("result")
                         }
                         this.style.backgroundColor = "red";
                     });
