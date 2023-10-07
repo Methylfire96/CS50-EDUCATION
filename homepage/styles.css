@@ -1,12 +1,9 @@
 .header {
     font-size: large;
     background-color: black;
-    color: #fff;
+    color: #8B0000;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
 }
 
-.header_color {
-    color: ;
-}
