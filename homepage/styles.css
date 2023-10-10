@@ -20,3 +20,9 @@
     margin-bottom: 16px;
     position: relative;
 }
+
+.input,button {
+    text-align: center;
+    size: large;
+    width: 80px;
+}
