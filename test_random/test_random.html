@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Engine</title>
+</head>
+<body>
+    <h1>Simple Search Engine</h1>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var query = document.getElementById('searchQuery').value;
+            search(query);
+        });
+
+        function search(query) {
+            var resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            // This is a very simplified example. In reality, you would send the query to a backend server, process it, and retrieve results.
+            var fakeResults = [
+                'Result 1: Lorem ipsum dolor sit amet',
+                'Result 2: Consectetur adipiscing elit',
+                'Result 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+            ];
+
+            fakeResults.forEach(function(result) {
+                var resultElement = document.createElement('div');
+                resultElement.textContent = result;
+                resultsDiv.appendChild(resultElement);
+            });
+        }
+    </script>
+</body>
+</html>
