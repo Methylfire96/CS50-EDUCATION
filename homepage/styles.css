@@ -1,9 +1,12 @@
 .header {
-    font-size: large;
-    background-color: black;
-    color: #8B0000;
+    font-size: 48px;
+    background-color: #445760;
+    color: white;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
 }
 
+.background_color {
+    background-color: #445760;
+}
