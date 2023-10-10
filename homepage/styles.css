@@ -10,7 +10,14 @@
 
 .bar {
     align: right;
-    
+}
+
+.link_gmail {
+    margin-top: 20px;
+}
+
+.link_pictures {
+    margin-left: 20px;
 }
 
 .google {
