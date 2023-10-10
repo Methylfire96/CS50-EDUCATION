@@ -1,5 +1,9 @@
 .header {
-    font-size: 48px;
+    font-size: 80px;
+}
+
+.google {
+    font-size: 70px;
     background-color: #445760;
     color: white;
     margin-bottom: 2rem;
