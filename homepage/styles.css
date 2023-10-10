@@ -38,10 +38,10 @@ li {
 }
 .google {
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    font-size: 70px;
+    font-size: 85px;
     background-color: #445760;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -87,11 +87,6 @@ form {
     position: relative;
 }
 
-.input,button {
-    text-align: center;
-    size: large;
-
-}
 a {
     text-decoration: none;
     color: #4285f4;
