@@ -100,3 +100,24 @@ a {
     text-decoration: none;
     color: #4285f4;
 }
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: #f0f0f0;
+}
