@@ -10,33 +10,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
 
-        <script>
-            document.getElementById('searchForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                var query = document.getElementById('searchQuery').value;
-                search(query);
-            });
-
-            function search(query) {
-                var resultsDiv = document.getElementById('results');
-                resultsDiv.innerHTML = '';
-
-                // This is a very simplified example. In reality, you would send the query to a backend server, process it, and retrieve results.
-                var fakeResults = [
-                    'Result 1: Lorem ipsum dolor sit amet',
-                    'Result 2: Consectetur adipiscing elit',
-                    'Result 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-                ];
-
-                fakeResults.forEach(function(result) {
-                    var resultElement = document.createElement('div');
-                    resultElement.textContent = result;
-                    resultsDiv.appendChild(resultElement);
-                });
-            }
-        </script>
-
-
 
         <title>Google</title>
     </head>
@@ -66,7 +39,7 @@
 
 
 
-            <form id="searchForm">
+            <form action="https://www.google.com/search" method="get">
                 <div class="search-container">
                     <span margin="auto" class="material-symbols-outlined">
                         search
