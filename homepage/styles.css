@@ -11,6 +11,8 @@
 .link {
 
     align: right;
+    text-decoration: none;
+    color: white;
 }
 
 .google {
