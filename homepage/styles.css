@@ -50,7 +50,8 @@ form {
     display: flex;
     width: 60%;
     max-width: 800px;
-    
+    margin: auto;
+
 }
 
 .search-container {
@@ -63,8 +64,8 @@ form {
     border-radius: 20px;
     padding: 10px;
     font-size: 1em;
-    width: 100%;
-    padding-right: 40px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
 }
 
 .search-button {
@@ -90,4 +91,8 @@ form {
     text-align: center;
     size: large;
 
+}
+a {
+    text-decoration: none;
+    color: #4285f4;
 }
