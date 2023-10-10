@@ -1,9 +1,11 @@
 .background_color {
     background-color: #445760;
+    color: white;
 }
 
 .header {
     font-size: 8px;
+    color: black;
 }
 
 .google {
