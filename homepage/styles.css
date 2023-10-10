@@ -10,9 +10,13 @@
 
 .link {
 
-    text-align: right;
-    text-decoration: none;
-    color: white;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+li {
+    margin: 0 10px;
 }
 
 .google {
