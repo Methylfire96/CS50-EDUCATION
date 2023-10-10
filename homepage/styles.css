@@ -1,3 +1,7 @@
+.background_color {
+    background-color: #445760;
+}
+
 .header {
     font-size: 80px;
 }
@@ -11,6 +15,8 @@
     text-align: center;
 }
 
-.background_color {
-    background-color: #445760;
+.realboxContainer {
+    display: inherit;
+    margin-bottom: 16px;
+    position: relative;
 }
