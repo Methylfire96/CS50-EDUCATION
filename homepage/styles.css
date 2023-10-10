@@ -100,17 +100,3 @@ a {
     text-decoration: none;
     color: #4285f4;
 }
-
-h1 {
-    text-align: center;
-    background-color: pink;
-    color: red;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
