@@ -8,16 +8,14 @@
     color: black;
 }
 
-.bar {
-    align: right;
-}
-
 .link_gmail {
-    margin-top: 20px;
+    
+    align: right;
 }
 
 .link_pictures {
     margin-left: 20px;
+    align: right;
 }
 
 .google {
