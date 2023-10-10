@@ -104,8 +104,8 @@ a {
 .tabs {
     display: flex;
     justify-content: center;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ccc;
+    background-color: #445760;
+    
     padding: 10px 0;
 }
 
