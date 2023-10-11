@@ -29,25 +29,6 @@ li {
   'opsz' 24
 }
 
-### homebutton
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-### lens
-.material-symbols-outlined{
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-
-}
-
 .google {
     scale: 60%;
     text-align: center;
@@ -82,7 +63,6 @@ form {
     background-color: #ececec;
 }
 
-
 .search-button {
     border: none;
     background-color: transparent;
@@ -94,15 +74,9 @@ form {
     font-size: 1.2em;
 }
 
-.realboxContainer {
-    display: inherit;
-    margin-bottom: 16px;
-    position: relative;
-}
-
 a {
     text-decoration: none;
-    color: #4285f4;
+    color: white;
 }
 
 .tabs {
