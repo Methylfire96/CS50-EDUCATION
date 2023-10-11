@@ -13,7 +13,7 @@
             document.addEventListener("DOMContentLoaded", function() {
                 let body = document.querySelector("body");
                 document.querySelector("#switch").addEventListener("click", function() {
-                    
+
                     body.style.backgroundColor = "white", body.style.color = "black";
                     document.getElementById("searchQuery").classList.add("bg");
                 });
@@ -27,7 +27,7 @@
                 appsIcon.addEventListener("click", function() {
 
                     let popup = document.createElement('div');
-                    popup.classList.add('popup');
+                    popup.classList.add('popup1');
                     popup.innerText = "There are no apps at the moment.";
 
                     document.body.appendChild(popup);
@@ -39,6 +39,26 @@
             });
 
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let appsIcon = document.getElementById('apps-icon');
+                appsIcon.addEventListener("click", function() {
+
+                    let popup = document.createElement('div');
+                    popup.classList.add('popup2');
+                    popup.innerText = "You ar at home silly ;)";
+
+                    document.body.appendChild(popup);
+
+                    popup.addEventListener("click", function() {
+                        popup.remove();
+                    });
+                });
+            });
+
+        </script>
+
+
         <title>Google</title>
     </head>
     <body class="background_color">
