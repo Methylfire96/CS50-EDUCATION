@@ -22,25 +22,20 @@
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-            // Get the apps icon element
-            let appsIcon = document.getElementById('apps-icon');
+                let appsIcon = document.getElementById('apps-icon');
+                appsIcon.addEventListener("click", function() {
 
-            // Add event listener to the apps icon
-            appsIcon.addEventListener("click", function() {
-                // Create a popup element
-                let popup = document.createElement('div');
-                popup.classList.add('popup');
-                popup.innerText = "There are no apps at the moment.";
+                    let popup = document.createElement('div');
+                    popup.classList.add('popup');
+                    popup.innerText = "There are no apps at the moment.";
 
-                // Append the popup to the body
-                document.body.appendChild(popup);
+                    document.body.appendChild(popup);
 
-                // Add event listener to close the popup when clicked
-                popup.addEventListener("click", function() {
-                    popup.remove();
+                    popup.addEventListener("click", function() {
+                        popup.remove();
+                    });
                 });
             });
-        });
 
         </script>
         <title>Google</title>
