@@ -78,6 +78,10 @@ form {
     outline: none;
     background-color: white;
 }
+.bg {
+    background-color: grey;
+}
+
 
 .search-button {
     border: none;
