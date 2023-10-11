@@ -51,7 +51,10 @@ li {
 .google {
     width: 150px;
     height: auto;
-    
+    text-align: center;
+    background-color: #445760;
+    margin-bottom: 20px;
+
 
 }
 
