@@ -39,12 +39,16 @@ li {
 }
 
 ### lens
-.material-symbols-outlined {
+.material-symbols-outlined-lens{
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 24;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform:
 
 }
 
