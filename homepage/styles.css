@@ -1,7 +1,6 @@
 .background_color {
     background-color: #445760;
     color: white;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .header {
@@ -65,9 +64,11 @@ form {
 .search-container {
     position: relative;
     width: 100%;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .round-input {
+
     border: none;
     border-radius: 20px;
     padding: 10px;
