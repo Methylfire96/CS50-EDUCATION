@@ -27,7 +27,7 @@
                 appsIcon.addEventListener("click", function() {
 
                     let popup = document.createElement('div');
-                    popup.classList.add('popup1');
+                    popup.classList.add('popup');
                     popup.innerText = "There are no apps at the moment.";
 
                     document.body.appendChild(popup);
@@ -41,11 +41,11 @@
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                let appsIcon = document.getElementById('apps-icon');
+                let appsIcon = document.getElementById('apps-icon2');
                 appsIcon.addEventListener("click", function() {
 
                     let popup = document.createElement('div');
-                    popup.classList.add('popup2');
+                    popup.classList.add('popup');
                     popup.innerText = "You ar at home silly ;)";
 
                     document.body.appendChild(popup);
@@ -74,7 +74,7 @@
                 <li><span id="apps-icon" class="material-symbols-outlined">
                     apps
                     </span></li>
-                <li><span class="material-symbols-outlined">
+                <li><span id="apps-icon2" class="material-symbols-outlined">
                     home
                     </span></li>
             </ul>

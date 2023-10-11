@@ -29,10 +29,10 @@ li {
   'opsz' 24
 }
 
-.popup1 {
+.popup {
     position: fixed;
     top: 5%;
-    left: 90%;
+    left: 80%;
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 10px;
@@ -43,6 +43,7 @@ li {
     z-index: 1000;
     cursor: pointer;
     color: black;
+}
 
 .google {
     scale: 60%;
