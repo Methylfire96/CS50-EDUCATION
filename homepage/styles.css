@@ -51,7 +51,7 @@ li {
 .google {
     scale: 60%;
     text-align: center;
-    background-color: #445760;
+    background-color: transparent;
     margin-top: 50px
 }
 
@@ -76,6 +76,7 @@ form {
     width: calc(100% - 40px);
     box-sizing: border-box;
     outline: none;
+    background-color: grey;
 }
 
 .search-button {
@@ -103,7 +104,7 @@ a {
 .tabs {
     display: flex;
     justify-content: center;
-    background-color: #445760;
+    background-color: transparent;
     padding: 10px 0;
     margin-top: 10px;
 }
