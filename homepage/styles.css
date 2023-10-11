@@ -47,12 +47,15 @@ li {
   'opsz' 24
 
 }
+.lens {
+    margin
+}
 
 .google {
     scale: 60%;
     text-align: center;
     background-color: #445760;
-    margin: 20px 0 30px 0;
+    margin-top: 50px;
 
 
 }
