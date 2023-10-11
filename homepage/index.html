@@ -21,12 +21,27 @@
 
         </script>
         <script>
-            funtion apps() {
-                let apps = document.querySelector("apps");
-                document.querySelector("#click").addEventListener("click", function() {
-                    alert("No Apps atm");
+            document.addEventListener("DOMContentLoaded", function() {
+            // Get the apps icon element
+            let appsIcon = document.getElementById('apps-icon');
+
+            // Add event listener to the apps icon
+            appsIcon.addEventListener("click", function() {
+                // Create a popup element
+                let popup = document.createElement('div');
+                popup.classList.add('popup');
+                popup.innerText = "There are no apps at the moment.";
+
+                // Append the popup to the body
+                document.body.appendChild(popup);
+
+                // Add event listener to close the popup when clicked
+                popup.addEventListener("click", function() {
+                    popup.remove();
                 });
-            };
+            });
+        });
+
         </script>
         <title>Google</title>
     </head>
@@ -40,7 +55,7 @@
 
                 <li><a href="https://www.google.com/">Pictures</a></li>
 
-                <li><span class="material-symbols-outlined">
+                <li><span id="apps-icon" class="material-symbols-outlined">
                     apps
                     </span></li>
                 <li><span class="material-symbols-outlined">
