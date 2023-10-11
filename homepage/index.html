@@ -16,16 +16,18 @@
             });
         </script>
         <script>
-            let body = document.querySelector("body");
-            document.querySelector("#red").addEventListener("click", function() {
-                body.style.backgroundColor = "red";
+            document.addEventListener("DOMContentLoaded", function() {
+                let body = document.querySelector("body");
+                document.querySelector("#red").addEventListener("click", function() {
+                    body.style.backgroundColor = "red";
+                });
             });
 
 
         </script>
         <title>Google</title>
     </head>
-    <body>
+    <body class="background_color">
         <div class="header">
             <p>This is a simple Google clone</p>
         </div>
