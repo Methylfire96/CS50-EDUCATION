@@ -58,6 +58,7 @@ button, input[type="submit"] {
 input[type="text"], input[type="number"] {
     line-height: 1.8;
     width: 25%;
+    margin: 10px;
 }
 
 input[type="text"]:hover, input[type="number"]:hover {
@@ -80,4 +81,3 @@ table td {
 tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
-
