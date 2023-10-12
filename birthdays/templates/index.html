@@ -37,6 +37,11 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+                        <ul>
+                            {% for name in database %}
+                            <li>{{ name }}</li>
+                            {% endfor %}
+                        </ul>
 
                     </tbody>
                 </table>
