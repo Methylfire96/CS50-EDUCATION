@@ -58,7 +58,7 @@ button, input[type="submit"] {
 input[type="text"], input[type="number"] {
     line-height: 1.8;
     width: 25%;
-    margin: 10px;
+    margin-right: 5px;
 }
 
 input[type="text"]:hover, input[type="number"]:hover {
