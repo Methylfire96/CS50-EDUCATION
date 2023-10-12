@@ -18,8 +18,8 @@
                 <table>
                     <form actiom="/" method="post">
                         <input placeholder="Name" autocomplete="off" type="text" name="name">
-                        <input placeholder="Month" autocomplete="off" type="number" name="month">
-                        <input placeholder="Day" autocomplete="off" type="number" name="day">
+                        <input placeholder="Month" autocomplete="off" type="number" name="month" min="1" max="12">
+                        <input placeholder="Day" autocomplete="off" type="number" name="day" min="1" max="31">
                         <button type="submit">Add Birthday</button>
                     </form>
                 </table>
@@ -38,12 +38,12 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
 
-                            {% for birthday in birthdays %}
-                                <tr>
-                                    <td>{{ birthday.name }}</td>
-                                    <td>{{ birthday.month }}/{{ birthday.day }}</td>
-                                </tr>
-                            {% endfor %}
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                            </tr>
+                        {% endfor %}
 
                     </tbody>
                 </table>
