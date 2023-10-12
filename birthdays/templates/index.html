@@ -41,7 +41,7 @@
                             {% for name in database %}
                             <li>{{ name }}</li>
                                 {% for row on rows %}
-                                    <li> class="{{ loop.cycle("month", "day") }}">{{ row}}</li>
+                                    <li> class="{{ loop.cycle("month", "day") }}">{{ row }}</li>
                             {% endfor %}
                         </ul>
 
