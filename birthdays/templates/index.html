@@ -37,13 +37,13 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        <ul>
-                            {% for name in database %}
-                            <li>{{ name }}</li>
-                                {% for row on rows %}
-                                    <li> class="{{ loop.cycle("month", "day") }}">{{ row }}</li>
+
+                            {% for birthday in birthdays %}
+                                <tr>
+                                    <td>{{ birthday.name }}</td>
+                                    <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                                </tr>
                             {% endfor %}
-                        </ul>
 
                     </tbody>
                 </table>
