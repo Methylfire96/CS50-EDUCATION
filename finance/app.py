@@ -117,13 +117,16 @@ def register():
         password = request.form["password"]
 
         cursor = db.cursor()
-        cursor.execute("INSERT INTO users (username, password) VALUES ?, ?", (username, password))
+        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         db.commit()
 
         return "Successfully registered"
 @app.route("/")
 def form():
     return render_templete("register.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 
