@@ -112,7 +112,7 @@ def register():
     """Register user"""
     if request.method == "GET":
         return render_template("register.html")
-    if request.method == "POST":
+    else:
         username = request.form["username"]
         password = request.form["password"]
 
