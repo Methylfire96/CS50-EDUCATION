@@ -119,11 +119,10 @@ def register():
 
     return "Successfully registered"
 
+@app.route("/")
+def form():
+    return render_templete("register.html")
 
-
-    if request.method == "GET":
-        return render_template("register.html")
-        ##if submit button click, UNIQUE INDEX.append
 
 
 @app.route("/sell", methods=["GET", "POST"])
