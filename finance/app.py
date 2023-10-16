@@ -120,18 +120,11 @@ def register():
         cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         db.commit()
 
-        return "Successfully registered"
-@app.route("/")
-def form():
-    return render_templete("register.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
+        return "Successfully registered", redirect("/login")
 
 
 
 
-        ##if submit button click, UNIQUE INDEX.append
 
 
 @app.route("/sell", methods=["GET", "POST"])
