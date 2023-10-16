@@ -115,6 +115,7 @@ def register():
         username = request.form["username"]
         password = request.form["password"]
 
+    
         cursor = db.cursor()
         cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         db.commit()
