@@ -110,17 +110,7 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    if request.method == "GET":
-        return render_template("register.html")
-    else:
-        username = request.form["username"]
-        password = request.form["password"]
-
-        cursor = db.cursor()
-        cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
-        db.commit()
-
-        return "Successfully registered", redirect("/login")
+    return ("todo")
 
 
 
