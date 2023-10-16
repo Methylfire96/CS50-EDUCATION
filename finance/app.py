@@ -119,8 +119,8 @@ def register():
         if existing_user:
             return apology("username already exists")
         hashed_password = generate_password_hash(password)
-        cursor = db.cursor()
-        cursor.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hashed_password))
+
+        db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
 
 
         return "Successfully registered", redirect("/login")
