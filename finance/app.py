@@ -110,6 +110,8 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    username = request.form["username"]
+    password = request.form["password"]
     if request.method == "GET":
         return render_template("register.html")
         ##if submit button click, UNIQUE INDEX.append
