@@ -123,7 +123,7 @@ def register():
         db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
 
 
-        return "Successfully registered", redirect("/login")
+        return redirect("/login")
 
     else:
         return render_template("register.html")
