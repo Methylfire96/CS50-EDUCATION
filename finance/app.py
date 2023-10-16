@@ -112,6 +112,15 @@ def register():
     """Register user"""
     username = request.form["username"]
     password = request.form["password"]
+
+    cursor = db.cursor()
+    cursor.execute("INSERT INTO users (username, password) VALUES ?, ?", (username, password))
+    db.commit()
+
+    return "Successfully registered"
+
+
+
     if request.method == "GET":
         return render_template("register.html")
         ##if submit button click, UNIQUE INDEX.append
