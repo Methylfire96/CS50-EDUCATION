@@ -111,7 +111,7 @@ def register():
     """Register user"""
     if request.method == "GET":
         return render_template("register.html")
-        ##if submit button click, usertable.append redirect("/register"),
+        ##if submit button click, usertable.append
 
 
 @app.route("/sell", methods=["GET", "POST"])
