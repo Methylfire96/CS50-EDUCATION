@@ -103,7 +103,8 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+
+    return lookup
 
 
 @app.route("/register", methods=["GET", "POST"])
