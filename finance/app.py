@@ -120,7 +120,7 @@ def register():
         cursor.execute("INSERT INTO users (username, password) VALUES ?, ?", (username, password))
         db.commit()
 
-            return "Successfully registered"
+        return "Successfully registered"
 @app.route("/")
 def form():
     return render_templete("register.html")
