@@ -120,10 +120,10 @@ def register():
             return apology("username already exists")
         hashed_password = generate_password_hash(password)
 
-        db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
+        register = db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
 
 
-        return redirect("/login")
+        return redirect("/login", register=users)
 
     else:
         return render_template("register.html")
