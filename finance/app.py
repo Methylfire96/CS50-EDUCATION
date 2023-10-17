@@ -115,20 +115,18 @@ def register():
         username = request.form.get("new_username")
         password = request.form.get("new_password")
 
+        ### field free error
         if not username or not password:
             return apology("potatopatoa", 403)
 
-
+        ### existing user error
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
             return apology("username already exists", 403)
 
-
         hashed_password = generate_password_hash(password)
 
-        db.execute("INSERT INTO users WHERE username IN (?)", users[username] ("WHERE password IN (?)", users[hashed_password]))
-
-        ###db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
         return redirect("/login")
 
     else:
