@@ -121,10 +121,10 @@ def register():
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
             return apology("username already exists")
-        
+
         hashed_password = generate_password_hash(password)
 
-        register = db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
+        register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hashed_password))
 
 
         return redirect("/login", register=users)
