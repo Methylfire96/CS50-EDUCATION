@@ -115,9 +115,13 @@ def register():
         username = request.form["username"]
         password = request.form["password"]
 
+        if not username or not password:
+            return apology("must provide username and password")
+
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
             return apology("username already exists")
+        
         hashed_password = generate_password_hash(password)
 
         register = db.execute("INSERT INTO users (username, hash) VALUES (%s, %s)", (username, hashed_password))
