@@ -112,8 +112,8 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        username = request.form["username"]
-        password = request.form["password"]
+        username = request.form["new_username"]
+        password = request.form["new_password"]
 
         if not username or not password:
             return apology("must provide username and password")
@@ -124,10 +124,10 @@ def register():
 
         hashed_password = generate_password_hash(password)
 
-        register = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hashed_password))
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hashed_password))
 
 
-        return redirect("/login", register=users)
+        return redirect("/login")
 
     else:
         return render_template("register.html")
