@@ -120,9 +120,9 @@ def register():
 
         hashed_password = generate_password_hash(password)
 
-        register= db.execute("INSERT INTO users WHERE username IN (?)", users[username] ("WHERE password IN (?)", users[hashed_password])
-)
+        register= db.execute("INSERT INTO users WHERE username IN (?)", users[username] ("WHERE password IN (?)", users[hashed_password]))
 
+        register= db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
         return redirect("/login", register=users)
 
     else:
