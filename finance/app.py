@@ -116,7 +116,7 @@ def register():
         password = request.form.get("new_password")
 
         if not username or not password:
-            return apology("must provide username and password", 403)
+            return apology("potatopatoa", 403)
 
 
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
