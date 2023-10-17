@@ -116,12 +116,12 @@ def register():
         password = request.form.get("new_password")
 
         if not username or not password:
-            return apology("must provide username and password")
+            return apology("must provide username and password", 403)
 
-        
+
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
-            return apology("username already exists")
+            return apology("username already exists", 403)
 
 
         hashed_password = generate_password_hash(password)
