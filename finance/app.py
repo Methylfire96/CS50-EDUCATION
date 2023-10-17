@@ -111,9 +111,9 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        username = request.form["new_username"]
-        password = request.form["new_password"]
+
+        username = request.form(["new_username"])
+        password = request.form(["new_password"])
 
         if not username or not password:
             return apology("must provide username and password")
@@ -124,7 +124,7 @@ rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("us
 
         hashed_password = generate_password_hash(password)
 
-        db.execute("INSERT INTO users WHERE username = ? AND hash)?)", (username, hashed_password))
+        db.execute("INSERT INTO users WHERE username = ?, hash = ?)", (username, hashed_password))
 
 
         return redirect("/login")
