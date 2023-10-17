@@ -112,8 +112,8 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        username = request.form["new_username"]
-        password = request.form["new_password"]
+        username = request.form.get("new_username")
+        password = request.form.get("new_password")
 
         if not username or not password:
             return apology("must provide username and password")
