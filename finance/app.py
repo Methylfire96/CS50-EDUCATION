@@ -103,8 +103,11 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    if request.method == "POST":
 
-    return lookup
+        quote = request.form.get("quote")
+
+        return lookup(quote)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -114,10 +117,15 @@ def register():
 
         username = request.form.get("new_username")
         password = request.form.get("new_password")
+        repeatPassword = request.form.get("repeat_password")
 
         # field free error
-        if not username or not password:
-            return apology("potatopatoa", 403)
+        if not username or not password or not repeatPassword:
+            return apology("Must provide all blank fields", 403)
+
+        # repaet password check
+        if password != repeatPassword:
+            return apology("Not matching password input")
 
         # existing user error
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
