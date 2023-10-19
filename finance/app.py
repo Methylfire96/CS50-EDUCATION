@@ -217,6 +217,45 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    
     if request.method == "POST":
-        lookup
-    return apology("TODO")
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        if not symbol or not shares:
+            return apology("must provide symbol and shares")
+
+        if not shares.isdigit() or int(shares) <= 0:
+            return apology("shares must be a positive integer")
+
+        stock_info = lookup(symbol)
+
+        if not stock_info:
+            return apology("invalid symbol")
+
+        user_shares = db.execute(
+            "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ?",
+            session["user_id"], symbol
+        )[0]["total_shares"]
+
+        if user_shares < int(shares):
+            return apology("insufficient shares")
+
+        total_earnings = int(shares) * stock_info["price"]
+
+        # Record the sell transaction in the database
+        db.execute(
+            "INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+            session["user_id"], symbol, -int(shares), stock_info["price"]
+        )
+
+        # Update user's cash balance
+        db.execute(
+            "UPDATE users SET cash = cash + ? WHERE id = ?",
+            total_earnings, session["user_id"]
+        )
+
+        return redirect("/")
+
+    else:
+        return render_template("sell.html")
