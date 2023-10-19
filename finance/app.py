@@ -108,6 +108,9 @@ def quote():
         quote = request.form.get("quote")
 
         return lookup(quote)
+    
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
