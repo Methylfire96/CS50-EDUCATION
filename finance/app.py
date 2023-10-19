@@ -211,13 +211,11 @@ def register():
 
 
 
-
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
@@ -235,8 +233,7 @@ def sell():
 
         user_shares = db.execute(
             "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ?",
-            session["user_id"], symbol
-        )[0]["total_shares"]
+            session["user_id"], symbol)[0]["total_shares"]
 
         if user_shares < int(shares):
             return apology("insufficient shares")
