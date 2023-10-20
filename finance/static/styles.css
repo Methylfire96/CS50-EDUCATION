@@ -30,3 +30,8 @@ h1 {
 .bg-light {
     background-color: #f8f9fa;
 }
+
+.table {
+    container;
+    text-align: center;
+}
