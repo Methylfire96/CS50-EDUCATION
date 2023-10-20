@@ -7,7 +7,5 @@
 {% block main %}
     <h1>Stock Quote</h1>
 
-    <p>Name: {{ stock_info["name"] }}</p>
-    <p>Symbol: {{ stock_info["symbol"] }}</p>
-    <p>Price: {{ stock_info["price"] | usd }}</p>
+    <p>A share of {{ stock_info["name"] }} ({{ stock_info["symbol"] }}) costs {{ stock_info["price"] | usd }}</p>
 {% endblock %}
