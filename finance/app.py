@@ -156,7 +156,6 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
-
         return redirect("/")
 
     else:
