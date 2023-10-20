@@ -205,14 +205,14 @@ def register():
 
         username = request.form.get("username")
         password = request.form.get("password")
-        repeatPassword = request.form.get("repeat_password")
+        confirmation = request.form.get("confirmation")
 
         # field free error
-        if not username or not password or not repeatPassword:
+        if not username or not password or not confirmation:
             return apology("Must provide all blank fields", 403)
 
         # repaet password check
-        if password != repeatPassword:
+        if password != confirmation:
             return apology("Not matching password input")
 
         # existing user error
