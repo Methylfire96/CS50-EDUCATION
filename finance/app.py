@@ -184,13 +184,13 @@ def quote():
 
         # empty field error
         if not symbol:
-            return apology("Must provide symbol", 403)
+            return apology("Must provide symbol", 400)
 
         stock_info = lookup(symbol)
 
         # invalid symbol
         if not stock_info:
-            return apology("invalid symbol", 403)
+            return apology("invalid symbol", 400)
 
         return render_template("quote_result.html", stock_info=stock_info)
 
