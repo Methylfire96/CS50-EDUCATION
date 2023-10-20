@@ -20,11 +20,11 @@
         <tbody>
             {% for stock in stocks %}
                 <tr {% if loop.index is even %} class="bg-light"{% endif %}>
-                    <td>{{ stock["symbol"] |upper }}</td>
-                    <td>{{ stock["name"] }}</td>
-                    <td>{{ stock["shares"] }}</td>
-                    <td>{{ stock["price"] | usd }}</td>
-                    <td>{{ stock["total_value"] | usd }}</td>
+                    <td class="text-start">{{ stock["symbol"] |upper }}</td>
+                    <td class="text-start">{{ stock["name"] }}</td>
+                    <td class="text-end">{{ stock["shares"] }}</td>
+                    <td class="text-end">{{ stock["price"] | usd }}</td>
+                    <td class="text-end">{{ stock["total_value"] | usd }}</td>
                     <td></td>
                     <td></td>
 
@@ -37,7 +37,7 @@
                 <td class="border-0 text-end">{{ cash | usd }}</td>
             </tr>
             <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+                <td class="border-0 fw-bold text-start" colspan="4">Total</td>
                 <td class="border-0 text-end">{{ grand_total | usd }}</td>
             </tr>
         </tfoot>
