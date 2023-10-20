@@ -228,12 +228,14 @@ def register():
 
         hashed_password = generate_password_hash(password)
 
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)",
+            username,
+            hashed_password,
+        )
         return redirect("/login")
 
     else:
         return render_template("register.html")
-
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -272,7 +274,11 @@ def sell():
         # Record the sell transaction in the database
         db.execute(
             "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?, ?)",
-            session["user_id"], symbol, -int(shares), stock_info["price"], timestamp
+            session["user_id"],
+            symbol,
+            -int(shares),
+            stock_info["price"],
+            timestamp,
         )
 
         # Update user's cash balance
@@ -285,7 +291,7 @@ def sell():
     else:
         owned_stocks = db.execute(
             "SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0",
-            session["user_id"]
+            session["user_id"],
         )
         return render_template("sell.html", owned_stocks=owned_stocks)
 
@@ -304,7 +310,8 @@ def deposit():
         # Update user's cash balance
         db.execute(
             "UPDATE users SET cash = cash + ? WHERE id = ?",
-            float(amount), session["user_id"]
+            float(amount),
+            session["user_id"],
         )
         return redirect("/")
 
