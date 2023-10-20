@@ -18,6 +18,7 @@
         </thead>
         <tbody>
             {% for transaction in transactions %}
+            <tr>
             {% for index, row in enumerate(rows) %}
                 <tr {% if index % 2 == 1 %} class="bg-light"{% endif %}>
 
@@ -25,6 +26,8 @@
                     <td>{{ transaction["shares"] }}</td>
                     <td>{{ transaction["price"] | usd }}</td>
                     <td>{{ transaction["transacted_at"] }}</td>
+                </tr>
+                {% endfor %}
                 </tr>
             {% endfor %}
         </tbody>
