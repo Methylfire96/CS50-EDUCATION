@@ -277,7 +277,11 @@ def sell():
         return redirect("/")
 
     else:
-        return render_template("sell.html")
+        owned_stocks = db.execute(
+            "SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol HAVING SUM(shares) > 0",
+            session["user_id"]
+        )
+        return render_template("sell.html", owned_stocks=owned_stocks)
 
 @app.route("/deposit", methods=["GET", "POST"])
 @login_required
