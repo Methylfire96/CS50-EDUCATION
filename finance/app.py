@@ -203,7 +203,7 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        username = request.form.get("new_username")
+        username = request.form.get("username")
         password = request.form.get("new_password")
         repeatPassword = request.form.get("repeat_password")
 
