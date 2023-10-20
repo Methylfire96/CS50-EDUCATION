@@ -253,9 +253,11 @@ def sell():
         shares = request.form.get("shares")
         timestamp = datetime.now()
 
+        # empty field error
         if not symbol or not shares:
             return apology("must provide symbol and shares")
 
+        # digit input
         if not shares.isdigit() or int(shares) <= 0:
             return apology("shares must be a positive integer")
 
@@ -268,6 +270,7 @@ def sell():
             "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ?",
             session["user_id"], symbol)[0]["total_shares"]
 
+        # amount check
         if user_shares < int(shares):
             return apology("insufficient shares")
 
