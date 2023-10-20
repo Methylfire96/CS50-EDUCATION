@@ -204,7 +204,7 @@ def register():
     if request.method == "POST":
 
         username = request.form.get("username")
-        password = request.form.get("new_password")
+        password = request.form.get("password")
         repeatPassword = request.form.get("repeat_password")
 
         # field free error
