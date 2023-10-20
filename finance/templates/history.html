@@ -19,7 +19,7 @@
         <tbody>
             {% for transaction in transactions %}
                 <tr>
-                    <td>{{ transaction["symbol"] }}</td>
+                    <td>{{ transaction["symbol"] |upper}}</td>
                     <td>{{ transaction["shares"] }}</td>
                     <td>{{ transaction["price"] | usd }}</td>
                     <td>{{ transaction["transacted_at"] }}</td>
