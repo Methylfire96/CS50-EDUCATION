@@ -10,11 +10,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Symbol</th>
-                <th>Name</th>
-                <th>Shares</th>
-                <th>Price</th>
-                <th>Total Value</th>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Total Value</th>
             </tr>
         </thead>
         <tbody>
@@ -33,11 +33,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <td class="border-0 fw-bold text-start" colspan="4">Cash {{ cash | usd }}</td>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
                 <td class="border-0 text-end">{{ cash | usd }}</td>
             </tr>
             <tr>
-                <td class="border-0 fw-bold text-start" colspan="4">Total</td>
+                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
                 <td class="border-0 text-end">{{ grand_total | usd }}</td>
             </tr>
         </tfoot>
