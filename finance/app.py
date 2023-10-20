@@ -180,7 +180,7 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
 
-        symbol = request.form.get("quote")
+        symbol = request.form.get("symbol")
 
         # empty field error
         if not symbol:
@@ -209,7 +209,7 @@ def register():
 
         # field free error
         if not username or not password or not confirmation:
-            return apology("Must provide all blank fields", 403)
+            return apology("Must provide all blank fields", 400)
 
         # repaet password check
         if password != confirmation:
@@ -218,7 +218,7 @@ def register():
         # existing user error
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
         hashed_password = generate_password_hash(password)
 
