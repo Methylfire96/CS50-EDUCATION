@@ -17,8 +17,8 @@
             </tr>
         </thead>
         <tbody>
-            {% for index, transaction in enumerate(transactions) %}
-                <tr {% if index % 2 == 1 %} class="bg-light"{% endif %}>
+            {% for transaction in transactions %}
+                <tr {% if loop.index is even %} class="bg-light"{% endif %}>
                     <td>{{ transaction["symbol"] | upper }}</td>
                     <td>{{ transaction["shares"] }}</td>
                     <td>{{ transaction["price"] | usd }}</td>
