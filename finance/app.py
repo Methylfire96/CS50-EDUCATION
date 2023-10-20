@@ -292,3 +292,27 @@ def sell():
 
     else:
         return render_template("sell.html")
+
+@app.route("/deposit", methods=["GET", "POST"])
+@login_required
+def deposit():
+    """Deposit money into user's account"""
+
+    if request.method == "POST":
+        amount = request.form.get("amount")
+
+        # Ensure amount is a positive number
+        if not amount or float(amount) <= 0:
+            return apology("Invalid deposit amount")
+
+        # Update user's cash balance
+        db.execute(
+            "UPDATE users SET cash = cash + ? WHERE id = ?",
+            float(amount), session["user_id"]
+        )
+
+        # Redirect to the index page after depositing
+        return redirect("/")
+
+    else:
+        return render_template("deposit.html")
