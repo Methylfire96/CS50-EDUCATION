@@ -93,7 +93,25 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    # Query the database for the user's transaction history
+    rows = db.execute(
+        "SELECT symbol, shares, price, transacted_at FROM transactions WHERE user_id = ? ORDER BY transacted_at DESC",
+        session["user_id"]
+    )
+
+    # Create a list to store information about each transaction
+    transactions = []
+
+    # Iterate through the rows and store transaction details
+    for row in rows:
+        transactions.append({
+            "symbol": row["symbol"],
+            "shares": row["shares"],
+            "price": row["price"],
+            "transacted_at": row["transacted_at"]
+        })
+
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
