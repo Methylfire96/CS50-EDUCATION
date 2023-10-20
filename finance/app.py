@@ -267,7 +267,7 @@ def sell():
 
         # Record the sell transaction in the database
         db.execute(
-            "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?)",
+            "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?, ?)",
             session["user_id"], symbol, -int(shares), stock_info["price"], timestamp
         )
 
