@@ -33,14 +33,13 @@
         </tbody>
         <tfoot>
             <tr>
-                <td>Cash: {{ cash | usd }}</td>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash {{ cash | usd }}</td>
+                <td class="border-0 fw-bold text-end">{{ cash | usd }}</td>
             </tr>
             <tr>
-
+                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+                <td class="border-0 fw-bold text-end">{{ grand_total | usd }}</td>
             </tr>
         </tfoot>
     </table>
-
-
-    <th>Grand Total: {{ grand_total | usd }}</th>
 {% endblock %}
