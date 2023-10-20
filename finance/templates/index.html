@@ -25,23 +25,13 @@
                     <td>{{ stock["shares"] }}</td>
                     <td>{{ stock["price"] | usd }}</td>
                     <td>{{ stock["total_value"] | usd }}</td>
-                    <td></td>
-                    <td></td>
 
-                </tr>
-                <tr>
-                    <td class="border-0 fw-bold" colspan="4">Cash</td>
-                    <td class="border-0">{{ cash | usd }}</td>
-                </tr>
-                <tr>
-                    <td class="border-0 fw-bold" colspan="4">Total</td>
-                    <td class="border-0">{{ grand_total | usd }}</td>
                 </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td class="border-0 fw-bold" colspan="4">Cash</td>
+                <td class="border-0 fw-bold">Cash</td>
                 <td class="border-0">{{ cash | usd }}</td>
             </tr>
             <tr>
