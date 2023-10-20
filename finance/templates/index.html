@@ -29,16 +29,24 @@
                     <td></td>
 
                 </tr>
+                <tr>
+                    <td class="border-0 fw-bold" colspan="4">Cash</td>
+                    <td class="border-0">{{ cash | usd }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold" colspan="4">Total</td>
+                    <td class="border-0">{{ grand_total | usd }}</td>
+                </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-                <td class="border-0 text-end">{{ cash | usd }}</td>
+                <td class="border-0 fw-bold" colspan="4">Cash</td>
+                <td class="border-0">{{ cash | usd }}</td>
             </tr>
             <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
-                <td class="border-0 text-end">{{ grand_total | usd }}</td>
+                <td class="border-0 fw-bold" colspan="4">Total</td>
+                <td class="border-0">{{ grand_total | usd }}</td>
             </tr>
         </tfoot>
     </table>
