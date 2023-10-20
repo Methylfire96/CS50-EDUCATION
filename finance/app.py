@@ -36,16 +36,13 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # Query the database for the user's portfolio information
+
     rows = db.execute(
         "SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING total_shares > 0",
         session["user_id"]
     )
 
-    # Create a list to store information about each stock
     stocks = []
-
-    # Iterate through the rows and get the current price and total value of each stock
     for row in rows:
         stock_info = lookup(row["symbol"])
         stocks.append({
@@ -56,10 +53,9 @@ def index():
             "total_value": row["total_shares"] * stock_info["price"]
         })
 
-    # Calculate the user's total cash
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-    # Calculate the user's grand total (cash + total value of stocks)
+    # cash + total value of stocks
     grand_total = cash + sum(stock["total_value"] for stock in stocks)
 
     return render_template("index.html", stocks=stocks, cash=cash, grand_total=grand_total)
@@ -73,44 +69,37 @@ def buy():
         shares = request.form.get("shares")
         timestamp = datetime.now()
 
-        # Ensure symbol and shares were submitted
+        # empty field error
         if not symbol or not shares:
             return apology("must provide symbol and shares")
 
-        # Ensure shares is a positive integer
+        # positiv number
         if not shares.isdigit() or int(shares) <= 0:
             return apology("shares must be a positive integer")
 
-        # Get stock info
         stock_info = lookup(symbol)
 
-        # Ensure the symbol is valid
         if not stock_info:
             return apology("invalid symbol")
 
-        # Calculate total cost
+        # total cost
         total_cost = int(shares) * stock_info["price"]
 
-        # Get user's current cash balance
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-        # Ensure user has enough cash to make the purchase
         if cash < total_cost:
             return apology("insufficient funds")
-
-        # Record the transaction in the database
+        # insert
         db.execute(
             "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?, ?)",
             session["user_id"], symbol, shares, stock_info["price"], timestamp
         )
 
-        # Update user's cash balance
+        # update
         db.execute(
             "UPDATE users SET cash = ? WHERE id = ?",
             cash - total_cost, session["user_id"]
         )
-
-        # Redirect to the index page
         return redirect("/")
 
     else:
@@ -121,16 +110,13 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    # Query the database for the user's transaction history
+
     rows = db.execute(
         "SELECT symbol, shares, price, transacted_at FROM transactions WHERE user_id = ? ORDER BY transacted_at DESC",
         session["user_id"]
     )
 
-    # Create a list to store information about each transaction
     transactions = []
-
-    # Iterate through the rows and store transaction details
     for row in rows:
         transactions.append({
             "symbol": row["symbol"],
@@ -170,10 +156,9 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
 
-        # Redirect user to home page
+
         return redirect("/")
 
-    # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
 
@@ -197,11 +182,13 @@ def quote():
 
         symbol = request.form.get("quote")
 
+        # empty field error
         if not symbol:
             return apology("Must provide symbol", 403)
 
         stock_info = lookup(symbol)
 
+        # invalid symbol
         if not stock_info:
             return apology("invalid symbol", 403)
 
@@ -287,7 +274,6 @@ def sell():
             "UPDATE users SET cash = cash + ? WHERE id = ?",
             total_earnings, session["user_id"]
         )
-
         return redirect("/")
 
     else:
@@ -310,8 +296,6 @@ def deposit():
             "UPDATE users SET cash = cash + ? WHERE id = ?",
             float(amount), session["user_id"]
         )
-
-        # Redirect to the index page after depositing
         return redirect("/")
 
     else:
