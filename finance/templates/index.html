@@ -31,8 +31,16 @@
                 </tr>
             {% endfor %}
         </tbody>
+        <tfoot>
+            <tr>
+                <td>Cash: {{ cash | usd }}</td>
+            </tr>
+            <tr>
+
+            </tr>
+        </tfoot>
     </table>
-    
-    <th>Cash: {{ cash | usd }}</th>
+
+
     <th>Grand Total: {{ grand_total | usd }}</th>
 {% endblock %}
