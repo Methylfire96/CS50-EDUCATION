@@ -4,6 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
+from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -70,6 +71,7 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        timestamp = datetime.now()
 
         # Ensure symbol and shares were submitted
         if not symbol or not shares:
@@ -98,8 +100,8 @@ def buy():
 
         # Record the transaction in the database
         db.execute(
-            "INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
-            session["user_id"], symbol, shares, stock_info["price"]
+            "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?, ?)",
+            session["user_id"], symbol, shares, stock_info["price"], timestamp
         )
 
         # Update user's cash balance
@@ -241,6 +243,7 @@ def sell():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        timestamp = datetime.now()
 
         if not symbol or not shares:
             return apology("must provide symbol and shares")
@@ -264,8 +267,8 @@ def sell():
 
         # Record the sell transaction in the database
         db.execute(
-            "INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
-            session["user_id"], symbol, -int(shares), stock_info["price"]
+            "INSERT INTO transactions (user_id, symbol, shares, price, transacted_at) VALUES (?, ?, ?, ?)",
+            session["user_id"], symbol, -int(shares), stock_info["price"], timestamp
         )
 
         # Update user's cash balance
