@@ -1,5 +1,5 @@
 import pygame, sys
-
+from editor import Editor
 WINDOW_WIDTH = 1200
 WINDOW_HEIGHT = 800
 
@@ -9,6 +9,8 @@ class Main:
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.clock = pygame.time.Clock()
 
+        self.editor = Editor()
+
     def run(self):
         while True:
             dt = self.clock.tick()
@@ -16,6 +18,8 @@ class Main:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
+            self.editor.run(dt)
 
             pygame.display.update()
 
