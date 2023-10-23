@@ -12,4 +12,12 @@ class Main:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
+                    sys.exit()
+
+            pygame.display.update()
+
+if __name__ == "__main__":
+    main = Main()
+    main.run()
+    
 
