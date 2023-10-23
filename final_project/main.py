@@ -1,9 +1,12 @@
 import pygame, sys
 
+WINDOW_WIDTH = 1200
+WINDOW_HEIGHT = 800
+
 class Main:
     def __init__(self):
         pygame.init()
-        self.display_surface = pygame.display.set_mode((WINDOW_Width, WINDOW_HEIGHT))
+        self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.clock = pygame.time.Clock()
 
     def run(self):
@@ -19,5 +22,5 @@ class Main:
 if __name__ == "__main__":
     main = Main()
     main.run()
-    
+
 
