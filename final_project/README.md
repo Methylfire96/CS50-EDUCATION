@@ -44,11 +44,13 @@ UFOs and Collisions: UFOs of varying designs descend from the top of the screen 
 The code handles collision detection between the player's ship and UFOs.
 Upon collision, the player's hull power (COUNTER) is decremented, providing a feedback mechanism for damage sustained.
 
-Bullet Handling: The player can fire bullets by pressing the spacebar. Bullets are depicted as small, elongated images, and their position is tracked to facilitate collision detection. Bullet firing is subject to a cooldown period to prevent rapid consecutive shots.
+Bullet Handling: The player can fire bullets by pressing the spacebar. Bullets are depicted as small, elongated images, and their position is tracked to facilitate collision detection.
+Bullet firing is subject to a cooldown period to prevent rapid consecutive shots.
 
-Score Tracking: Points are awarded to the player for successfully hitting UFOs. A scoring system is implemented to keep track of the player's progress, providing a tangible measure of success.
+Score Tracking: Points are awarded to the player for successfully hitting UFOs. A scoring system is implemented to keep track of the player's progress, providing a tangible measure of success. The maximum highscore is 2001 (Nostalgic thoughts).
 
-Game Over and Victory: The game incorporates distinct visual cues for game over and victory scenarios. When the player's hull power reaches zero, signifying defeat, a game over screen is displayed along with an accompanying sound effect. Conversely, upon accumulating a substantial score, a victory screen is presented to celebrate the player's achievement.
+Game Over and Victory: The game incorporates distinct visual cues for game over and victory scenarios. When the player's hull power reaches zero, signifying defeat, a game over screen is displayed along with an accompanying sound effect.
+Conversely, upon accumulating a substantial score, a victory screen is presented to celebrate the player's achievement.
 
 Main Game Loop: The core of the game resides in the main game loop. This loop regulates the game's flow, managing events, updating entity positions, handling user input, and refreshing the display at a consistent frame rate.
 
