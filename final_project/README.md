@@ -4,11 +4,11 @@ my video url: https://www.youtube.com/watch?v=DpiWAiJuK6U
 
 Description:
 
-This game is a retro space shooter!
+The game is a retro space shooter!
 As a kid i was totally fascinated of this concept, so i rebuilt that kind of game.
 The animated space ships are self drawn with an unfinished look, more retro looking. What is there, not to love?
 
-The code:
+The code overview:
 
 Imports necessary modules: pygame, sys, time, and random.
 Initializes Pygame and sets up the window with a caption "Final Project Space Shooter".
@@ -34,13 +34,30 @@ D = Right
 
 SPACE = Shoot
 
-Implemented sounds and background music which i researched on the web.
+Key components:
 
-Enemy ships spawn randomly on the lengh of the window width and falling on X, along the window height. When they touch the window height border on the bottom of the screen, they will be removed.
-If an enemy ship is shot down by the player, the score is updating and add one point. 
-The maximum highscore in this game is 2001 (little thoughtfull number, which represents the year, i got my first pc and the odessey of playing games started)
-Also there is a hull power counter, starting with 10 points and will be decreased, every time you hit an enemy ship. To avoid those you can move your ship up, down, left, right.
+Game Initialization: Pygame is initialized, and essential elements like the window dimensions, background image, and audio files are set up. The window is configured with a captivating space backdrop, creating an immersive visual experience.
+
+Game Entities: The game features several entities, including the player's spacecraft, UFOs, bullets, and accompanying sound effects. The player's vessel, represented by a dynamically-scaled image, responds to user input for navigation.
+
+UFOs and Collisions: UFOs of varying designs and sizes descend from the top of the screen at random intervals. The code handles collision detection between the player's spacecraft and UFOs. Upon collision, the player's hull power (COUNTER) is decremented, providing a feedback mechanism for damage sustained.
+
+Bullet Handling: The player can fire bullets by pressing the spacebar. Bullets are depicted as small, elongated images, and their position is tracked to facilitate collision detection. Bullet firing is subject to a cooldown period to prevent rapid consecutive shots.
+
+Score Tracking: Points are awarded to the player for successfully hitting UFOs. A scoring system is implemented to keep track of the player's progress, providing a tangible measure of success.
+
+Game Over and Victory: The game incorporates distinct visual cues for game over and victory scenarios. When the player's hull power reaches zero, signifying defeat, a game over screen is displayed along with an accompanying sound effect. Conversely, upon accumulating a substantial score, a victory screen is presented to celebrate the player's achievement.
+
+Main Game Loop: The core of the game resides in the main game loop. This loop regulates the game's flow, managing events, updating entity positions, handling user input, and refreshing the display at a consistent frame rate.
+
+
+
+
 
 All in all:
 Simple shooter, avoid contact to the enemies or shoot them to reach the highscore.
 Have fun and enjoy playing.
+
+
+
+The maximum highscore in this game is 2001 (little thoughtfull number, which represents the year, i got my first pc and the odessey of playing games started)
