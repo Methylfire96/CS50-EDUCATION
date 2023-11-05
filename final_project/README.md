@@ -6,7 +6,7 @@ Description:
 
 The game is a retro space shooter!
 As a kid i was totally fascinated of this concept, so i rebuilt that kind of game.
-The animated space ships are self drawn with an unfinished look, to make it look more retro. What is there, not to love?
+The animated space ships (player and enemies) are self drawn with an unfinished look, to make it look more retro. What is there, not to love?
 
 The code overview:
 
@@ -38,9 +38,10 @@ Key components:
 
 Game Initialization: Pygame is initialized, and essential elements like the window dimensions, background image, and audio files are set up. The window is configured with a captivating space backdrop, creating an immersive visual experience.
 
-Game Entities: The game features several entities, including the player's spacecraft, UFOs, bullets, and accompanying sound effects. The player's vessel, represented by a dynamically-scaled image, responds to user input for navigation.
+Game Entities: The game features several entities, including the player's spacecraft, UFOs, bullets, and accompanying sound effects. The player's ship responds to user input for navigation.
 
-UFOs and Collisions: UFOs of varying designs and sizes descend from the top of the screen at random intervals. The code handles collision detection between the player's spacecraft and UFOs. Upon collision, the player's hull power (COUNTER) is decremented, providing a feedback mechanism for damage sustained.
+UFOs and Collisions: UFOs of varying designs descend from the top of the screen at random intervals.
+The code handles collision detection between the player's spacecraft and UFOs. Upon collision, the player's hull power (COUNTER) is decremented, providing a feedback mechanism for damage sustained.
 
 Bullet Handling: The player can fire bullets by pressing the spacebar. Bullets are depicted as small, elongated images, and their position is tracked to facilitate collision detection. Bullet firing is subject to a cooldown period to prevent rapid consecutive shots.
 
