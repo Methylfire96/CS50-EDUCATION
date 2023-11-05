@@ -54,6 +54,5 @@ Score Tracking: Points are awarded to the player for successfully hitting UFOs. 
 Game Over and Victory: The game incorporates distinct visual cues for game over and victory scenarios. When the player's hull power reaches zero, signifying defeat, a game over screen is displayed along with an accompanying sound effect.
 Conversely, upon accumulating a substantial score, a victory screen is presented to celebrate the player's achievement.
 
-All in all:
-Simple shooter, avoid contact to the enemies or shoot them to reach the highscore.
-Have fun and enjoy playing.
+In this straightforward yet engaging space shooter game, players must skillfully navigate their ship, employing evasive maneuvers to avoid direct contact with encroaching enemy UFOs.
+Alternatively, they can strategically engage and eliminate these adversaries through precise shooting, all in pursuit of achieving the coveted high score. Immerse yourself in this cosmic battle, where every decision counts. Have a blast and relish the exhilarating experience of playing!
