@@ -36,6 +36,8 @@ SPACE = Shoot
 
 Key components:
 
+Main Game Loop: The core of the game resides in the main game loop. This loop regulates the game's flow, managing events, updating entity positions, handling user input, and refreshing the display at a consistent frame rate.
+
 Game Initialization: Pygame is initialized, and essential elements like the window dimensions, background image, and audio files are set up. The window is configured with a captivating space backdrop, creating an immersive visual experience.
 
 Game Entities: The game features several entities, including the player's ship, UFOs, bullets, and accompanying sound effects. The player's ship responds to user input for navigation.
@@ -52,16 +54,6 @@ Score Tracking: Points are awarded to the player for successfully hitting UFOs. 
 Game Over and Victory: The game incorporates distinct visual cues for game over and victory scenarios. When the player's hull power reaches zero, signifying defeat, a game over screen is displayed along with an accompanying sound effect.
 Conversely, upon accumulating a substantial score, a victory screen is presented to celebrate the player's achievement.
 
-Main Game Loop: The core of the game resides in the main game loop. This loop regulates the game's flow, managing events, updating entity positions, handling user input, and refreshing the display at a consistent frame rate.
-
-
-
-
-
 All in all:
 Simple shooter, avoid contact to the enemies or shoot them to reach the highscore.
 Have fun and enjoy playing.
-
-
-
-The maximum highscore in this game is 2001 (little thoughtfull number, which represents the year, i got my first pc and the odessey of playing games started)
