@@ -6,7 +6,7 @@ Description:
 
 The game is a retro space shooter!
 As a kid i was totally fascinated of this concept, so i rebuilt that kind of game.
-The animated space ships are self drawn with an unfinished look, more retro looking. What is there, not to love?
+The animated space ships are self drawn with an unfinished look, to make it look more retro. What is there, not to love?
 
 The code overview:
 
