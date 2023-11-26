@@ -1,8 +1,8 @@
 def deep(d):
     if d == 42:
-        print("Yes")
+        return "Yes"
     else:
-        print("No")
+        return "No"
 
 
 
