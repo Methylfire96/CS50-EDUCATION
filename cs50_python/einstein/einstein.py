@@ -1,6 +1,8 @@
-def formula(n):
-    for n = mass * 300000000²
-        return n
+def formula(mass):
+    lightspeed = 300000000
+    e = mass * lightspeed**2
+
+    return e
 
 mass = int(input("Mass: "))
 result = formula(mass)
