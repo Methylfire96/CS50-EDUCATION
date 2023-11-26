@@ -2,8 +2,15 @@
 
 def convert(text):
     if ":)" in text and ":(" in text:
-        return text.replace(":)", "🙂"), text.replace(":(", "🙁")
-
+        text.replace(":)", "🙂")
+        text.replace(":(", "🙁")
+        return text
+    elif ":)" in text:
+        text.replace(":)", "🙂")
+    elif ":(" in text:
+        text.replace(":(", "🙁")
+    else:
+        return text
 
 
 
