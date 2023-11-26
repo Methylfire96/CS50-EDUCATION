@@ -9,7 +9,7 @@ def convert(text):
 
 def main():
     text = input("Are you happy? ")
-    faces = convert(text)
+    faces = text.replace(convert)
     print(faces)
 
 
