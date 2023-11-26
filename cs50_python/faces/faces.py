@@ -10,4 +10,4 @@ def convert(n):
 
 text = input ("How are you? ")
 result = convert(text)
-convert(result)
+print(result)
