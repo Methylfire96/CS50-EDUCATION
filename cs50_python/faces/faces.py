@@ -11,7 +11,7 @@ def convert(text):
 
 
 def main():
-    text = input("Are you happy? ")
+    text = input()
     faces = convert(text)
     print(faces)
 
