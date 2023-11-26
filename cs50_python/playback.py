@@ -1,5 +1,5 @@
 text = input("What you want to say? ")
 
-result = text.set(...)
+result = (text, sep='###')
 
 print(result)
