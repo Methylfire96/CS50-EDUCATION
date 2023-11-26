@@ -1,5 +1,5 @@
 text = input("What you want to say? ")
 
-result = text.lower
+result = text.lower()
 
 print(result)
