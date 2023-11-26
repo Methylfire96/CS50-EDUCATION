@@ -1,12 +1,13 @@
 
 def convert(n):
-    if ":)" in text:
-        n.replace(":)", "🙂")
-        return n
-    if ":(" in text:
-        n.replace(":(", "🙁")
-        return n
+    if ":)" in n:
+        n = n.replace(":)", "🙂")
+
+    if ":(" in n:
+        n = n.replace(":(", "🙁")
+    return n
 
 
 text = input ("How are you? ")
-convert(text)
+result = convert(text)
+convert(result)
