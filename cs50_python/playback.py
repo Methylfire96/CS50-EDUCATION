@@ -1,5 +1,5 @@
 text = input("What you want to say? ")
 
-result = text.sep='###'
+result = text.split()
 
-print(result)
+print(*result, sep='...')
