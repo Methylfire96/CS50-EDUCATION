@@ -1,6 +1,8 @@
 
 def convert(n):
-    return(n.replace(":)", "🙂") and n.replace(":(", "🙁"))
+    n.replace(":)", "🙂")
+    n.replace(":(", "🙁")
+    return n
 
 
 text = input ("How are you? ")
