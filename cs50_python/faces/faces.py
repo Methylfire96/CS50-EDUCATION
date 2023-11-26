@@ -3,7 +3,7 @@
 def convert(text):
     if ":)" in text:
         return text.replace(":)", "🙂")
-    if ":(" in text:
+    elif ":(" in text:
         return text.replace(":(", "🙁")
     else:
         return text
