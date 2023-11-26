@@ -1,7 +1,7 @@
 
 
 def convert(text):
-    if text == ":)":
+    if ":)" in text:
         return "🙂"
     elif text == ":(":
         return "☹️"
