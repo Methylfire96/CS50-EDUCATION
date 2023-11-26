@@ -2,14 +2,17 @@
 
 def convert(text):
     if ":)" in text:
-        return "🙂"
-    elif text == ":(":
-        return "☹️"
+        return text.replace(":)", "🙂")
+    elif ":(" in text:
+        return text.replace(":(", "☹️")
+    else:
+        return text
+
 
 
 def main():
     text = input("Are you happy? ")
-    faces = text.replace(convert)
+    faces = convert(text)
     print(faces)
 
 
