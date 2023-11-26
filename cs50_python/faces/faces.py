@@ -7,7 +7,6 @@ def convert(n):
         n = n.replace(":(", "🙁")
     return n
 
-
 text = input ("How are you? ")
 result = convert(text)
 print(result)
