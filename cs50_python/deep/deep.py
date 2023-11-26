@@ -1,7 +1,7 @@
 def deep(d):
     right = {"42", "forty-two", "forty two"}
 
-    if d.lower() in right:
+    if d.lower().strip() in right:
         return "Yes"
     else:
         return "No"
