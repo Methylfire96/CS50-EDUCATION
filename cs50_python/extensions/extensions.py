@@ -1,10 +1,19 @@
+def type(filename):
+    dict = {
+        ".gif": "image.gif",
+        ".jpg": "image.jpg",
+        ".jpeg": "image.jpeg",
+        ".png": "image.png"
+        }
+
+    ext = "." + filename.split(".")[-1].lower()
+
+    if ext in dict:
+        return dict[ext]
+    else:
+        return "application/octet-stream"
+
+
 filename = input("File name: ")
-
-if {".gif", ".jpg", ".jpeg", ".png"} in filename.lower():
-    p
-
-
-
-
-else:
-    print("application/octet-stream")
+result = type(filename)
+print(f"{filename}, {result})
