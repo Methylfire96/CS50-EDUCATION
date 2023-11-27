@@ -1,9 +1,9 @@
 def type(filename):
     dict = {
-        ".gif": "image.gif",
-        ".jpg": "image.jpg",
-        ".jpeg": "image.jpeg",
-        ".png": "image.png",
+        ".gif": "image/gif",
+        ".jpg": "image/jpg",
+        ".jpeg": "image/jpeg",
+        ".png": "image/png",
         ".pdf": "application/pdf",
         ".txt": "text/plain",
         ".zip": "application/zip",
@@ -18,5 +18,5 @@ def type(filename):
 
 if __name__ == "__main__":
     filename = input("File name: ")
-    result = type(filename)[:]
+    result = type(filename)
     print(f"{result}")
