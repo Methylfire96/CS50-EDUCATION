@@ -13,7 +13,7 @@ def type(filename):
     else:
         return "application/octet-stream"
 
-
-filename = input("File name: ")
-result = type(filename)
-print(f"{filename}, {result})
+type()
+    filename = input("File name: ")
+    result = type(filename)
+    print(f"{filename}, {result}")
