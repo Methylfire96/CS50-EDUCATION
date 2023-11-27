@@ -16,7 +16,7 @@ def type(filename):
     else:
         return "application/octet-stream"
 
-if __name__ == "__main__":
-    filename = input("File name: ")
-    result = type(filename).strip()
-    print(f"{result}")
+
+filename = input("File name: ")
+result = type(filename).strip()
+print(f"{result}")
