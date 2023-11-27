@@ -3,7 +3,10 @@ def type(filename):
         ".gif": "image.gif",
         ".jpg": "image.jpg",
         ".jpeg": "image.jpeg",
-        ".png": "image.png"
+        ".png": "image.png",
+        ".pdf": "application/pdf",
+        ".txt": "text/plain",
+        ".zip": "application/zip",
         }
 
     ext = "." + filename.split(".")[-1].lower()
@@ -15,5 +18,5 @@ def type(filename):
 
 if __name__ == "__main__":
     filename = input("File name: ")
-    result = type(filename)
+    result = type(filename).end("")
     print(f"{result}")
