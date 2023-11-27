@@ -18,5 +18,5 @@ def type(filename):
 
 if __name__ == "__main__":
     filename = input("File name: ")
-    result = type(filename).end("")
+    result = type(filename)[:]
     print(f"{result}")
