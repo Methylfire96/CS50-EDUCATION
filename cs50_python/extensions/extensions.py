@@ -8,7 +8,7 @@ def type(filename):
         ".txt": "text/plain",
         ".zip": "application/zip",
         }
-
+    filename = filename.strip()
     ext = "." + filename.split(".")[-1].lower()
 
     if ext in dict:
