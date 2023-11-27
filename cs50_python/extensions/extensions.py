@@ -18,5 +18,5 @@ def type(filename):
 
 if __name__ == "__main__":
     filename = input("File name: ")
-    result = type(filename)
+    result = type(filename).strip()
     print(f"{result}")
