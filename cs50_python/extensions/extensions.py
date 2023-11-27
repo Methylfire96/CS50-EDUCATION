@@ -7,4 +7,4 @@ if {".gif", ".jpg", ".jpeg", ".png"} in filename.lower():
 
 
 else:
-    
+    print("application/octet-stream")
