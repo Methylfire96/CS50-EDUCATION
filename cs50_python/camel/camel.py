@@ -1,10 +1,11 @@
 def main():
     s = input("camelCase: ")
-    text = snake(c)
+    text = snake(s)
     print("snake_case: ", text)
 
 
-def snake(c):
+def snake(s):
     for c in s:
         print(c, end="")
 
+main()
