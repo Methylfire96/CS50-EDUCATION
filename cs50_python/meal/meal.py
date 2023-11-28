@@ -4,6 +4,7 @@ def main():
     print(result)
 
 def convert(time):
+
     conv = float(time)
 
     if 7.0 <= conv <= 8.0:
