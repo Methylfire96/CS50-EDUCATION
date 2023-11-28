@@ -4,8 +4,9 @@ def main():
     print(result)
 
 def convert(time):
-    ask = input("What time is it? ")
-    hours, minutes = ask.split(":")
+
+    hours = ask.split(":")
+    minutes = ask.split(":")
 
     hours = float(ask[0])
     minutes =float(ask[2])
@@ -26,12 +27,3 @@ def convert(time):
 
 if __name__ == "__main__":
     main()
-
-
-math = input("Expression: ")
-
-store = math.split()
-
-val1 = float(store[0])
-operator = (store[1])
-val2 = float(store[2])
