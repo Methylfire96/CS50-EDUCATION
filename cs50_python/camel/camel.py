@@ -10,7 +10,7 @@ def snake(s):
         if c.isupper():
             snake_case += "_" + c.lower()
         else:
-            snake_case #= c
+            snake_case += c
     return snake_case.lstrip("_")
 
 
