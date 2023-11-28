@@ -1,5 +1,5 @@
 def main():
-    time = input("What time is it? ")
+    input = input("What time is it? ")
     result = convert(time)
     print(result)
 
