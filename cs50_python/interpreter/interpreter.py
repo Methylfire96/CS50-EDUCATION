@@ -13,12 +13,11 @@ def div(x, y):
 
 math = input("Expression: ")
 
-val1 = float(math[0].strip())
-val2 = float(math[-1].strip())
-operator = ("+", "-", "*", "/")
-if operator in math:
-    return operator.(operator)
+store = math.split()
 
+val1 = float(store[0])
+operator = (store[1])
+val2 = float(store[2])
 
 
 if operator == "+":
