@@ -5,7 +5,7 @@ def main():
 
 def convert(time):
 
-    time = hours, minutes
+    
     hours, minutes = time.split(":")
     hours = float(time[0])
     minutes = float(time[2])
