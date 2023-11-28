@@ -1,13 +1,15 @@
 def main():
-    x = input("What time is it? ")
-    convert(x)
+    time = input("What time is it? ")
+    converted_meal(time)
 
 
 def convert(time):
 
     hours, minutes = map(float, time.split(":"))
 
-    conv = hours + minutes/60
+    return hours + minutes/60
+
+def meal(conv):
 
     result = ""
 
@@ -20,7 +22,11 @@ def convert(time):
     elif 18.0 <= conv <= 19.0:
         result = "dinner time"
 
+
     print(result)
+def converted_meal(time):
+    conv = convert(time)
+    meal(conv)
 
 if __name__ == "__main__":
     main()
