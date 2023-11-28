@@ -1,13 +1,15 @@
 def main():
-    input = input("What time is it? ")
-    result = convert(time)
+    ask = input("What time is it? ")
+    result = convert(ask)
     print(result)
 
 def convert(time):
-    hours, minutes = time.split(":")
-    time.hours = 24
-    time.minutes = 60
-    conv = float((time.hours).(time.minutes))
+    ask = input("What time is it? ")
+    hours, minutes = ask.split(":")
+
+    hours = float(ask[0])
+    minutes =float(ask[2])
+    conv = hours.minutes
 
     if 7.0 <= conv <= 8.0:
         return "breakfast time"
