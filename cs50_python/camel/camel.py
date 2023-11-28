@@ -6,8 +6,7 @@ def main():
 
 def snake(s):
     for c in s:
-        print(c, end="")
-        if c.capitalize():
-            return c.split("_")
+        print(c, end="c.capitalize()")
+            
 
 main()
