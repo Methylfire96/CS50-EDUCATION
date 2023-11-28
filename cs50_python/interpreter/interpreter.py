@@ -12,19 +12,19 @@ def div(x, y):
         return "Cant divide through zero!"
 
 val1 = float(input("Value one: "))
-operator = input("operatior (+ , - , * , / ): ")
+operator = input("operatior (+, -, *, /): ")
 val2 = float(input("Value two: "))
 
 if operator == "+":
     result = add(val1, val2)
 
-if operator == "-":
+elif operator == "-":
     result = sub(val1, val2)
 
-if operator == "*":
+elif operator == "*":
     result = mult(val1, val2)
 
-if operator == "/":
+elif operator == "/":
     result = div(val1, val2)
 
 else:
