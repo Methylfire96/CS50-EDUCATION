@@ -14,10 +14,10 @@ def convert(time):
     if 7.0 <= conv <= 8.0:
         result = "breakfast time"
 
-    if 12.0 <= conv <= 13.0:
+    elif 12.0 <= conv <= 13.0:
         result = "lunch time"
 
-    if 18.0 <= conv <= 19.0:
+    elif 18.0 <= conv <= 19.0:
         result = "dinner time"
 
     print(result)
