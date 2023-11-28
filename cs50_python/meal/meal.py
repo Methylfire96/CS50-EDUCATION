@@ -1,15 +1,15 @@
 def main():
     time = input("What time is it? ")
-    result = convert(time)
-    print(result)
+    convert(time)
+
 
 def convert(time):
 
+    hours, minutes = map(float, time.split(":"))
 
-    converts = time.split(":")
-    hours = float(time[0])
-    minutes = float(time[-1])
-    conv = converts(hours, minutes)
+    conv = hours + minutes/60
+
+    result = ""
 
     if 7.0 <= conv <= 8.0:
         result = "breakfast time"
@@ -20,9 +20,7 @@ def convert(time):
     if 18.0 <= conv <= 19.0:
         result = "dinner time"
 
-    else:
-        result = ""
-    print(f"{result}")
+    print(result)
 
 if __name__ == "__main__":
     main()
