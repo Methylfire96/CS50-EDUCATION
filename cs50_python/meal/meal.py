@@ -22,8 +22,8 @@ def meal(conv):
     elif 18.0 <= conv <= 19.0:
         result = "dinner time"
 
-
     print(result)
+    
 def converted_meal(time):
     conv = convert(time)
     meal(conv)
