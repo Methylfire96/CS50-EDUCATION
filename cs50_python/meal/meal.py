@@ -5,7 +5,11 @@ def main():
 
 def convert(time):
 
-    conv = float(time)
+    time = hours, minutes
+    hours, minutes = time.split(":")
+    hours = float(time[0])
+    minutes = float(time[2])
+    conv = hours and minutes
 
     if 7.0 <= conv <= 8.0:
         return "breakfast time"
