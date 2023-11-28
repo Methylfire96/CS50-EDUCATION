@@ -1,12 +1,17 @@
 def main():
-    s = input("camelCase: ")
-    text = snake(s)
-    print("snake_case: ", text)
+    str = input("camelCase: ")
+    text = snake(str)
+    print(f"snake_case: {text}")
 
 
 def snake(s):
+    snake_case = ""
     for c in s:
-        print(c, end="c.capitalize()")
-            
+        if c.isupper():
+            snake_case += "_" + c.lower()
+        else:
+            snake_case #= c
+    return snake_case.lstrip("_")
+
 
 main()
