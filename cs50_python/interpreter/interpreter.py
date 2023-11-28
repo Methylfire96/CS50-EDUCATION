@@ -11,11 +11,13 @@ def div(x, y):
     else:
         return "Cant divide through zero!"
 
-math = float(input("Expression: "))
+math = input("Expression: ")
 
-val1 = math[0].strip()
-val2 = math[-1].strip()
-operator = math[{"+", "-", "*", "/" }]
+val1 = float(math[0].strip())
+val2 = float(math[-1].strip())
+operator = ("+", "-", "*", "/")
+if operator in math:
+    return operator.(operator)
 
 
 
