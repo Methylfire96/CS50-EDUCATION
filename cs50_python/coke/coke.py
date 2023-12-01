@@ -1,8 +1,8 @@
 def main():
     print("Amount Due: 50")
     inp = int(input("Insert Coin: "))
-
-    print(insert)
+    calc = insert(inp)
+    print(f"{calc}")
 
 
 
@@ -14,8 +14,6 @@ def insert(due):
     if coins in due:
         result = due - coins
         return result
-
-
 
 
 
