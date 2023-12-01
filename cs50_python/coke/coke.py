@@ -17,12 +17,11 @@ def insert(coin, amount_due):
 
     if coin in coins:
         amount_due -= coin
-        if amount_due == 0:
-            return 0
+
     else:
         print("Invalid coin (25, 10, 5)")
 
-    return amount_due
+    return amount_due, max(0, -amount_due)
 
 
 main()
