@@ -9,7 +9,7 @@ def main():
 
 
 def insert(c):
-    coins = [25, 10 ,5]
+    coins = {"25", "10" ,"5"}
     due = 50
     if coins in due:
         result = due - coins
