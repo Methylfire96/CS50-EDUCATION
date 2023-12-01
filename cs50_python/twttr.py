@@ -4,11 +4,7 @@ def main():
     print(f"Output: {result}")
 
 def conv(c):
-    while c in inp:
-        convert = c.lower().remove.("a", "e", "i", "o", "u")
+        convert = "".join(char.lower() for char in c if char.lower() not in {"a", "e", "i", "o", "u"})
         return convert
-
-
-
 
 main()
