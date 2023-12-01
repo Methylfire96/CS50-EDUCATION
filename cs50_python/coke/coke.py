@@ -2,19 +2,21 @@ def main():
     print("Amount Due: 50")
     inp = int(input("Insert Coin: "))
     calc = insert(inp)
-    print(f"{calc}")
+    print(f"Amount Due: {calc}")
 
 
 
 
 
-def insert(due):
-    coins = {"25", "10" ,"5"}
+def insert(coin):
+    coins = {25, 10, 5}
     due = 50
-    if coins in due:
-        result = due - coins
+    if coin in coins:
+        result = due - coin
         return result
-
+    else:
+        print("Invalid coin (25, 10, 5)")
+        return due
 
 
 main()
