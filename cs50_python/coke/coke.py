@@ -7,7 +7,7 @@ def main():
         amount_due = insert(inp, amount_due)
         print(f"Amount Due: {amount_due}")
 
-    else:
+    if amount_due == 0:
         print("Change Owed: 0")
 
 
@@ -20,7 +20,7 @@ def insert(coin, amount_due):
     else:
         print("Invalid coin (25, 10, 5)")
 
-    return amount_due, max(0, -amount_due)
+    return amount_due
 
 
 main()
