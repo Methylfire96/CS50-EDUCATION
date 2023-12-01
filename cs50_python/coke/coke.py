@@ -6,10 +6,12 @@ def main():
 
         inp = int(input("Insert Coin: "))
         amount_due = insert(inp, amount_due)
+
         if amount_due > 0:
             print(f"Amount Due: {amount_due}")
         else:
-            print(f"Change Owed: {amount_due}")
+            print(f"Change Owed: {-amount_due}")
+            break
 
 
 
@@ -19,8 +21,7 @@ def insert(coin, amount_due):
 
     if coin in coins:
         amount_due -= coin
-        if amount_due < 0:
-            return -amount_due
+
     else:
         print("Invalid coin (25, 10, 5)")
 
