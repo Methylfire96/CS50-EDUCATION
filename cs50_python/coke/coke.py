@@ -8,7 +8,7 @@ def main():
         print(f"Amount Due: {amount_due}")
 
     else:
-        print("Change Oed: 0")
+        print("Change Owed: 0")
 
 
 
