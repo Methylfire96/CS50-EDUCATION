@@ -5,6 +5,7 @@ def main():
     while amount_due > 0:
         inp = int(input("Insert Coin: "))
         amount_due = insert(inp, amount_due)
+
         print(f"Amount Due: {amount_due}")
         if amount_due == 0:
             print(f"Change Owed: 0")
