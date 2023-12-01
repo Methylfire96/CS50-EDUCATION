@@ -11,6 +11,7 @@ def main():
 def insert(coin):
     coins = {25, 10, 5}
     due = 50
+
     if coin in coins:
         result = due - coin
         return result
