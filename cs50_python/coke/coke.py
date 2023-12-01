@@ -7,7 +7,8 @@ def main():
         amount_due = insert(inp, amount_due)
         if amount_due <= 0:
             print("Change Owed: 0")
-        print(f"Amount Due: {amount_due}")
+        else:
+            print(f"Amount Due: {amount_due}")
 
 
 
