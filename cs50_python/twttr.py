@@ -5,7 +5,8 @@ def main():
 
 def conv(c):
     while c in inp:
-        c.
+        convert = c.lower().remove.("a", "e", "i", "o", "u")
+        return convert
 
 
 
