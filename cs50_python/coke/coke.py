@@ -19,6 +19,8 @@ def insert(coin, amount_due):
 
     if coin in coins:
         amount_due -= coin
+        if amount_due < 0:
+            return amount_due + coin
     else:
         print("Invalid coin (25, 10, 5)")
 
