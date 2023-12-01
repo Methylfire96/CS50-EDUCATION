@@ -5,9 +5,9 @@ def main():
     while True:
 
         inp = int(input("Insert Coin: "))
-        amount_due = insert(inp, amount_due)
+        amount_due, change_owed = insert(inp, amount_due)
 
-        if amount_due > 0:
+        if change_owed > 0:
             print(f"Amount Due: {amount_due}")
         else:
             print(f"Change Owed: {amount_due}")
