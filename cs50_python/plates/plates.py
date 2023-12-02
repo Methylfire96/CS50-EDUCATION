@@ -9,7 +9,8 @@ def is_valid(s):
 
     if s[0].isdigit():
         return False
-    elif s[0:2] != 
+    elif s[0:2].isalpha():
+        return False
     else:
         return True
 
