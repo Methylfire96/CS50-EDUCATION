@@ -7,9 +7,12 @@ def main():
 
 def is_valid(s):
 
-    for c in s:
-        if s[0] == c.isnumber():
-            return False
+    if s[0].isdigit():
+        return False
+    elif s[0:2] != 
+    else:
+        return True
+
 
 
 main()
