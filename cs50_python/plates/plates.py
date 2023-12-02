@@ -15,7 +15,7 @@ def is_valid(s):
         return False
     if any(c.isdigit() for c in s[2:-1]):
         return False
-    if any(c not in c.isdigit().isalpha() for c in s):
+    if any(not (c.isdigit() or c.isalpha()) for c in s):
         return False
 
 
