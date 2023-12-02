@@ -15,8 +15,8 @@ def is_valid(s):
 
     if not 2 <= len(s) <= 6:
         return False
-    # CS50 is valid, CS05 is invalid, there should be no zero inside the plate
-    if any(c.isdigit() for c in s[2:-1]):
+
+    if any(c.isdigit("0") for c in s[2:-2]):
         return False
 
     if any(not (c.isdigit() or c.isalpha()) for c in s):
