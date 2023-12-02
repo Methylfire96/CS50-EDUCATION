@@ -9,7 +9,7 @@ def is_valid(s):
 
     if s[2:].startswith("0"):
         return False
-    if not s[0:2].isalpha():
+    if not s[0:2].isalpha() or not s[0:2].isupper():
         return False
     if not 2 <= len(s) <= 6:
         return False
