@@ -3,7 +3,7 @@ def is_valid(s):
     if not (2 <= len(s) <= 6):
         return False
 
-    # Check if the first two characters are letters
+    # Check if all characters in the first two positions are letters
     if not s[:2].isalpha():
         return False
 
