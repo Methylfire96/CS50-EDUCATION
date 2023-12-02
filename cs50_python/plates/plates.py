@@ -7,14 +7,16 @@ def main():
 
 def is_valid(s):
 
-    if s[0].isdigit():
+    if s[2:].startswith("0"):
         return False
-    elif s[0:2].isalpha():
-        return True
-    elif s[0:5].strip().set(""):
+    if not s[0:2].isalpha():
         return False
-    else:
-        return True
+    if not 2 <= len(s) <= 6:
+        return False
+    
+
+
+    return True
 
 
 
