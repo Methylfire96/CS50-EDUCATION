@@ -29,8 +29,8 @@ def calculate_percentage(fraction):
             print("Error: Division by zero. Please enter a valid fraction.")
 
 
-        except ValueError as e:
-            print("Error: {e}. Please enter a valid fraction.")
+        except ValueError:
+            print("Error: Please enter a valid fraction.")
 
 
 if __name__ == "__main__":
