@@ -12,8 +12,10 @@ def main():
     }
 
     while True:
+        try:
             order = input("Item: ")
-            order = dict[:]
-            print (order)
+        except:
+            
+            print(f"Total: ${dict[order]}")
 
 main()
