@@ -33,5 +33,6 @@ if __name__ == "__main__":
 
         if isinstance(result, int):
             print(f"{result}%")
+            break
         else:
             print(result)
