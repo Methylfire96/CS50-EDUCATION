@@ -1,14 +1,12 @@
 def main():
      while True:
         fraction_input = input("Fraction: ")
-
         result = calculate_percentage(fraction_input)
 
         if isinstance(result, int):
             print(f"{result}%")
         else:
             print(result)
-
 
 def calculate_percentage(fraction):
     while True:
