@@ -19,7 +19,7 @@ def main():
 
                 if item in dict:
                     order[item] = order.get(item, 0) + dict[item]
-                    order.append(item)
+                    
                     sum_up(order)
 
         except EOFError:
