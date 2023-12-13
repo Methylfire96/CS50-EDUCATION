@@ -3,7 +3,7 @@ def calculate_percentage(fraction):
         try:
             x, y = map(int, fraction.split('/'))
 
-            if x < 0 or y < 0:
+            if x < 0 or y < 0 or x > y:
                 raise ValueError("Invalid fraction")
 
             percentage = (x / y) * 100
