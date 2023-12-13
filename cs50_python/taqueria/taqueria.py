@@ -13,9 +13,11 @@ def main():
 
     while True:
         try:
-            order = input("Item: \n")
+            order = input("Item: ")
         except:
-            
-            print(f"Total: ${dict[order]}")
+            if order.append("-d"):
+                order = int({dict[order]})
+                result = sum(order)
+            print(f"Total: ${result}")
 
 main()
