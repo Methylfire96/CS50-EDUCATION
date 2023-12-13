@@ -13,7 +13,7 @@ def main():
 
     while True:
         try:
-            order = input("Item: ")
+            order = input("Item: \n")
         except:
             
             print(f"Total: ${dict[order]}")
