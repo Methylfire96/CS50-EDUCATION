@@ -29,13 +29,12 @@ def calculate_percentage(fraction):
                 return round(percentage)
 
         except ZeroDivisionError:
-            print("Error: Division by zero. Please enter a valid fraction.")
+            print("Error: Division by zero.")
             fraction = input("Fraction: ")
 
         except ValueError:
-            print("Error: Invalid input. Please enter a valid fraction.")
+            print("Error: Invalid input.")
             fraction = input("Fraction: ")
-
 
 main()
 
