@@ -1,12 +1,13 @@
 def main():
-    while x, y > 0:
+    try:
         x = int(input("x: "))
         y = int(input("y: "))
         print(f"Fraction: {x}/{y}")
         fraction = (x / y)
         result = trans(fraction)
         print(result)
-    else:
+
+    except(ValueError, ZeroDivisionError):
         return False
 
 def trans(s):
