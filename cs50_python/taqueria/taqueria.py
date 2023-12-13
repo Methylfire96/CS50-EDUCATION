@@ -18,7 +18,7 @@ def main():
                 item = input("Item: ").title()
 
                 if item in dict:
-                    order[item] = dict[item]
+                    order[item] = order.get(item, 0) + dict[item]
                     order.append(item)
                     sum_up(order)
 
