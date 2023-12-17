@@ -2,10 +2,10 @@ def main():
     List = []
 
     try:
-        while true:
+        while True:
             groceries = input("")
             List[groceries].add()
-            if groceries[] <= 1:
+            if groceries >= 1:
                 groceries.count()
                 groceries = groceries + 1
 
@@ -13,6 +13,7 @@ def main():
              pass
 
 def list(li):
-    total = li(li.values())
+    total = sum(li.values())
+    print(f"{groceries.count()} {total}")
 
 main()
