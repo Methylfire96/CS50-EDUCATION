@@ -15,7 +15,11 @@ def main():
              pass
 
 def upd(li):
-    total = sum(li.values())
-    print(f"{count} {total.upper()}")
+    li = 0
+    c = groceries.count(li)
+    if c >= 1:
+         c = c + 1
+    count = sum(c)
+    print(f"{count} {List[groceries]}")
 
 main()
