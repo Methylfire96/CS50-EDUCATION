@@ -1,6 +1,6 @@
 def main():
     # empty list
-    List = []
+    List = {}
     # ask input
     # add item to list
     # keep count of items
@@ -18,7 +18,7 @@ def main():
 
 
 def upd(List):
-    for item, count in List.items():
-        print(f"{count} {item}")
+    for groceries, count in List.groceries():
+        print(f"{count} {groceries}")
 
 main()
