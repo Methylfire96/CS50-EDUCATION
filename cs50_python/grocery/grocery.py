@@ -12,8 +12,9 @@ def main():
 
 
     except EOFError:
-            
             upd(List)
+
+
 def upd(li):
     li = 0
     c = groceries.count(li)
