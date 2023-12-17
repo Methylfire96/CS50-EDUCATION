@@ -4,8 +4,9 @@ def main():
     try:
         while True:
             groceries = input("")
-            List[groceries].add()
-            if groceries >= 1:
+            List.append(groceries)
+            count_groceries = int(groceries)
+            if count_groceries >= 1:
                 groceries.count()
                 groceries = groceries + 1
 
