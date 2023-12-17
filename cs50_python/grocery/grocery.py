@@ -6,7 +6,7 @@ def main():
     # keep count of items
     try:
         while True:
-            groceries = input("")
+            groceries = input("").strip()
             if groceries in List:
                 List[groceries] = List.get(groceries, 0) + 1
 
