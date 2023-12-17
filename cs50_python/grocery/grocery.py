@@ -17,8 +17,8 @@ def main():
     upd(List)
 
 
-def upd(li):
-    
-    print(f"{count} {List[groceries]}")
+def upd(List):
+    for item, count in List.items():
+        print(f"{count} {item}")
 
 main()
