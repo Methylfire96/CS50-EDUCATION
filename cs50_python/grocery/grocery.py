@@ -7,8 +7,8 @@ def main():
     try:
         while True:
             groceries = input("").strip()
-            if groceries in List:
-                List[groceries] = List.get(groceries, 0) + 1
+
+            List[groceries] = List.get(groceries, 0) + 1
 
 
     except EOFError:
@@ -18,7 +18,7 @@ def main():
 
 
 def upd(List):
-    for groceries, count in List.groceries():
-        print(f"{count} {groceries}")
+    for item, count in sorted(List.items()):
+        print(f"{count} {item.upper}")
 
 main()
