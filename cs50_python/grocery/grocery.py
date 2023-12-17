@@ -7,14 +7,15 @@ def main():
     try:
         while True:
             groceries = input("")
-            if groceries
-            count_groceries = int(groceries)
+            if groceries in List:
+                List[groceries] = List.get(groceries, 0)
+                upd(List)
 
     except EOFError:
              pass
 
-def list(li):
+def upd(li):
     total = sum(li.values())
-    print(f"{groceries.count()} {total}")
+    print(f"{count} {total.upper()}")
 
 main()
