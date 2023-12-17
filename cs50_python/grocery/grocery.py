@@ -7,11 +7,8 @@ def main():
     try:
         while True:
             groceries = input("")
-            List.append(groceries)
+            if groceries
             count_groceries = int(groceries)
-            if count_groceries >= 1:
-                groceries.count()
-                groceries = groceries + 1
 
     except EOFError:
              pass
