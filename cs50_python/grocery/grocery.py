@@ -9,8 +9,10 @@ def main():
                 groceries.count()
                 groceries = groceries + 1
 
+    except EOFError:
+             pass
 
-def list(s):
-
+def list(li):
+    total = li(li.values())
 
 main()
