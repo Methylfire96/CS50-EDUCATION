@@ -11,15 +11,15 @@ def main():
 
             List[groceries] = List.get(groceries, 0) + 1
 
-
     except EOFError:
             pass
 
     upd(List)
 
+
+def upd(List):
     # count and sort groceries
     # print upper
-def upd(List):
     for item, count in sorted(List.items()):
         print(f"{count} {item.upper()}")
 
