@@ -19,6 +19,6 @@ def main():
 
 def upd(List):
     for item, count in sorted(List.items()):
-        print(f"{count} {item.upper}")
+        print(f"{count} {item.upper()}")
 
 main()
