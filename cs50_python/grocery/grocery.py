@@ -7,8 +7,8 @@ def main():
     try:
         while True:
             groceries = input("").strip()
-
-            List[groceries] = List.get(groceries, 0) + 1
+            if groceries in List:
+                List[groceries] = List.get(groceries, 0) + 1
 
 
     except EOFError:
